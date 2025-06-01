@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ config.default_language }}">
+<head>
+    {% include "head.html" %}
+</head>
+<body>
+      <main>
+          {% block content %}
+          {% endblock content %}
+          <p style="margin-top:64px;">
+          <a href="/">home</a> |
+          <a href="https://">submissions</a> |
+          <a rel="me" href="https://instagram.com/meteoric.torc">instagram</a>
+          </p>
+          <p>
+          <a href="https://webring.xxiivv.com/#xxiivv" target="_blank" rel="noopener noreferrer">
+          torc</a>
+          </p>
+          <div class="subtle-mono">
+            built<br /> epoch<br /> {{ config.extra.epoch }}
+          </div>
+      </main>
+</body>
+</html>

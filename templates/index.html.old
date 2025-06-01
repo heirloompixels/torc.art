@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+
+
+<img src="/logo.png"/>
+
+<h1> Truth or Consequences Contemporary</h1>
+
+<p>An experimental art space located in an Oasis on the banks of the Rio Grande in Southern New Mexico</p>
+
+<ul>
+<li>
+	<h3>Calendar</h3>
+	<p>Upcoming events located upon the temporal timeline of this particular entities existence</p>
+</li>
+<li>
+	<h3>Exhibtions / Events</h3>
+	<p>A catalog of past events</p>
+</li>
+<li>Equipment</li>
+<li>Events</li>
+<li>Agile Meteor Press</li>
+<li>MeTeORiC</li>
+<li>Artists</li>
+</ul>
+
+<h2>Shop Online</h2>
+<p> Please help support our projects by shopping out online store where you can fid art and wonderful products from amazing artists</p>
+
+<p> You can shop in person at 312 Main Ave, Truth or Conseqeunces NM 87901<p>
+
+

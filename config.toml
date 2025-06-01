@@ -1,0 +1,38 @@
+base_url = "https://torc.art"
+title = "Truth or Consequences Contemporary"
+description = "art in the oasis"
+compile_sass = false
+minify_html = false
+default_language = "en"
+
+taxonomies = [
+	{ name = "recommender" },
+	{ name = "authorname" },
+	{ name = "pubyear" },
+	{ name = "rating" },
+	{ name = "readstate" }
+]
+
+[slugify]
+paths = "on"
+anchors = "on"
+
+[markdown]
+render_emoji = true
+external_links_target_blank = true
+smart_punctuation = true
+highlight_code = false
+
+[link_checker]
+internal_level = "warn"
+
+[extra]
+author = "kpc"
+default_theme = "light"
+twitter_card = true
+epoch = "PLACEHOLDER"
+
+
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
