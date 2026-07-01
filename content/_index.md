@@ -3,39 +3,33 @@
 
 <img style="display: block; margin:auto; height: 12em;"  src="/logo.svg"/>
 
-# Truth or Consequences Contemporary 
+# Truth or Consequences Contemporary
 
 A Gallery in the Middle of Nowhere.
 
 <img style="display: block; margin:auto;" src="/box_prints.jpg"/>
 
-Contemporary art space focusing on experiment and experiential works. We bring cutting edge projects to life in the strange vortex which is Truth or Consequences, New Mexico. 
+Contemporary art space focusing on experiment and experiential works. We bring cutting edge projects to life in the strange vortex which is Truth or Consequences, New Mexico.
 
 ## Projects
 
-- Exhibition Space
+- [Exhibition Space](/exhibitions/)
 - Agile Meteor Press
-- Workshops & Education 
-- Performance 
-- Dance 
+- Workshops & Education
+- Performance
+- Dance
 - Art Equipment
-- MeTeORiC Festival 
+- MeTeORiC Festival
 - Idea Idea
 - Printmaking
 - Stone Sculpture
 
-## Artists Represented 
+## The Ecosystem
 
-- Jeannie Ortiz
-- Kyle Parker Cunningham
-- Thomas Phillip Laidig
-- Sarah "Rosie" Rosenthal 
-- Luke Leone 
-- Petro Hul 
-- Thomas Christopher Haig
-- Everest Pipkin 
-- Gary Cunningham 
+- [Exhibitions](/exhibitions/) — current and past shows in the gallery
+- [Artists](/artists/) — the roster we represent
+- [Calendar](/calendar/) — upcoming events, workshops, and openings
 
+## Shop In Person
 
-
- 
+You can shop in person at 312 Main Ave, Truth or Consequences, NM 87901.

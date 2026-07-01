@@ -5,13 +5,8 @@ compile_sass = false
 minify_html = false
 default_language = "en"
 
-taxonomies = [
-	{ name = "recommender" },
-	{ name = "authorname" },
-	{ name = "pubyear" },
-	{ name = "rating" },
-	{ name = "readstate" }
-]
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
 
 [slugify]
 paths = "on"
@@ -31,8 +26,3 @@ author = "kpc"
 default_theme = "light"
 twitter_card = true
 epoch = "PLACEHOLDER"
-
-
-
-# Whether to build a search index to be used later on by a JavaScript library
-build_search_index = false

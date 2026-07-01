@@ -7,17 +7,8 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-<meta name="apple-mobile-web-app-title" content="MyWebSite" />
+<meta name="apple-mobile-web-app-title" content="TorC Contemporary" />
 <link rel="manifest" href="/site.webmanifest" />
-
-
-
-
-<!--<meta property="og:image" content="https://nnix.com/nnix.png">
-<link rel="mask-icon" href="https://nnix.com/safari-pinned-tab.svg" color="#000000">
-<meta name="msapplication-TileColor" content="#f2f2f2">
-<meta name="theme-color" content="#f2f2f2">
--->
 <!-- opengraph and favicons -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,6 +46,11 @@
 {% elif config.base_url %}
 {% set url = config.base_url %}
 {% endif %}
+{% if page.extra.image %}
+{% set image = page.extra.image %}
+{% elif section.extra.image %}
+{% set image = section.extra.image %}
+{% endif %}
 {% if title %}
 <title>{{ title }}</title>
 {% endif %}
@@ -79,7 +75,7 @@
 {% if description %}
 <meta property="og:description" content="{{ description }}">
 {% endif %}
-{% if image %}
+{% if image is defined %}
 <meta property="og:image" content="{{ image }}">
 {% endif %}
 <link rel="canonical" href="{{ url | safe }}">
@@ -90,20 +86,15 @@
 {% endblock css %}
 
 <script type="application/ld+json">
-{"name":"agile meteor press",
+{"name":"{{ config.title }}",
 "description":"{{ description }}",
 "@type":"website",
 "url":"{{ url | safe }}",
 "sameAs" : [
-   "https://torc.art",
-   "https://cherubgyre.com",
-   "https://refmark.com",
-   "https://www.linkedin.com/in/davidemerson",
-   "https://github.com/davidemerson",
-   "https://merveilles.town/@kpc"
+   "https://instagram.com/meteoric.torc",
+   "https://webring.xxiivv.com/#xxiivv"
    ],
 "headline":"{{ title }}",
 "@context":"http://schema.org"}</script>
-<style>* { cursor: url("/icons/cursor.png"), auto; } </style>
 
 <meta name="format-detection" content="telephone=no">
