@@ -188,6 +188,40 @@ figure { margin: 0 0 1.5rem; }
 .page ul li::before { content: "+"; padding-right: 0.5ch; color: var(--fg-muted); }
 .page li ul { margin: 0.3rem 0 0 1.5em; }
 
+/* ---------- post lists ---------- */
+
+.page .post-list, .post-list { list-style: none; margin: 2rem 0 0; padding: 0; }
+
+.post-list li {
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--rule);
+}
+
+.page .post-list li::before { content: none; padding-right: 0; }
+
+.post-list a {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  text-decoration: none;
+}
+
+.post-list a:hover { text-decoration: underline; }
+
+.post-list time,
+.post-meta {
+  display: block;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+  color: var(--fg-muted);
+  margin-top: 0.2rem;
+}
+
+.post-list p { margin: 0.4rem 0 0; color: var(--fg-muted); font-size: 0.95rem; }
+
+.post-meta { margin: -0.3rem 0 1.5rem; }
+
+.post-back { margin-top: 3rem; font-family: 'Inter', sans-serif; font-size: 0.85rem; }
+
 /* ---------- tables ---------- */
 
 table { border-collapse: collapse; width: 100%; }

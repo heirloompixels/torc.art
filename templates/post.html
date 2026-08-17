@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article class="page">
+    <h1>{{ page.title }}</h1>
+    {% if page.date %}
+    <p class="post-meta"><time datetime="{{ page.date }}">{{ page.date | date(format="%e %B %Y") }}</time></p>
+    {% endif %}
+    {{ page.content | safe }}
+
+    <p class="post-back"><a href="/{{ page.components | first }}/">&larr; Back</a></p>
+</article>
+{% endblock content %}
