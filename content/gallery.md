@@ -1,24 +1,31 @@
 +++
 title = "Exhibition Space"
-description = "The gallery on Main Ave — exhibitions, openings, and the artists we represent."
+description = "A gallery in the middle of nowhere, at 312 Main Ave."
 weight = 1
 +++
 
-Our exhibition space sits on Main Ave in downtown Truth or Consequences. We show
-contemporary work with a bias toward the experimental and the experiential —
-projects that are difficult to place elsewhere, and better for it.
+A gallery in the middle of nowhere, obsessed with understanding the optimal ways
+to use art in the transmission of lived emotions from one human being to another.
 
-## Current Exhibition
+We exhibit a wide range of work from local, regional, and national artists. The
+current space is the fourth iteration of art space we have run in Truth or
+Consequences over a dozen years.
 
-<!-- TODO: replace with the current show — title, artist, dates, a line or two. -->
-*Details of the current exhibition are coming shortly. In the meantime, follow
-along on [Instagram](https://instagram.com/meteoric.torc) for openings and
-announcements.*
+## Current & Upcoming
 
-## Upcoming
+<!-- TODO: replace with the current show — title, artist, dates. -->
+*Announcements go out first on [Instagram](https://instagram.com/torc.art). Write
+to [hello@torc.art](mailto:hello@torc.art) to be added to the mailing list.*
 
-<!-- TODO: list upcoming shows as they are scheduled. -->
-*To be announced.*
+## Selected Past Exhibitions
+
+<!-- TODO: verify titles and dates against the archive before publishing. -->
+- **Jeannie Ortiz** — opened 14 March 2026
+- **Nakatani Gong Orchestra** — performance, 20 March 2026
+- **Tatsuya Nakatani: Bow Show** — 14 February 2025, the bows of the percussionist
+
+A fuller record lives in [the archive](https://shop.torc.art/blogs/archive) — a
+digital memex of the times we share doing this work.
 
 ## Artists Represented
 
@@ -35,5 +42,6 @@ announcements.*
 ## Also in the Space
 
 Beyond exhibitions, the space hosts workshops and education, performance, dance,
-stone sculpture, and the MeTeORiC Festival. If you have a project that needs a
-room and a wall, [get in touch](mailto:hello@torc.art).
+stone sculpture, printmaking, and the MeTeORiC Festival. Each year we head out for
+Fieldwork — creating and rejuvenating in the wild. If you have a project that
+needs a room and a wall, [get in touch](mailto:hello@torc.art).

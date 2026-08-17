@@ -27,7 +27,10 @@ default_theme = "light"
 
 address = "312 Main Ave, Truth or Consequences, NM 87901"
 email = "hello@torc.art"
-instagram = "https://instagram.com/meteoric.torc"
+instagram = "https://instagram.com/torc.art"
+phone = "575-519-4773"
+amp_url = "https://amp.torc.art"
+archive_url = "https://shop.torc.art/blogs/archive"
 shop_url = "https://shop.torc.art"
 
 # Landing page project cards. Order here is the order on the page.
@@ -35,12 +38,12 @@ shop_url = "https://shop.torc.art"
 [[extra.projects]]
 name = "Exhibition Space"
 url = "/gallery/"
-blurb = "The gallery on Main Ave — exhibitions, openings, and works by the artists we represent."
+blurb = "A gallery in the middle of nowhere. Exhibitions, openings, and the artists we represent."
 
 [[extra.projects]]
 name = "Agile Meteor Press"
 url = "/press/"
-blurb = "Our printmaking imprint. Editions, broadsides, and collaborative print projects."
+blurb = "Our press. One art book per season — digitally printed runs, and special editions bound by hand."
 
 [[extra.projects]]
 name = "Members"

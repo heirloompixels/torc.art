@@ -13,7 +13,7 @@ Truth or Consequences, NM 87901
 
 <!-- TODO: replace with real opening hours. -->
 *Hours vary with what is installed. Check
-[Instagram](https://instagram.com/meteoric.torc) before making the drive, or
+[Instagram](https://instagram.com/torc.art) before making the drive, or
 write to [hello@torc.art](mailto:hello@torc.art) to arrange a visit.*
 
 ## Getting Here
@@ -25,4 +25,5 @@ downtown on Main Ave, within walking distance of the hot springs district.
 ## Contact
 
 [hello@torc.art](mailto:hello@torc.art)  
-[@meteoric.torc](https://instagram.com/meteoric.torc)
+575-519-4773  
+[@torc.art](https://instagram.com/torc.art)

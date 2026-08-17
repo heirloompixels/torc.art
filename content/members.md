@@ -10,11 +10,11 @@ programming free to the public.
 
 ## What Members Get
 
-<!-- TODO: confirm the benefits and tiers below before launch. -->
-- Studio and equipment access at member rates
-- First look at new editions from Agile Meteor Press
-- A discount in [the shop](https://shop.torc.art)
+<!-- TODO: none of the benefits below are confirmed — replace with the real list. -->
+- First look at each new title from [Agile Meteor Press](/press/)
 - Invitations to openings, workshops, and member events
+- A hand in the work — members help bind our special editions
+- A discount in [the shop](https://shop.torc.art)
 
 ## Tiers
 
