@@ -1,8 +1,33 @@
 {% extends "base.html" %}
 
-<h1>Something</h1>
-
 {% block content %}
+<section class="hero">
+    <img class="hero-mark" src="/logo.svg" alt="" width="160" height="160">
+    <h1>Truth or Consequences Contemporary</h1>
+    <p class="lede">{{ config.description }}</p>
+</section>
+
 {{ section.content | safe }}
 
+<section class="projects">
+    <h2>Projects</h2>
+    <ul class="project-grid">
+        {% for project in config.extra.projects %}
+        <li class="project">
+            <a href="{{ project.url | safe }}">
+                <h3>{{ project.name }}</h3>
+                <p>{{ project.blurb }}</p>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+
+<section class="visit-callout">
+    <h2>Visit</h2>
+    <p>
+        {{ config.extra.address }}<br>
+        <a href="/visit/">Hours &amp; directions</a>
+    </p>
+</section>
 {% endblock content %}

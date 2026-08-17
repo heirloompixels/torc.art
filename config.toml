@@ -1,17 +1,12 @@
-base_url = "https://new.torc.art"
+base_url = "https://torc.art"
 title = "Truth or Consequences Contemporary"
-description = "art in the oasis"
+description = "An experimental art space on the banks of the Rio Grande in southern New Mexico."
 compile_sass = false
 minify_html = false
 default_language = "en"
+build_search_index = false
 
-taxonomies = [
-	{ name = "recommender" },
-	{ name = "authorname" },
-	{ name = "pubyear" },
-	{ name = "rating" },
-	{ name = "readstate" }
-]
+taxonomies = []
 
 [slugify]
 paths = "on"
@@ -27,12 +22,32 @@ highlight_code = false
 internal_level = "warn"
 
 [extra]
-author = "kpc"
+author = "Truth or Consequences Contemporary"
 default_theme = "light"
-twitter_card = true
-epoch = "PLACEHOLDER"
 
+address = "312 Main Ave, Truth or Consequences, NM 87901"
+email = "hello@torc.art"
+instagram = "https://instagram.com/meteoric.torc"
+shop_url = "https://shop.torc.art"
 
+# Landing page project cards. Order here is the order on the page.
+# `url` may be an internal path or an external link.
+[[extra.projects]]
+name = "Exhibition Space"
+url = "/gallery/"
+blurb = "The gallery on Main Ave — exhibitions, openings, and works by the artists we represent."
 
-# Whether to build a search index to be used later on by a JavaScript library
-build_search_index = false
+[[extra.projects]]
+name = "Agile Meteor Press"
+url = "/press/"
+blurb = "Our printmaking imprint. Editions, broadsides, and collaborative print projects."
+
+[[extra.projects]]
+name = "Members"
+url = "/members/"
+blurb = "Membership keeps the doors open and the presses running. Studio access, discounts, and first look at new work."
+
+[[extra.projects]]
+name = "Shop"
+url = "https://shop.torc.art"
+blurb = "Prints, editions, and work from the artists we represent — shipped anywhere, or picked up on Main Ave."

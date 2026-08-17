@@ -1,6 +1,6 @@
 {
-  "name": "Agile Meteor Press",
-  "short_name": "A. M. P.",
+  "name": "Truth or Consequences Contemporary",
+  "short_name": "TorC Contemporary",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#fcf1ef",
+  "theme_color": "#f2f2f2",
+  "background_color": "#f2f2f2",
   "display": "standalone"
 }

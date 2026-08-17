@@ -1,41 +1,13 @@
 +++
+sort_by = "weight"
+template = "index.html"
 +++
 
-<img style="display: block; margin:auto; height: 12em;"  src="/logo.svg"/>
+<img class="splash" src="/box_prints.jpg" alt="Boxed prints at Agile Meteor Press">
 
-# Truth or Consequences Contemporary 
+A contemporary art space focused on experimental and experiential work. We bring
+cutting-edge projects to life in the strange vortex that is Truth or Consequences,
+New Mexico — an oasis on the banks of the Rio Grande.
 
-A Gallery in the Middle of Nowhere.
-
-<img style="display: block; margin:auto;" src="/box_prints.jpg"/>
-
-Contemporary art space focusing on experiment and experiential works. We bring cutting edge projects to life in the strange vortex which is Truth or Consequences, New Mexico. 
-
-## Projects
-
-- Exhibition Space
-- Agile Meteor Press
-- Workshops & Education 
-- Performance 
-- Dance 
-- Art Equipment
-- MeTeORiC Festival 
-- Idea Idea
-- Printmaking
-- Stone Sculpture
-
-## Artists Represented 
-
-- Jeannie Ortiz
-- Kyle Parker Cunningham
-- Thomas Phillip Laidig
-- Sarah "Rosie" Rosenthal 
-- Luke Leone 
-- Petro Hul 
-- Thomas Christopher Haig
-- Everest Pipkin 
-- Gary Cunningham 
-
-
-
- 
+What began as a single exhibition space is now several things at once: a gallery, a
+printmaking press, a membership, and a shop. Each has its own corner below.
