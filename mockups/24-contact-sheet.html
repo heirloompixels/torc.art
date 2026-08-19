@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>24 Contact Sheet — Truth or Consequences Contemporary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+:root{--base:#171716;--cell:#1f1f1e;--paper:#eeece5;--muted:#8b887f;--mark:#e2653a;
+--jost:'Jost',Futura,sans-serif;--ui:'Inter',system-ui,sans-serif;--body:'EB Garamond',Georgia,serif;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--base);color:var(--paper);font-family:var(--body);font-size:17.5px;line-height:1.55}
+a{color:inherit;text-decoration:none}
+.w{max-width:1400px;margin:0 auto;padding:0 clamp(14px,2.5vw,30px)}
+header{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:18px 0;
+ font-family:var(--ui);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);
+ border-bottom:1px solid #2c2c2a}
+header .b{color:var(--mark)}
+nav{display:flex;gap:15px;flex-wrap:wrap}nav a:hover{color:var(--paper)}
+
+.sheet{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:2px;background:#2a2a28;border:2px solid #2a2a28;margin:18px 0}
+.frame{background:var(--cell);position:relative;aspect-ratio:4/3;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;
+ padding:14px;transition:background .25s}
+.frame:hover{background:#282826}
+.frame .edge{position:absolute;left:0;right:0;top:0;height:14px;
+ background:repeating-linear-gradient(90deg,#2a2a28 0 6px,transparent 6px 14px)}
+.frame .edge.b{top:auto;bottom:0}
+.frame .n{position:absolute;top:20px;left:14px;font-family:var(--ui);font-size:9px;letter-spacing:.16em;color:var(--mark)}
+.frame .t{font-family:var(--jost);font-weight:300;font-size:1.6rem;letter-spacing:-.015em;line-height:1.05}
+.frame .d{font-family:var(--ui);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+.frame.img{padding:0}
+.frame.img img{width:100%;height:100%;object-fit:cover;display:block;opacity:.86}
+.frame.img .cap{position:absolute;left:14px;bottom:20px;font-family:var(--ui);font-size:9px;letter-spacing:.14em;
+ text-transform:uppercase;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.8)}
+.frame.txt{aspect-ratio:auto;justify-content:flex-start;padding:22px 18px}
+.frame.txt h1{font-family:var(--jost);font-weight:200;font-size:clamp(1.5rem,3vw,2.4rem);line-height:1;letter-spacing:-.03em;margin:0 0 12px}
+.frame.txt p{margin:0 0 .8em;font-size:1rem;color:#c3c0b8}
+.frame.txt .motto{font-family:var(--ui);font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--mark)}
+.frame.wide{grid-column:span 2}
+@media(max-width:520px){.frame.wide{grid-column:span 1}}
+.frame.mark{align-items:center;justify-content:center}
+.frame.mark img{width:52%;filter:invert(1) brightness(1.5);opacity:.85}
+
+.strip{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:10px 0 26px;
+ font-family:var(--ui);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+footer{border-top:1px solid #2c2c2a;padding:26px 0 60px;display:grid;gap:24px}
+@media(min-width:760px){footer{grid-template-columns:repeat(4,1fr)}}
+footer h4{font-family:var(--ui);font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:var(--mark);margin:0 0 10px;font-weight:500}
+footer p{margin:0;font-size:1rem;line-height:1.8;color:#b8b5ad}
+footer a:hover{color:var(--paper)}
+</style></head><body><div class="w">
+
+<header><span class="b">TorC Contemporary — Contact Sheet 01</span>
+<nav><a href="#">About</a><a href="#">Artists</a><a href="#">Exhibitions</a><a href="#">Calendar</a><a href="#">Etching Press</a><a href="#">A.M.P.</a><a href="#">Glyphs</a><a href="#">Press</a><a href="#">Visit</a><a href="#">Shop</a></nav>
+<span>312 Main Ave · TorC NM</span></header>
+
+<div class="sheet">
+  <div class="frame txt wide"><span class="edge"></span>
+    <h1>Truth or Consequences Contemporary</h1>
+    <div class="motto">A Gallery in the Middle of Nowhere</div>
+    <p style="margin-top:14px">Obsessed with understanding optimal ways to use art in the transmission of lived emotions from one human being to another.</p>
+    <p>Contemporary art space focusing on experiment and experiential works, in the strange vortex which is Truth or Consequences, New Mexico.</p>
+  </div>
+  <div class="frame img"><span class="edge"></span><img src="../static/box_prints.jpg" alt="Intaglio prints around a deep red presentation box"><span class="cap">01 — Intaglio prints</span><span class="edge b"></span></div>
+  <div class="frame mark"><span class="edge"></span><img src="../static/logo.svg" alt="A cloud with a lightning bolt"><span class="edge b"></span></div>
+
+  <a class="frame" href="#"><span class="edge"></span><span class="n">02</span><span class="t">About</span><span class="d">Who we are and how we got here</span><span class="edge b"></span></a>
+  <a class="frame" href="#"><span class="edge"></span><span class="n">03</span><span class="t">Artists</span><span class="d">The people we show</span><span class="edge b"></span></a>
+  <a class="frame" href="#"><span class="edge"></span><span class="n">04</span><span class="t">Exhibitions</span><span class="d">What is and was on the walls</span><span class="edge b"></span></a>
+  <a class="frame" href="#"><span class="edge"></span><span class="n">05</span><span class="t">Calendar</span><span class="d">Openings, art hops, performances</span><span class="edge b"></span></a>
+  <a class="frame" href="#"><span class="edge"></span><span class="n">06</span><span class="t">Community Etching Press</span><span class="d">Press time, orientation, pricing</span><span class="edge b"></span></a>
+  <a class="frame" href="#"><span class="edge"></span><span class="n">07</span><span class="t">Agile Meteor Press</span><span class="d">Our publishing imprint</span><span class="edge b"></span></a>
+
+  <div class="frame txt wide"><span class="edge"></span>
+    <h1 style="font-size:1.5rem">Fieldwork — Summer</h1>
+    <p>We are in and out of the gallery this summer as we do our annual Fieldwork — creating and rejuvenating out in the wild. Orders from the shop will ship slower than normal — please get in touch if you need a rush order.</p>
+    <p style="font-family:var(--jost);font-size:1.3rem;color:var(--paper)">Jeannie &amp; Kyle</p>
+  </div>
+  <a class="frame" href="#"><span class="edge"></span><span class="n">08</span><span class="t">Glyphs</span><span class="d">Leave your mark on Main Street</span><span class="edge b"></span></a>
+  <a class="frame" href="#"><span class="edge"></span><span class="n">09</span><span class="t">Press</span><span class="d">What has been written about us</span><span class="edge b"></span></a>
+  <a class="frame" href="#"><span class="edge"></span><span class="n">10</span><span class="t">Visit</span><span class="d">Where we are and how to reach us</span><span class="edge b"></span></a>
+  <a class="frame" href="#"><span class="edge"></span><span class="n">11</span><span class="t">Shop</span><span class="d">Buy the work</span><span class="edge b"></span></a>
+</div>
+
+<div class="strip">
+  <span>Exhibition Space · Agile Meteor Press · Workshops &amp; Education · Performance · Dance</span>
+  <span>Art Equipment · MeTeORiC Festival · Idea Idea · Printmaking · Stone Sculpture</span>
+</div>
+
+<footer>
+  <div><h4>Gallery</h4><p>312 Main Ave<br>Truth or Consequences<br>NM 87901</p></div>
+  <div><h4>Contact</h4><p><a href="mailto:intentionallyconfusing@gmail.com">intentionallyconfusing@gmail.com</a></p></div>
+  <div><h4>Elsewhere</h4><p><a href="#">shop.torc.art</a><br><a href="#">amp.torc.art</a><br><a href="#">Instagram · Facebook · YouTube</a></p></div>
+  <div><h4>Artists</h4><p><a href="#">jeannieortiz.com</a><br><a href="#">kyleparkercunningham.com</a><br><a href="#">intentionallyconfusing.com</a></p></div>
+</footer>
+</div></body></html>

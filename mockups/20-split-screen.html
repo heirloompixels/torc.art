@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>20 Split Screen — Truth or Consequences Contemporary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f3f2ee;--panel:#181816;--ink:#1c1b19;--muted:#8f8b83;--accent:#b4553a;
+--jost:'Jost',Futura,sans-serif;--ui:'Inter',system-ui,sans-serif;--body:'EB Garamond',Georgia,serif;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:18.5px;line-height:1.62}
+a{color:inherit;text-decoration:none}
+.layout{display:grid;grid-template-columns:1fr;min-height:100vh}
+@media(min-width:960px){.layout{grid-template-columns:26rem 1fr}}
+
+aside{background:var(--panel);color:#efece6;padding:clamp(26px,3vw,44px);display:flex;flex-direction:column;gap:30px}
+@media(min-width:960px){aside{position:sticky;top:0;height:100vh;overflow-y:auto}}
+aside .mark{width:64px;display:block;filter:invert(1) brightness(1.4);opacity:.9}
+aside h1{font-family:var(--jost);font-weight:200;font-size:clamp(1.7rem,2.6vw,2.5rem);line-height:1.05;letter-spacing:-.025em;margin:0}
+aside .motto{font-family:var(--ui);font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:#8e8981;margin-top:14px}
+aside nav{display:flex;flex-direction:column;gap:1px;margin-top:auto}
+aside nav a{font-family:var(--jost);font-weight:200;font-size:1.35rem;letter-spacing:-.01em;padding:9px 0;border-bottom:1px solid #2b2a27;
+ display:flex;justify-content:space-between;align-items:baseline;transition:color .2s,padding .25s}
+aside nav a span{font-family:var(--ui);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#75706a}
+aside nav a:hover{color:var(--accent);padding-left:10px}
+aside .foot{font-family:var(--ui);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#78736c;line-height:2.1}
+aside .foot a:hover{color:#efece6}
+
+main{padding:clamp(28px,4vw,72px)}
+.hero-img{margin:0 0 clamp(34px,5vw,66px)}
+.hero-img img{width:100%;display:block}
+.hero-img figcaption{font-family:var(--ui);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:12px}
+section{padding:0 0 clamp(34px,5vw,64px);margin-bottom:clamp(34px,5vw,64px);border-bottom:1px solid #e0ded7}
+section:last-of-type{border-bottom:none}
+.eyebrow{font-family:var(--ui);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);margin-bottom:20px}
+h2{font-family:var(--jost);font-weight:200;font-size:clamp(1.7rem,3.6vw,2.9rem);letter-spacing:-.025em;line-height:1.1;margin:0 0 20px;max-width:22ch}
+p{margin:0 0 1em;max-width:62ch;color:#413f3a}
+.two{display:grid;grid-template-columns:1fr;gap:clamp(20px,3vw,44px)}
+@media(min-width:820px){.two{grid-template-columns:1fr 1fr}}
+dl{margin:0}
+dt{font-family:var(--ui);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:18px}
+dd{margin:4px 0 0}
+dd .t{font-family:var(--jost);font-size:1.45rem;font-weight:300;display:block}
+dd p{font-size:1rem;margin:3px 0 0}
+.pills{display:flex;flex-wrap:wrap;gap:9px}
+.pills span{border:1px solid #d6d3cb;border-radius:100px;padding:8px 16px;font-family:var(--ui);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#5d5a54}
+.sig{font-family:var(--jost);font-weight:300;font-size:1.5rem}
+</style></head><body><div class="layout">
+
+<aside>
+  <div>
+    <img class="mark" src="../static/logo.svg" alt="A line drawing of a cloud with a lightning bolt">
+    <h1 style="margin-top:24px">Truth or Consequences Contemporary</h1>
+    <div class="motto">A Gallery in the Middle of Nowhere</div>
+  </div>
+  <nav>
+    <a href="#">About<span>01</span></a>
+    <a href="#">Artists<span>02</span></a>
+    <a href="#">Exhibitions<span>03</span></a>
+    <a href="#">Calendar<span>04</span></a>
+    <a href="#">Etching Press<span>05</span></a>
+    <a href="#">Agile Meteor Press<span>06</span></a>
+    <a href="#">Glyphs<span>07</span></a>
+    <a href="#">Press<span>08</span></a>
+    <a href="#">Visit<span>09</span></a>
+    <a href="#">Shop<span>↗</span></a>
+  </nav>
+  <div class="foot">312 Main Ave<br>Truth or Consequences, NM 87901<br><a href="mailto:intentionallyconfusing@gmail.com">intentionallyconfusing@gmail.com</a><br><br><a href="#">Instagram</a> · <a href="#">Facebook</a> · <a href="#">YouTube</a></div>
+</aside>
+
+<main>
+  <figure class="hero-img"><img src="../static/box_prints.jpg" alt="Intaglio prints laid out around a deep red presentation box"><figcaption>Intaglio prints — Community Etching Press</figcaption></figure>
+
+  <section>
+    <div class="eyebrow">Statement</div>
+    <h2>Obsessed with the transmission of lived emotions</h2>
+    <div class="two">
+      <p>A gallery in the middle of nowhere obsessed with understanding optimal ways to use art in the transmission of lived emotions from one human being to another.</p>
+      <p>Contemporary art space focusing on experiment and experiential works. We bring cutting edge projects to life in the strange vortex which is Truth or Consequences, New Mexico. You can visit us at 312 Main Ave.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Fieldwork — Summer</div>
+    <h2>Creating and rejuvenating out in the wild</h2>
+    <p>We are in and out of the gallery this summer as we do our annual Fieldwork. Orders from the shop will ship slower than normal — please get in touch if you need a rush order.</p>
+    <div class="sig">Thank you, Jeannie &amp; Kyle</div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Recently on the walls</div>
+    <div class="two">
+      <dl>
+        <dt>May 9 – 21, 2026</dt><dd><span class="t">First Exit</span><p>NMSU BFA &amp; MFA Student Show — eighteen artists.</p></dd>
+        <dt>April 11 – May 6, 2026</dt><dd><span class="t">What Hands Do</span><p>Jeannie Ortiz — a body of new works in new mediums.</p></dd>
+      </dl>
+      <dl>
+        <dt>February 14, 2026</dt><dd><span class="t">Tatsuya Nakatani Bow Show</span><p>A one night event during Art Hop.</p></dd>
+        <dt>November 14, 2025</dt><dd><span class="t">Women of Consequences</span><p>Release party — Agile Meteor Press no. 4.</p></dd>
+      </dl>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Projects</div>
+    <div class="pills"><span>Exhibition Space</span><span>Agile Meteor Press</span><span>Workshops &amp; Education</span><span>Performance</span><span>Dance</span><span>Art Equipment</span><span>MeTeORiC Festival</span><span>Idea Idea</span><span>Printmaking</span><span>Stone Sculpture</span></div>
+  </section>
+</main>
+</div></body></html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>29 Monsoon — Truth or Consequences Contemporary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+:root{--storm:#3d4756;--dust:#c9c2b4;--paper:#eeeae2;--ink:#20242b;--muted:#7b8291;--flash:#e9d27a;
+--jost:'Jost',Futura,sans-serif;--ui:'Inter',system-ui,sans-serif;--body:'EB Garamond',Georgia,serif;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:18.5px;line-height:1.62}
+a{color:inherit;text-decoration:none}
+.w{max-width:1200px;margin:0 auto;padding:0 clamp(20px,4vw,52px)}
+
+.sky{background:linear-gradient(175deg,#2f3746 0%,#4b5666 42%,#8d8b83 78%,var(--paper) 100%);color:#ecead4;position:relative;overflow:hidden}
+.sky::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.16;
+ background:repeating-linear-gradient(102deg,rgba(255,255,255,.6) 0 1px,transparent 1px 9px)}
+.sky > *{position:relative;z-index:1}
+header{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;padding:22px 0}
+.brand{font-family:var(--ui);font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:#e8e5db}
+nav{display:flex;gap:16px;flex-wrap:wrap}
+nav a{font-family:var(--ui);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#b3b8c2}
+nav a:hover{color:var(--flash)}
+.hero{padding:clamp(60px,11vw,150px) 0 clamp(70px,12vw,170px);text-align:center}
+.hero .bolt{width:80px;margin:0 auto 30px;display:block;filter:invert(1) brightness(1.7) drop-shadow(0 0 18px rgba(233,210,122,.55))}
+h1{font-family:var(--jost);font-weight:200;font-size:clamp(2.3rem,8vw,6.4rem);line-height:.98;letter-spacing:-.035em;margin:0;color:#f4f1e8}
+.hero .motto{font-family:var(--ui);font-size:10.5px;letter-spacing:.36em;text-transform:uppercase;color:var(--flash);margin-top:26px}
+.hero p{max-width:52ch;margin:32px auto 0;font-size:1.3rem;color:#dbd8ce}
+
+section{padding:clamp(44px,7vw,92px) 0;border-top:1px solid #ddd8cc}
+.eyebrow{font-family:var(--ui);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--storm);margin-bottom:24px}
+h2{font-family:var(--jost);font-weight:200;font-size:clamp(1.7rem,4vw,2.9rem);letter-spacing:-.025em;line-height:1.12;margin:0 0 22px;max-width:22ch}
+.two{display:grid;grid-template-columns:1fr;gap:clamp(24px,4vw,56px)}
+@media(min-width:880px){.two{grid-template-columns:1fr 1fr}}
+p{margin:0 0 1em;color:#3c414a}
+figure{margin:0}figure img{width:100%;display:block}
+figcaption{font-family:var(--ui);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:11px}
+
+.rows a{display:flex;justify-content:space-between;align-items:baseline;gap:18px;padding:15px 0;border-bottom:1px solid #ddd8cc;transition:padding .25s,color .2s}
+.rows a:first-child{border-top:1px solid #ddd8cc}
+.rows .t{font-family:var(--jost);font-weight:200;font-size:clamp(1.5rem,3.4vw,2.4rem);letter-spacing:-.02em}
+.rows .d{font-family:var(--ui);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);text-align:right}
+.rows a:hover{color:var(--storm);padding-left:16px}
+
+.cta{background:var(--storm);color:#e9e6dc;border-radius:4px;padding:clamp(28px,5vw,58px);text-align:center}
+.cta h3{font-family:var(--jost);font-weight:200;font-size:clamp(1.5rem,3.4vw,2.4rem);margin:0 0 16px;letter-spacing:-.02em;color:#f2efe6}
+.cta p{color:#c3c8d1;max-width:54ch;margin:0 auto 1em}
+.cta .sig{font-family:var(--jost);font-size:1.4rem;color:var(--flash)}
+
+.pills{display:flex;flex-wrap:wrap;gap:9px}
+.pills span{border:1px solid #cdc7b9;border-radius:100px;padding:8px 16px;font-family:var(--ui);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#5c6068}
+footer{border-top:1px solid #ddd8cc;padding:clamp(38px,5vw,78px) 0 70px;display:grid;gap:26px}
+@media(min-width:760px){footer{grid-template-columns:repeat(3,1fr)}}
+footer h4{font-family:var(--ui);font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--storm);margin:0 0 12px;font-weight:600}
+footer p{margin:0;line-height:1.9;font-size:1.02rem}
+</style></head><body>
+
+<div class="sky"><div class="w">
+  <header><span class="brand">Truth or Consequences Contemporary</span>
+  <nav><a href="#">About</a><a href="#">Artists</a><a href="#">Exhibitions</a><a href="#">Calendar</a><a href="#">Etching Press</a><a href="#">A.M.P.</a><a href="#">Glyphs</a><a href="#">Press</a><a href="#">Visit</a><a href="#">Shop ↗</a></nav></header>
+  <div class="hero">
+    <img class="bolt" src="../static/logo.svg" alt="A line drawing of a cloud with a lightning bolt">
+    <h1>A Gallery in the<br>Middle of Nowhere</h1>
+    <div class="motto">Art in the Oasis · 312 Main Ave · New Mexico</div>
+    <p>Obsessed with understanding optimal ways to use art in the transmission of lived emotions from one human being to another.</p>
+  </div>
+</div></div>
+
+<div class="w">
+<section>
+  <div class="eyebrow">Monsoon</div>
+  <div class="two">
+    <div>
+      <h2>The season that brings the desert to life</h2>
+      <p>In celebration of the monsoon season — which brings the desert to life and sustains it through the year — we installed a new art signage piece on the facade, paying homage to that lineage.</p>
+      <p>Kyle was struck by lightning while Jeannie belayed him rock climbing. That dramatic and life changing moment is now memorialized on our facade — a gift to our historic Main Street district, and a welcome reminder that rebuilding our old buildings is the lightning helping to catalyze the formation of a strong and robust community.</p>
+    </div>
+    <figure><img src="../static/box_prints.jpg" alt="Intaglio prints around a deep red presentation box"><figcaption>Intaglio prints — Community Etching Press</figcaption></figure>
+  </div>
+</section>
+
+<section>
+  <div class="cta">
+    <h3>Fieldwork — Summer</h3>
+    <p>We are in and out of the gallery this summer as we do our annual Fieldwork — creating and rejuvenating out in the wild. Orders from the shop will ship slower than normal — please get in touch if you need a rush order.</p>
+    <div class="sig">Jeannie &amp; Kyle</div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Here</div>
+  <div class="rows">
+    <a href="#"><span class="t">About</span><span class="d">Who we are</span></a>
+    <a href="#"><span class="t">Artists</span><span class="d">The people we show</span></a>
+    <a href="#"><span class="t">Exhibitions</span><span class="d">On the walls</span></a>
+    <a href="#"><span class="t">Calendar</span><span class="d">Openings · Art hops</span></a>
+    <a href="#"><span class="t">Etching Press</span><span class="d">Press time · Pricing</span></a>
+    <a href="#"><span class="t">Agile Meteor Press</span><span class="d">The imprint</span></a>
+    <a href="#"><span class="t">Glyphs</span><span class="d">Leave your mark</span></a>
+    <a href="#"><span class="t">Press</span><span class="d">Written about us</span></a>
+    <a href="#"><span class="t">Visit</span><span class="d">312 Main Ave</span></a>
+    <a href="#"><span class="t">Shop</span><span class="d">Buy the work</span></a>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Projects</div>
+  <div class="pills"><span>Exhibition Space</span><span>Agile Meteor Press</span><span>Workshops &amp; Education</span><span>Performance</span><span>Dance</span><span>Art Equipment</span><span>MeTeORiC Festival</span><span>Idea Idea</span><span>Printmaking</span><span>Stone Sculpture</span></div>
+</section>
+
+<footer>
+  <div><h4>Gallery</h4><p>312 Main Ave<br>Truth or Consequences, NM 87901<br><a href="mailto:intentionallyconfusing@gmail.com">intentionallyconfusing@gmail.com</a></p></div>
+  <div><h4>Elsewhere</h4><p><a href="#">shop.torc.art</a><br><a href="#">amp.torc.art</a><br><a href="#">Instagram · Facebook · YouTube</a></p></div>
+  <div><h4>Artists</h4><p><a href="#">jeannieortiz.com</a><br><a href="#">kyleparkercunningham.com</a><br><a href="#">intentionallyconfusing.com</a></p></div>
+</footer>
+</div></body></html>

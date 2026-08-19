@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>18 Blueprint — Truth or Consequences Contemporary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f2f4f3;--ink:#16232b;--cyan:#2c7c93;--grid:rgba(44,124,147,.16);--muted:#71858d;
+--jost:'Jost',Futura,sans-serif;--ui:'Inter',system-ui,sans-serif;--body:'EB Garamond',Georgia,serif;
+--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.6;
+ background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+ background-size:28px 28px}
+a{color:inherit;text-decoration:none}
+.sheet{max-width:1240px;margin:26px auto;background:rgba(242,244,243,.92);border:2px solid var(--cyan);padding:0}
+.inner{border:1px solid var(--cyan);margin:8px;padding:clamp(18px,3vw,40px)}
+
+.titleblock{display:grid;grid-template-columns:1fr;gap:0;border:1px solid var(--cyan);margin-bottom:26px}
+@media(min-width:820px){.titleblock{grid-template-columns:2fr 1fr 1fr}}
+.titleblock > div{padding:14px 16px;border-left:1px solid var(--cyan)}
+.titleblock > div:first-child{border-left:none}
+.tb-k{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);margin-bottom:5px}
+.tb-v{font-family:var(--jost);font-size:1.15rem;font-weight:400}
+
+nav{display:flex;flex-wrap:wrap;gap:0 16px;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+ padding:10px 0;border-bottom:1px solid var(--cyan);margin-bottom:clamp(30px,5vw,60px)}
+nav a{color:var(--muted)}nav a:hover{color:var(--cyan)}
+
+h1{font-family:var(--jost);font-weight:300;font-size:clamp(2rem,6.4vw,5.2rem);line-height:.98;letter-spacing:-.03em;margin:0 0 .2em}
+.motto{font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--cyan);margin-bottom:34px}
+
+.dim{position:relative;padding:0 0 0 0;margin:clamp(28px,4vw,54px) 0}
+.dim::before{content:"";position:absolute;left:0;right:0;top:-14px;border-top:1px solid var(--cyan)}
+.dim::after{content:"";position:absolute;left:0;top:-19px;width:1px;height:11px;background:var(--cyan)}
+
+.two{display:grid;grid-template-columns:1fr;gap:clamp(24px,4vw,48px)}
+@media(min-width:880px){.two{grid-template-columns:1.2fr .8fr}}
+h2{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);margin:0 0 14px}
+p{margin:0 0 1em}
+
+figure{margin:0;border:1px solid var(--cyan);padding:8px;background:rgba(255,255,255,.55)}
+figure img{width:100%;display:block;filter:grayscale(.65) contrast(1.05)}
+figcaption{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+
+.specs{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:11.5px}
+.specs td{padding:8px 10px;border:1px solid rgba(44,124,147,.35);vertical-align:top}
+.specs td:first-child{color:var(--cyan);text-transform:uppercase;letter-spacing:.08em;width:38%}
+
+.plan{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:0;border:1px solid var(--cyan);margin-top:14px}
+.plan a{padding:20px 16px;border-right:1px solid rgba(44,124,147,.35);border-bottom:1px solid rgba(44,124,147,.35);
+ min-height:104px;display:flex;flex-direction:column;justify-content:space-between;transition:background .2s}
+.plan a:hover{background:rgba(44,124,147,.12)}
+.plan .n{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;color:var(--cyan)}
+.plan .t{font-family:var(--jost);font-size:1.4rem;font-weight:400;letter-spacing:-.015em;line-height:1.06}
+
+.callout{border:1px dashed var(--cyan);padding:20px 22px;margin:clamp(28px,4vw,50px) 0}
+.callout .t{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);margin-bottom:10px}
+.callout .sig{font-family:var(--jost);font-size:1.35rem;margin-top:8px}
+
+footer{margin-top:clamp(30px,4vw,54px);border-top:1px solid var(--cyan);padding-top:16px;
+ font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
+ display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;line-height:2}
+footer a:hover{color:var(--cyan)}
+</style></head><body>
+<div class="sheet"><div class="inner">
+
+<div class="titleblock">
+  <div><div class="tb-k">Project</div><div class="tb-v">Truth or Consequences Contemporary</div></div>
+  <div><div class="tb-k">Location</div><div class="tb-v">312 Main Ave, TorC NM</div></div>
+  <div><div class="tb-k">Sheet</div><div class="tb-v">A-01 · Index</div></div>
+</div>
+
+<nav><a href="#">home</a><a href="#">about</a><a href="#">artists</a><a href="#">exhibitions</a><a href="#">calendar</a><a href="#">etching-press</a><a href="#">agile-meteor-press</a><a href="#">glyphs</a><a href="#">press</a><a href="#">visit</a><a href="#">shop</a></nav>
+
+<h1>A Gallery in the<br>Middle of Nowhere</h1>
+<div class="motto">Art in the Oasis — Contemporary Art Space</div>
+
+<div class="dim"></div>
+
+<div class="two">
+  <div>
+    <h2>01 — Program</h2>
+    <p>A gallery in the middle of nowhere obsessed with understanding optimal ways to use art in the transmission of lived emotions from one human being to another.</p>
+    <p>Contemporary art space focusing on experiment and experiential works. We bring cutting edge projects to life in the strange vortex which is Truth or Consequences, New Mexico.</p>
+    <figure style="margin-top:20px"><img src="../static/box_prints.jpg" alt="Intaglio prints around a deep red presentation box"><figcaption>Detail 1/1 — intaglio prints, community etching press</figcaption></figure>
+  </div>
+  <div>
+    <h2>02 — Specifications</h2>
+    <table class="specs">
+      <tr><td>Address</td><td>312 Main Ave, Truth or Consequences, NM 87901</td></tr>
+      <tr><td>Structure</td><td>Luchini Electric Building, 1916. Built like a proverbial tank.</td></tr>
+      <tr><td>Site</td><td>Rio Grande banks, Greater Gila foothills</td></tr>
+      <tr><td>Principals</td><td>Jeannie Ortiz &amp; Kyle Parker Cunningham</td></tr>
+      <tr><td>Imprint</td><td>Agile Meteor Press</td></tr>
+      <tr><td>Equipment</td><td>Community etching press; intaglio and bookbinding</td></tr>
+      <tr><td>Media</td><td>Handloom, sculpture, intaglio, painting, printmaking, art clothing, adornment, knives, books</td></tr>
+      <tr><td>Status</td><td>Summer Fieldwork — in and out of the gallery</td></tr>
+    </table>
+
+    <div class="callout">
+      <div class="t">Field note</div>
+      We are in and out of the gallery this summer as we do our annual Fieldwork — creating and rejuvenating out in the wild. Orders from the shop will ship slower than normal.
+      <div class="sig">Jeannie &amp; Kyle</div>
+    </div>
+  </div>
+</div>
+
+<div class="dim"></div>
+<h2>03 — Plan of sections</h2>
+<div class="plan">
+  <a href="#"><span class="n">A-02</span><span class="t">About</span></a>
+  <a href="#"><span class="n">A-03</span><span class="t">Artists</span></a>
+  <a href="#"><span class="n">A-04</span><span class="t">Exhibitions</span></a>
+  <a href="#"><span class="n">A-05</span><span class="t">Calendar</span></a>
+  <a href="#"><span class="n">A-06</span><span class="t">Etching Press</span></a>
+  <a href="#"><span class="n">A-07</span><span class="t">Agile Meteor Press</span></a>
+  <a href="#"><span class="n">A-08</span><span class="t">Glyphs</span></a>
+  <a href="#"><span class="n">A-09</span><span class="t">Press</span></a>
+  <a href="#"><span class="n">A-10</span><span class="t">Visit</span></a>
+  <a href="#"><span class="n">A-11</span><span class="t">Shop</span></a>
+</div>
+
+<div class="dim"></div>
+<h2>04 — Schedule of press rates</h2>
+<table class="specs">
+  <tr><td>Orientation Program</td><td>$40 — two hours, required before solo use</td></tr>
+  <tr><td>Open Printing Session</td><td>$25 per 2 hr session · $40 for both in a day</td></tr>
+  <tr><td>Private Press Time</td><td>$20 per hour, weekdays by availability</td></tr>
+  <tr><td>Private Classes</td><td>$40 per hour</td></tr>
+  <tr><td>Scribe points</td><td>$25 · plates from $0.75 · paper from $0.50 · wiping cloth $10</td></tr>
+  <tr><td>Ink</td><td>Water soluble only. Akua Intaglio unless pre-approved.</td></tr>
+</table>
+
+<footer>
+  <span>TRUTH OR CONSEQUENCES CONTEMPORARY · <a href="mailto:intentionallyconfusing@gmail.com">intentionallyconfusing@gmail.com</a></span>
+  <span><a href="#">shop.torc.art</a> · <a href="#">amp.torc.art</a> · <a href="#">instagram</a> · <a href="#">facebook</a> · <a href="#">youtube</a></span>
+</footer>
+</div></div></body></html>

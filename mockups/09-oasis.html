@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>09 Oasis — Truth or Consequences Contemporary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+:root{--sky:#dfeef0;--water:#79b4b7;--deep:#1d4b52;--sand:#f4ece0;--ink:#17322f;--muted:#5f8383;
+--jost:'Jost',Futura,sans-serif;--ui:'Inter',system-ui,sans-serif;--body:'EB Garamond',Georgia,serif;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--sand);color:var(--ink);font-family:var(--body);font-size:18.5px;line-height:1.65}
+a{color:inherit;text-decoration:none}
+.w{max-width:1180px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+
+.top{background:linear-gradient(180deg,var(--sky) 0%,#eef4ec 55%,var(--sand) 100%);padding-bottom:clamp(50px,8vw,110px)}
+header{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;padding:22px 0}
+.brand{font-family:var(--ui);font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;font-weight:500;color:var(--deep)}
+nav{display:flex;gap:16px;flex-wrap:wrap}
+nav a{font-family:var(--ui);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
+nav a:hover{color:var(--deep)}
+
+.hero{text-align:center;padding:clamp(46px,8vw,100px) 0 0}
+.hero h1{font-family:var(--jost);font-weight:200;font-size:clamp(2.4rem,8.4vw,7rem);line-height:.95;letter-spacing:-.035em;margin:0;color:var(--deep)}
+.hero h1 em{font-style:italic;font-family:var(--body);font-weight:400}
+.hero .motto{font-family:var(--ui);font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--water);margin-top:24px}
+.hero p{max-width:54ch;margin:34px auto 0;font-size:1.32rem;color:#2c5450}
+.wave{display:block;width:100%;height:auto;margin-top:clamp(30px,5vw,60px)}
+
+section{padding:clamp(44px,7vw,92px) 0}
+.eyebrow{font-family:var(--ui);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--water);margin-bottom:22px;text-align:center}
+h2{font-family:var(--jost);font-weight:200;font-size:clamp(1.8rem,4.4vw,3.2rem);letter-spacing:-.025em;text-align:center;margin:0 auto 34px;max-width:22ch;color:var(--deep);line-height:1.12}
+.two{display:grid;grid-template-columns:1fr;gap:clamp(26px,4vw,58px);align-items:center}
+@media(min-width:880px){.two{grid-template-columns:1fr 1fr}}
+.two p{margin:0 0 1em;color:#31544f}
+figure{margin:0}figure img{width:100%;display:block;border-radius:200px 200px 8px 8px;box-shadow:0 22px 60px rgba(29,75,82,.2)}
+figcaption{font-family:var(--ui);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:12px;text-align:center}
+
+.arches{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.arches a{background:#fff;border-radius:110px 110px 6px 6px;padding:38px 22px 26px;text-align:center;
+ box-shadow:0 2px 4px rgba(29,75,82,.06),0 14px 34px rgba(29,75,82,.09);transition:transform .28s,box-shadow .28s}
+.arches a:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(29,75,82,.18)}
+.arches .t{font-family:var(--jost);font-size:1.5rem;font-weight:300;color:var(--deep);letter-spacing:-.01em}
+.arches .d{font-size:.98rem;color:var(--muted);margin-top:8px;line-height:1.4}
+
+.band{background:var(--deep);color:#e6f1ef;border-radius:10px;padding:clamp(30px,5vw,64px);text-align:center;margin:0 auto}
+.band h3{font-family:var(--jost);font-weight:200;font-size:clamp(1.6rem,3.6vw,2.6rem);margin:0 0 18px;letter-spacing:-.02em}
+.band p{max-width:52ch;margin:0 auto 1em;color:#bcd6d3}
+.band .sig{font-family:var(--jost);font-size:1.4rem;color:#fff}
+
+.pills{display:flex;flex-wrap:wrap;gap:9px;justify-content:center}
+.pills span{background:#fff;border-radius:100px;padding:9px 17px;font-family:var(--ui);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--deep);box-shadow:0 2px 8px rgba(29,75,82,.08)}
+
+footer{background:var(--sky);padding:clamp(40px,6vw,80px) 0 60px;margin-top:clamp(40px,6vw,80px)}
+.fgrid{display:grid;gap:26px}
+@media(min-width:760px){.fgrid{grid-template-columns:repeat(3,1fr)}}
+.fgrid h4{font-family:var(--ui);font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--water);margin:0 0 12px;font-weight:600}
+.fgrid p{margin:0;color:#2d514d;line-height:1.85;font-size:1.02rem}
+</style></head><body>
+
+<div class="top">
+<div class="w">
+  <header><span class="brand">Truth or Consequences Contemporary</span>
+  <nav><a href="#">About</a><a href="#">Artists</a><a href="#">Exhibitions</a><a href="#">Calendar</a><a href="#">Etching Press</a><a href="#">A.M.P.</a><a href="#">Glyphs</a><a href="#">Press</a><a href="#">Visit</a><a href="#">Shop ↗</a></nav></header>
+  <div class="hero">
+    <h1>Art in the <em>Oasis</em></h1>
+    <div class="motto">A Gallery in the Middle of Nowhere</div>
+    <p>A contemporary art space obsessed with understanding optimal ways to use art in the transmission of lived emotions from one human being to another.</p>
+  </div>
+</div>
+<svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,50 C180,90 360,10 560,42 C760,74 900,20 1100,44 C1260,63 1360,50 1440,38 L1440,90 L0,90 Z" fill="#f4ece0"/></svg>
+</div>
+
+<div class="w">
+<section>
+  <div class="eyebrow">Statement</div>
+  <h2>Experiment and experiential works, in a strange vortex</h2>
+  <div class="two">
+    <figure><img src="../static/box_prints.jpg" alt="Intaglio prints around a deep red presentation box"><figcaption>Community Etching Press — intaglio prints</figcaption></figure>
+    <div>
+      <p>We bring cutting edge projects to life in the strange vortex which is Truth or Consequences, New Mexico. You can visit us at 312 Main Ave.</p>
+      <p>We are on the historic Main Street of a small desert town on the banks of the Rio Grande, in the foothills of the Greater Gila region.</p>
+      <p>The gallery holds a standing selection of handloom, sculpture, intaglio, painting, printmaking, art clothing, adornment and knives, alongside books from Agile Meteor Press.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="band">
+    <h3>Fieldwork</h3>
+    <p>We are in and out of the gallery this summer as we do our annual Fieldwork — creating and rejuvenating out in the wild. Orders from the shop will ship slower than normal — please get in touch if you need a rush order.</p>
+    <div class="sig">Jeannie &amp; Kyle</div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Here</div>
+  <div class="arches">
+    <a href="#"><div class="t">About</div><div class="d">Who we are and how we got here</div></a>
+    <a href="#"><div class="t">Artists</div><div class="d">The people we show</div></a>
+    <a href="#"><div class="t">Exhibitions</div><div class="d">What is and was on the walls</div></a>
+    <a href="#"><div class="t">Calendar</div><div class="d">Openings, art hops, performances</div></a>
+    <a href="#"><div class="t">Etching Press</div><div class="d">Press time, orientation, pricing</div></a>
+    <a href="#"><div class="t">Agile Meteor Press</div><div class="d">Our publishing imprint</div></a>
+    <a href="#"><div class="t">Glyphs</div><div class="d">Leave your mark on Main Street</div></a>
+    <a href="#"><div class="t">Press</div><div class="d">What has been written about us</div></a>
+    <a href="#"><div class="t">Visit</div><div class="d">Where we are and how to reach us</div></a>
+    <a href="#"><div class="t">Shop</div><div class="d">Buy the work</div></a>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Projects</div>
+  <div class="pills"><span>Exhibition Space</span><span>Agile Meteor Press</span><span>Workshops &amp; Education</span><span>Performance</span><span>Dance</span><span>Art Equipment</span><span>MeTeORiC Festival</span><span>Idea Idea</span><span>Printmaking</span><span>Stone Sculpture</span></div>
+</section>
+</div>
+
+<footer><div class="w"><div class="fgrid">
+  <div><h4>Gallery</h4><p>312 Main Ave<br>Truth or Consequences, NM 87901<br><a href="mailto:intentionallyconfusing@gmail.com">intentionallyconfusing@gmail.com</a></p></div>
+  <div><h4>Elsewhere</h4><p><a href="#">shop.torc.art</a><br><a href="#">amp.torc.art</a><br><a href="#">Instagram · Facebook · YouTube</a></p></div>
+  <div><h4>Artists</h4><p><a href="#">jeannieortiz.com</a><br><a href="#">kyleparkercunningham.com</a><br><a href="#">intentionallyconfusing.com</a></p></div>
+</div></div></footer>
+</body></html>
