@@ -62,6 +62,16 @@ a separate step from building it.
 | 33 | Concrete | Concrete poetry — title broken across a stepped typographic field |
 | 34 | Sun Bleached | Warm bleached gradient, soft sun disc, offset rose shadows |
 
+## How to look at these
+
+`index.html` is the contact sheet — all thirty-four with thumbnails and a filter
+by temperament. The thumbnails in `thumbs/` are the top 1440×900 of each page,
+rendered from the files themselves; they are generated output, not hand-made, so
+regenerate them if you edit a design.
+
+Every design was rendered in Chromium at 1440, 768 and 390 px and checked for
+horizontal overflow. All thirty-four are clean at all three.
+
 ## Notes on choosing
 
 A few are close cousins and probably shouldn't both survive: 01/15/19 are three
@@ -69,3 +79,11 @@ temperatures of the same restraint; 03/26/31 are three kinds of editorial; 09,
 10, 34 all work the desert palette; 04, 17, 22 are the dark options.
 
 Motion in 12, 25 and 32 respects `prefers-reduced-motion`.
+
+## Before any of this ships
+
+Two mockups carry text that is not from `content/`: **11 Index** prints a
+coordinates/elevation block, and **18 Blueprint** repeats the same location
+facts in its specification table. Those numbers were written to give the layout
+something to hold. Check them against a real source before they go anywhere
+near production.

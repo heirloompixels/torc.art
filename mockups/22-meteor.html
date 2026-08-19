@@ -7,7 +7,8 @@
 :root{--void:#07070c;--panel:#0e0e16;--paper:#e9e7e0;--muted:#7d7b8c;--flare:#e8b04b;
 --jost:'Jost',Futura,sans-serif;--ui:'Inter',system-ui,sans-serif;--body:'EB Garamond',Georgia,serif;}
 *{box-sizing:border-box}
-body{margin:0;background:var(--void);color:var(--paper);font-family:var(--body);font-size:18.5px;line-height:1.65;overflow-x:hidden}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--void);color:var(--paper);font-family:var(--body);font-size:18.5px;line-height:1.65}
 a{color:inherit;text-decoration:none}
 .stars{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.55;
  background-image:radial-gradient(1px 1px at 12% 18%,#fff,transparent),radial-gradient(1px 1px at 47% 9%,#fff,transparent),

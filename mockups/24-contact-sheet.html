@@ -17,8 +17,8 @@ header .b{color:var(--mark)}
 nav{display:flex;gap:15px;flex-wrap:wrap}nav a:hover{color:var(--paper)}
 
 .sheet{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:2px;background:#2a2a28;border:2px solid #2a2a28;margin:18px 0}
-.frame{background:var(--cell);position:relative;aspect-ratio:4/3;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;
- padding:14px;transition:background .25s}
+.frame{background:var(--cell);position:relative;min-height:230px;height:100%;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;
+ padding:22px 14px;transition:background .25s}
 .frame:hover{background:#282826}
 .frame .edge{position:absolute;left:0;right:0;top:0;height:14px;
  background:repeating-linear-gradient(90deg,#2a2a28 0 6px,transparent 6px 14px)}
@@ -30,7 +30,7 @@ nav{display:flex;gap:15px;flex-wrap:wrap}nav a:hover{color:var(--paper)}
 .frame.img img{width:100%;height:100%;object-fit:cover;display:block;opacity:.86}
 .frame.img .cap{position:absolute;left:14px;bottom:20px;font-family:var(--ui);font-size:9px;letter-spacing:.14em;
  text-transform:uppercase;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.8)}
-.frame.txt{aspect-ratio:auto;justify-content:flex-start;padding:22px 18px}
+.frame.txt{justify-content:flex-start;padding:26px 18px}
 .frame.txt h1{font-family:var(--jost);font-weight:200;font-size:clamp(1.5rem,3vw,2.4rem);line-height:1;letter-spacing:-.03em;margin:0 0 12px}
 .frame.txt p{margin:0 0 .8em;font-size:1rem;color:#c3c0b8}
 .frame.txt .motto{font-family:var(--ui);font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--mark)}

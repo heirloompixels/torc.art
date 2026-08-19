@@ -7,7 +7,8 @@
 :root{--paper:#f4f3ef;--ink:#131312;--muted:#86847d;--accent:#c2452a;
 --jost:'Jost',Futura,sans-serif;--ui:'Inter',system-ui,sans-serif;--body:'EB Garamond',Georgia,serif;}
 *{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.58;overflow-x:hidden}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.58}
 a{color:inherit;text-decoration:none}
 .w{max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,52px)}
 header{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:18px 0;

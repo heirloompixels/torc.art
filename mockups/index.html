@@ -28,12 +28,10 @@ h1{font-family:var(--jost);font-weight:200;font-size:clamp(1.9rem,5.4vw,4rem);li
 
 .sheet{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:clamp(18px,2.4vw,34px);padding:clamp(24px,3vw,44px) 0}
 .card{display:block}
-.thumb{position:relative;width:100%;aspect-ratio:4/3;overflow:hidden;background:#fff;
+.thumb{position:relative;width:100%;aspect-ratio:1440/900;overflow:hidden;background:#fff;
  border:1px solid var(--rule);transition:border-color .2s,box-shadow .25s,transform .25s}
 .card:hover .thumb{border-color:var(--ink);box-shadow:0 16px 40px rgba(40,35,25,.16);transform:translateY(-3px)}
-.thumb iframe{position:absolute;top:0;left:0;width:1440px;height:1080px;border:0;
- transform:scale(.28);transform-origin:0 0;pointer-events:none}
-.thumb .veil{position:absolute;inset:0}
+.thumb img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
 .meta{display:flex;justify-content:space-between;gap:12px;align-items:baseline;margin-top:12px}
 .meta .n{font-family:var(--ui);font-size:10px;letter-spacing:.16em;color:var(--muted)}
 .meta .t{font-family:var(--jost);font-weight:300;font-size:1.4rem;letter-spacing:-.015em}
@@ -52,6 +50,7 @@ footer{border-top:1px solid var(--ink);padding:26px 0 70px;font-family:var(--ui)
   <h1>Design Mockups</h1>
   <div class="sub">Truth or Consequences Contemporary · 34 directions</div>
   <p class="intro">Thirty-four homepage designs built from the real site content, each using the site's three typefaces — Jost for display, Inter for interface, EB Garamond for reading. Click any thumbnail to open the full page. Filter by temperament below.</p>
+  <p class="intro" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:14px">Thumbnails show the top of each page at 1440&nbsp;px. Open a design to see it whole.</p>
 </header>
 
 <div class="bar" id="bar">
@@ -109,7 +108,7 @@ const items = [
 const sheet = document.getElementById('sheet');
 sheet.innerHTML = items.map(([n,slug,title,note,tags]) => `
  <a class="card" data-tags="${tags}" href="${n}-${slug}.html">
-  <div class="thumb"><iframe src="${n}-${slug}.html" loading="lazy" title="${title}" scrolling="no" tabindex="-1"></iframe><span class="veil"></span></div>
+  <div class="thumb"><img src="thumbs/${n}-${slug}.jpg" loading="lazy" decoding="async" alt="${title} — homepage design"></div>
   <div class="meta"><span class="t">${title}</span><span class="n">${n}</span></div>
   <div class="note">${note}</div>
   <div class="tags">${tags.split(' ').join(' · ')}</div>

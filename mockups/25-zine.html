@@ -7,6 +7,7 @@
 :root{--stock:#e9e7df;--ink:#0d0d0c;--hi:#111;--muted:#6b6a64;
 --jost:'Jost',Futura,sans-serif;--ui:'Inter',system-ui,sans-serif;--body:'EB Garamond',Georgia,serif;}
 *{box-sizing:border-box}
+html,body{overflow-x:clip}
 body{margin:0;background:var(--stock);color:var(--ink);font-family:var(--body);font-size:17.5px;line-height:1.5;
  background-image:radial-gradient(rgba(0,0,0,.05) .6px,transparent .6px);background-size:2.4px 2.4px}
 a{color:inherit;text-decoration:none}
@@ -46,7 +47,7 @@ p{margin:0 0 .85em}
  display:block;color:var(--muted);margin-top:1px}
 .list a:hover em{color:#b9b8b2}
 
-.marq{border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);padding:8px 0;overflow:hidden;white-space:nowrap;
+.marq{font-variant-emoji:text;border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);padding:8px 0;overflow:hidden;white-space:nowrap;
  font-family:var(--ui);font-weight:800;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;margin-bottom:16px}
 .marq div{display:inline-block;animation:s 30s linear infinite}
 @keyframes s{from{transform:translateX(0)}to{transform:translateX(-50%)}}
@@ -65,7 +66,7 @@ footer{border:3px solid var(--ink);padding:18px;margin-bottom:40px;font-family:v
   <p>Obsessed with understanding optimal ways to use art in the transmission of lived emotions from one human being to another.</p>
 </div>
 
-<div class="marq"><div>★ Contemporary art space focusing on experiment and experiential works ★ Cutting edge projects in the strange vortex which is Truth or Consequences ★ Contemporary art space focusing on experiment and experiential works ★ Cutting edge projects in the strange vortex which is Truth or Consequences ★ </div></div>
+<div class="marq"><div>★︎ Contemporary art space focusing on experiment and experiential works ★︎ Cutting edge projects in the strange vortex which is Truth or Consequences ★︎ Contemporary art space focusing on experiment and experiential works ★︎ Cutting edge projects in the strange vortex which is Truth or Consequences ★︎ </div></div>
 
 <div class="two a">
   <div><img class="xerox" src="../static/box_prints.jpg" alt="Intaglio prints around a deep red presentation box"></div>
