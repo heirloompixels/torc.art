@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>23 Bauhaus — Truth or Consequences Contemporary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f2efe9;--ink:#111;--red:#d8412f;--blue:#1f4fa8;--yellow:#f2c230;--muted:#7d7a74;
+--jost:'Jost',Futura,sans-serif;--ui:'Inter',system-ui,sans-serif;--body:'EB Garamond',Georgia,serif;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.58}
+a{color:inherit;text-decoration:none}
+.w{max-width:1280px;margin:0 auto;padding:0 clamp(16px,3vw,36px)}
+header{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:18px 0;border-bottom:3px solid var(--ink)}
+.brand{font-family:var(--jost);font-weight:500;text-transform:uppercase;letter-spacing:.06em;font-size:.95rem}
+nav{display:flex;gap:15px;flex-wrap:wrap}
+nav a{font-family:var(--ui);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+nav a:hover{color:var(--red)}
+
+.mosaic{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:minmax(88px,auto);gap:0;border-bottom:3px solid var(--ink)}
+.mosaic > *{border-right:3px solid var(--ink);border-bottom:3px solid var(--ink);padding:clamp(16px,2.4vw,30px);display:flex;flex-direction:column;justify-content:flex-end;grid-column:span 6}
+@media(min-width:860px){
+ .m-title{grid-column:span 4;grid-row:span 3}
+ .m-red{grid-column:span 2;grid-row:span 2}
+ .m-circle{grid-column:span 2}
+ .m-blue{grid-column:span 2;grid-row:span 2}
+ .m-txt{grid-column:span 2}
+ .m-img{grid-column:span 2;grid-row:span 2}
+ .m-yellow{grid-column:span 2}
+ .m-quote{grid-column:span 4}
+}
+.m-title{background:var(--paper)}
+.m-title h1{font-family:var(--jost);font-weight:500;text-transform:uppercase;font-size:clamp(1.9rem,6.4vw,4.6rem);line-height:.9;letter-spacing:-.02em;margin:0}
+.m-title .motto{font-family:var(--ui);font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);margin-top:16px}
+.m-red{background:var(--red);color:#fff;justify-content:space-between}
+.m-red .t{font-family:var(--jost);font-weight:400;font-size:clamp(1.2rem,2.4vw,1.9rem);text-transform:uppercase;line-height:1.05}
+.m-red .k{font-family:var(--ui);font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;opacity:.85}
+.m-blue{background:var(--blue);color:#fff;justify-content:space-between}
+.m-blue .t{font-family:var(--jost);font-weight:400;font-size:clamp(1.1rem,2.2vw,1.65rem);text-transform:uppercase;line-height:1.1}
+.m-blue p{font-size:.98rem;margin:8px 0 0;color:#dbe4f7}
+.m-yellow{background:var(--yellow);justify-content:space-between}
+.m-yellow .t{font-family:var(--jost);font-weight:500;font-size:clamp(1.1rem,2.2vw,1.7rem);text-transform:uppercase}
+.m-circle{background:var(--paper);align-items:center;justify-content:center;padding:14px}
+.m-circle svg{width:100%;height:auto;max-height:150px}
+.m-img{padding:0;overflow:hidden}
+.m-img img{width:100%;height:100%;object-fit:cover;display:block;min-height:180px}
+.m-txt{background:var(--paper)}
+.m-txt p{margin:0;font-size:1.02rem}
+.m-quote{background:var(--ink);color:var(--paper)}
+.m-quote p{font-family:var(--jost);font-weight:300;font-size:clamp(1.1rem,2.4vw,1.9rem);line-height:1.22;margin:0;letter-spacing:-.01em}
+
+.strip{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:0;border-bottom:3px solid var(--ink)}
+.strip a{border-right:3px solid var(--ink);padding:22px 16px;min-height:118px;display:flex;flex-direction:column;justify-content:space-between;transition:background .2s,color .2s}
+.strip a:nth-child(3n+1):hover{background:var(--red);color:#fff}
+.strip a:nth-child(3n+2):hover{background:var(--blue);color:#fff}
+.strip a:nth-child(3n):hover{background:var(--yellow)}
+.strip .n{font-family:var(--ui);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:inherit;opacity:.6}
+.strip .t{font-family:var(--jost);font-weight:500;text-transform:uppercase;font-size:1.2rem;line-height:1.05;letter-spacing:-.01em}
+
+.band{padding:clamp(28px,4vw,58px) 0;border-bottom:3px solid var(--ink);display:grid;grid-template-columns:1fr;gap:28px}
+@media(min-width:840px){.band{grid-template-columns:1fr 1fr}}
+h2{font-family:var(--jost);font-weight:500;text-transform:uppercase;font-size:1.1rem;letter-spacing:.08em;margin:0 0 12px}
+p{margin:0 0 .9em}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{font-family:var(--ui);font-size:10px;letter-spacing:.14em;text-transform:uppercase;border:2px solid var(--ink);padding:6px 12px}
+footer{padding:24px 0 60px;font-family:var(--ui);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);line-height:2.2}
+footer a:hover{color:var(--red)}
+</style></head><body><div class="w">
+
+<header><span class="brand">TorC Contemporary</span>
+<nav><a href="#">About</a><a href="#">Artists</a><a href="#">Exhibitions</a><a href="#">Calendar</a><a href="#">Etching Press</a><a href="#">A.M.P.</a><a href="#">Glyphs</a><a href="#">Press</a><a href="#">Visit</a><a href="#">Shop</a></nav></header>
+
+<div class="mosaic">
+  <div class="m-title"><h1>Truth or<br>Consequences<br>Contemporary</h1><div class="motto">A Gallery in the Middle of Nowhere</div></div>
+  <div class="m-red"><span class="k">Now</span><span class="t">Summer<br>Fieldwork</span></div>
+  <div class="m-circle"><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="52" fill="none" stroke="#111" stroke-width="4"/><path d="M60 8 A52 52 0 0 1 60 112 Z" fill="#1f4fa8"/><rect x="52" y="52" width="16" height="16" fill="#f2c230"/></svg></div>
+  <div class="m-blue"><span class="t">312 Main Ave</span><p>Truth or Consequences, New Mexico 87901. Luchini Electric Building, standing since 1916.</p></div>
+  <div class="m-txt"><p>Contemporary art space focusing on experiment and experiential works.</p></div>
+  <div class="m-img"><img src="../static/box_prints.jpg" alt="Intaglio prints around a deep red presentation box"></div>
+  <div class="m-yellow"><span class="t">Community<br>Etching Press</span><span style="font-family:var(--ui);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;margin-top:10px">Saturdays 11–1 · 2–4</span></div>
+  <div class="m-quote"><p>Obsessed with understanding optimal ways to use art in the transmission of lived emotions from one human being to another.</p></div>
+</div>
+
+<div class="strip">
+  <a href="#"><span class="n">01</span><span class="t">About</span></a>
+  <a href="#"><span class="n">02</span><span class="t">Artists</span></a>
+  <a href="#"><span class="n">03</span><span class="t">Exhibitions</span></a>
+  <a href="#"><span class="n">04</span><span class="t">Calendar</span></a>
+  <a href="#"><span class="n">05</span><span class="t">Etching Press</span></a>
+  <a href="#"><span class="n">06</span><span class="t">A.M.P.</span></a>
+  <a href="#"><span class="n">07</span><span class="t">Glyphs</span></a>
+  <a href="#"><span class="n">08</span><span class="t">Press</span></a>
+  <a href="#"><span class="n">09</span><span class="t">Visit</span></a>
+  <a href="#"><span class="n">10</span><span class="t">Shop</span></a>
+</div>
+
+<div class="band">
+  <div><h2>Fieldwork</h2>
+  <p>We are in and out of the gallery this summer as we do our annual Fieldwork — creating and rejuvenating out in the wild. Orders from the shop will ship slower than normal — please get in touch if you need a rush order.</p>
+  <p style="font-family:var(--jost);text-transform:uppercase;letter-spacing:.06em;font-size:1.2rem">Jeannie &amp; Kyle</p></div>
+  <div><h2>Projects</h2>
+  <div class="chips"><span>Exhibition Space</span><span>Agile Meteor Press</span><span>Workshops &amp; Education</span><span>Performance</span><span>Dance</span><span>Art Equipment</span><span>MeTeORiC Festival</span><span>Idea Idea</span><span>Printmaking</span><span>Stone Sculpture</span></div></div>
+</div>
+
+<footer>312 Main Ave · Truth or Consequences · NM 87901 · <a href="mailto:intentionallyconfusing@gmail.com">intentionallyconfusing@gmail.com</a><br>
+<a href="#">shop</a> · <a href="#">agile meteor press</a> · <a href="#">instagram</a> · <a href="#">facebook</a> · <a href="#">youtube</a></footer>
+</div></body></html>

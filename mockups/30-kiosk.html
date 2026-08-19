@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>30 Kiosk — Truth or Consequences Contemporary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#fff;--ink:#101010;--soft:#f0efec;--muted:#6e6d69;--accent:#0f3d2e;
+--jost:'Jost',Futura,sans-serif;--ui:'Inter',system-ui,sans-serif;--body:'EB Garamond',Georgia,serif;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:20px;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.w{max-width:1340px;margin:0 auto;padding:0 clamp(16px,3vw,40px)}
+header{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:20px 0}
+.brand{font-family:var(--ui);font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600}
+.badge{font-family:var(--ui);font-size:11px;letter-spacing:.14em;text-transform:uppercase;background:var(--accent);color:#fff;padding:8px 16px;border-radius:100px}
+
+.hero{background:var(--accent);color:#f2f0ea;border-radius:20px;padding:clamp(30px,5vw,70px);margin-bottom:16px;
+ display:grid;gap:clamp(24px,4vw,52px);align-items:center}
+@media(min-width:900px){.hero{grid-template-columns:1.05fr .95fr}}
+.hero h1{font-family:var(--jost);font-weight:300;font-size:clamp(2.2rem,6vw,4.6rem);line-height:1;letter-spacing:-.03em;margin:0 0 .4em}
+.hero p{margin:0;color:#c8d5cd;font-size:1.3rem;max-width:40ch}
+.hero img{width:100%;display:block;border-radius:14px}
+
+.grid{display:grid;grid-template-columns:1fr;gap:16px;margin-bottom:16px}
+@media(min-width:700px){.grid.c2{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.grid.c3{grid-template-columns:repeat(3,1fr)}.grid.c4{grid-template-columns:repeat(4,1fr)}}
+@media(min-width:700px) and (max-width:999px){.grid.c3,.grid.c4{grid-template-columns:1fr 1fr}}
+
+.tile{background:var(--soft);border-radius:20px;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;
+ justify-content:space-between;min-height:200px;transition:background .22s,transform .22s}
+a.tile:hover{background:var(--ink);color:var(--paper);transform:translateY(-4px)}
+a.tile:hover .d{color:#b9b8b3}
+.tile .n{font-family:var(--ui);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+a.tile:hover .n{color:#8f8e89}
+.tile .t{font-family:var(--jost);font-weight:300;font-size:clamp(1.7rem,3vw,2.4rem);letter-spacing:-.02em;line-height:1.02;margin-top:18px}
+.tile .d{font-size:1.05rem;color:#54534f;margin-top:8px;line-height:1.4}
+
+.tile.big{min-height:260px}
+.tile.dark{background:var(--ink);color:var(--paper)}
+.tile.dark .d{color:#b6b5b0}
+.tile.dark .n{color:#8d8c87}
+.tile.stat .num{font-family:var(--jost);font-weight:200;font-size:clamp(2.6rem,6vw,4.4rem);line-height:1;letter-spacing:-.03em}
+
+.wide{background:var(--soft);border-radius:20px;padding:clamp(26px,4vw,52px);margin-bottom:16px}
+.wide h2{font-family:var(--ui);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:0 0 18px;font-weight:600}
+.wide p{margin:0 0 1em;max-width:62ch}
+.wide .sig{font-family:var(--jost);font-weight:300;font-size:1.6rem}
+.pills{display:flex;flex-wrap:wrap;gap:10px}
+.pills span{background:#fff;border-radius:100px;padding:10px 18px;font-family:var(--ui);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#4a4945}
+
+footer{padding:30px 0 70px;display:grid;gap:24px;font-size:1.05rem}
+@media(min-width:760px){footer{grid-template-columns:repeat(4,1fr)}}
+footer h4{font-family:var(--ui);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:0 0 10px;font-weight:600}
+footer p{margin:0;line-height:1.8}
+footer a:hover{color:var(--accent)}
+</style></head><body><div class="w">
+
+<header><span class="brand">Truth or Consequences Contemporary</span><span class="badge">Summer Fieldwork — call ahead</span></header>
+
+<div class="hero">
+  <div>
+    <h1>A Gallery in the Middle of Nowhere</h1>
+    <p>Obsessed with understanding optimal ways to use art in the transmission of lived emotions from one human being to another.</p>
+  </div>
+  <img src="../static/box_prints.jpg" alt="Intaglio prints laid out around a deep red presentation box">
+</div>
+
+<div class="grid c3">
+  <a class="tile big" href="#"><span class="n">01</span><div><span class="t">Exhibitions</span><div class="d">What is and was on the walls — from the wearable to the cerebral.</div></div></a>
+  <a class="tile big" href="#"><span class="n">02</span><div><span class="t">Artists</span><div class="d">The people we show — local, regional and national.</div></div></a>
+  <a class="tile big" href="#"><span class="n">03</span><div><span class="t">Calendar</span><div class="d">Openings, art hops, performances.</div></div></a>
+</div>
+
+<div class="grid c4">
+  <a class="tile dark" href="#"><span class="n">04</span><div><span class="t">Community Etching Press</span><div class="d">Press time, orientation, pricing.</div></div></a>
+  <a class="tile" href="#"><span class="n">05</span><div><span class="t">Agile Meteor Press</span><div class="d">Our publishing imprint.</div></div></a>
+  <a class="tile" href="#"><span class="n">06</span><div><span class="t">Glyphs</span><div class="d">Leave your mark on Main Street.</div></div></a>
+  <a class="tile" href="#"><span class="n">07</span><div><span class="t">About</span><div class="d">Who we are and how we got here.</div></div></a>
+</div>
+
+<div class="grid c4">
+  <div class="tile stat"><span class="n">Orientation</span><div><span class="num">$40</span><div class="d">Two hours, required before solo press use.</div></div></div>
+  <div class="tile stat"><span class="n">Open session</span><div><span class="num">$25</span><div class="d">Per 2 hour block · $40 for both in a day.</div></div></div>
+  <div class="tile stat"><span class="n">Building</span><div><span class="num">1916</span><div class="d">Luchini Electric — still standing in 2216.</div></div></div>
+  <div class="tile stat"><span class="n">Titles</span><div><span class="num">08</span><div class="d">Books published by Agile Meteor Press.</div></div></div>
+</div>
+
+<div class="wide">
+  <h2>Fieldwork — Summer</h2>
+  <p>We are in and out of the gallery this summer as we do our annual Fieldwork — creating and rejuvenating out in the wild. Orders from the shop will ship slower than normal — please get in touch if you need a rush order. If you are making a trip, get in touch first and we will make sure someone is here for you.</p>
+  <div class="sig">Thank you, Jeannie &amp; Kyle</div>
+</div>
+
+<div class="grid c2">
+  <div class="wide" style="margin:0"><h2>Statement</h2>
+  <p>Contemporary art space focusing on experiment and experiential works. We bring cutting edge projects to life in the strange vortex which is Truth or Consequences, New Mexico.</p>
+  <p>We are on the historic Main Street of a small desert town on the banks of the Rio Grande, in the foothills of the Greater Gila region.</p></div>
+  <div class="wide" style="margin:0"><h2>Projects</h2>
+  <div class="pills"><span>Exhibition Space</span><span>Agile Meteor Press</span><span>Workshops &amp; Education</span><span>Performance</span><span>Dance</span><span>Art Equipment</span><span>MeTeORiC Festival</span><span>Idea Idea</span><span>Printmaking</span><span>Stone Sculpture</span></div></div>
+</div>
+
+<div class="grid c3">
+  <a class="tile" href="#"><span class="n">08</span><div><span class="t">Press</span><div class="d">What has been written about us.</div></div></a>
+  <a class="tile" href="#"><span class="n">09</span><div><span class="t">Visit</span><div class="d">312 Main Ave, Truth or Consequences, NM 87901.</div></div></a>
+  <a class="tile dark" href="#"><span class="n">10</span><div><span class="t">Shop ↗</span><div class="d">Buy the work — shop.torc.art</div></div></a>
+</div>
+
+<footer>
+  <div><h4>Gallery</h4><p>312 Main Ave<br>Truth or Consequences<br>NM 87901</p></div>
+  <div><h4>Contact</h4><p><a href="mailto:intentionallyconfusing@gmail.com">intentionallyconfusing@gmail.com</a></p></div>
+  <div><h4>Elsewhere</h4><p><a href="#">shop.torc.art</a><br><a href="#">amp.torc.art</a><br><a href="#">Instagram · Facebook · YouTube</a></p></div>
+  <div><h4>Artists</h4><p><a href="#">jeannieortiz.com</a><br><a href="#">kyleparkercunningham.com</a><br><a href="#">intentionallyconfusing.com</a></p></div>
+</footer>
+</div></body></html>

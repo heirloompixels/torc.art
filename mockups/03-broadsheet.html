@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>03 Broadsheet — Truth or Consequences Contemporary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f6f4ee;--ink:#161514;--rule:#161514;--muted:#6f6b63;--accent:#8a0f1e;
+--jost:'Jost',Futura,sans-serif;--ui:'Inter',system-ui,sans-serif;--body:'EB Garamond',Georgia,serif;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body)}
+a{color:inherit;text-decoration:none}a:hover{color:var(--accent)}
+.paper{max-width:1240px;margin:0 auto;padding:0 clamp(16px,3.5vw,44px)}
+.hair{border-top:1px solid var(--rule)}.double{border-top:3px double var(--rule)}
+
+.flag{text-align:center;padding:26px 0 10px}
+.flag .dateline{font-family:var(--ui);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.flag h1{font-family:var(--jost);font-weight:300;font-size:clamp(1.9rem,6.2vw,5.2rem);letter-spacing:.02em;line-height:1;margin:16px 0 8px;text-transform:uppercase}
+.flag .motto{font-style:italic;font-size:1.15rem;color:#3a3733}
+
+nav{display:flex;justify-content:center;flex-wrap:wrap;gap:0 20px;padding:10px 0;font-family:var(--ui);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+
+.lead{display:grid;grid-template-columns:1fr;gap:0;padding:0}
+@media(min-width:960px){.lead{grid-template-columns:1.6fr 1fr}}
+.lead .main{padding:28px clamp(0px,2.5vw,32px) 28px 0}
+@media(max-width:959px){.lead .main{padding-right:0}}
+.lead .side{padding:28px 0 28px clamp(0px,2.5vw,32px)}
+@media(min-width:960px){.lead .side{border-left:1px solid #cfcac0}}
+
+.kicker{font-family:var(--ui);font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+h2.head{font-family:var(--jost);font-weight:400;font-size:clamp(2rem,4.4vw,3.4rem);line-height:1.02;margin:0 0 14px;letter-spacing:-.015em}
+.deck{font-size:1.28rem;font-style:italic;color:#3d3a35;margin:0 0 18px;line-height:1.45}
+.body-cols{column-count:1;column-gap:34px;font-size:1.06rem;line-height:1.58;text-align:justify;hyphens:auto}
+@media(min-width:700px){.body-cols{column-count:2}}
+.body-cols p{margin:0 0 1em}
+.body-cols p:first-of-type::first-letter{font-family:var(--jost);float:left;font-size:3.4em;line-height:.82;padding:.06em .1em 0 0;font-weight:400}
+
+.side h3{font-family:var(--ui);font-size:10px;letter-spacing:.24em;text-transform:uppercase;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+.side .item{padding:11px 0;border-bottom:1px dotted #bdb8ae;font-size:1rem;line-height:1.45}
+.side .item b{font-family:var(--ui);font-weight:600;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;display:block;color:var(--muted);margin-bottom:2px}
+.side .item .t{font-family:var(--jost);font-size:1.2rem}
+
+figure{margin:24px 0 0}
+figure img{width:100%;display:block;filter:grayscale(1) contrast(1.12)}
+figcaption{font-family:var(--ui);font-size:10.5px;letter-spacing:.1em;color:var(--muted);margin-top:8px;text-transform:uppercase}
+
+.strip{display:grid;grid-template-columns:1fr;gap:0;padding:0}
+@media(min-width:820px){.strip{grid-template-columns:repeat(3,1fr)}}
+.strip .col{padding:24px clamp(0px,2vw,26px);border-left:1px solid #cfcac0}
+.strip .col:first-child{border-left:none;padding-left:0}
+.strip h4{font-family:var(--ui);font-size:10px;letter-spacing:.24em;text-transform:uppercase;margin:0 0 12px;color:var(--accent)}
+.strip p{margin:0 0 .9em;font-size:1.02rem;line-height:1.55}
+.strip ul{list-style:none;margin:0;padding:0;font-size:1.02rem;line-height:1.85}
+
+footer{padding:22px 0 50px;text-align:center;font-family:var(--ui);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);line-height:2.2}
+</style></head><body><div class="paper">
+
+<div class="flag">
+  <div class="dateline"><span>No. 312 · Main Ave</span><span>Truth or Consequences, New Mexico</span><span>Art in the Oasis</span></div>
+  <h1>Truth or Consequences Contemporary</h1>
+  <div class="motto">A Gallery in the Middle of Nowhere</div>
+</div>
+<div class="double"></div>
+<nav><a href="#">Home</a><a href="#">About</a><a href="#">Artists</a><a href="#">Exhibitions</a><a href="#">Calendar</a><a href="#">Etching Press</a><a href="#">Agile Meteor Press</a><a href="#">Glyphs</a><a href="#">Press</a><a href="#">Visit</a><a href="#">Shop</a></nav>
+<div class="double"></div>
+
+<div class="lead">
+  <div class="main">
+    <div class="kicker">The Premise</div>
+    <h2 class="head">Obsessed with the transmission of lived emotions</h2>
+    <p class="deck">A contemporary art space focusing on experiment and experiential works, bringing cutting edge projects to life in the strange vortex which is Truth or Consequences, New Mexico.</p>
+    <div class="body-cols">
+      <p>A gallery in the middle of nowhere obsessed with understanding optimal ways to use art in the transmission of lived emotions from one human being to another.</p>
+      <p>We travel to remote places around the world and gather experiences which we turn into objects. We do not work separately from the rhythms of the natural world — we try to integrate with them, and to remember how small a part of it we are.</p>
+      <p>Truth or Consequences Contemporary is the physical space we occupy in our minds. A refuge for the arts supporting a laboratory to answer the questions of "what is relevant as we move into this new world."</p>
+      <p>This is a twelve-year creative run in this town, in four iterations: Mud Mountain Studio and 100th Monkey Gallery, with Olin West; Seba, a hip-hop influenced art space; Desert Archaic, a creative oasis; and Truth or Consequences Contemporary, which puts all of it together to carry rural art to an international audience.</p>
+    </div>
+    <figure>
+      <img src="../static/box_prints.jpg" alt="Intaglio prints laid out on a wooden table around a deep red presentation box">
+      <figcaption>Intaglio prints laid out around a deep red presentation box — Community Etching Press</figcaption>
+    </figure>
+  </div>
+  <aside class="side">
+    <h3>On the Walls</h3>
+    <div class="item"><b>May 9–21, 2026</b><span class="t">First Exit</span><br>NMSU BFA &amp; MFA Student Show — eighteen artists.</div>
+    <div class="item"><b>April 11 – May 6, 2026</b><span class="t">What Hands Do</span><br>Jeannie Ortiz. New works in new mediums.</div>
+    <div class="item"><b>February 14, 2026</b><span class="t">Tatsuya Nakatani Bow Show</span><br>One night during Art Hop.</div>
+    <div class="item"><b>November 14, 2025</b><span class="t">Women of Consequences</span><br>Release party, a.m.p. no. 4.</div>
+    <h3 style="margin-top:26px">Notices</h3>
+    <div class="item"><b>Summer</b>Fieldwork — we are in and out of the gallery. Shop orders ship slower than normal. — Jeannie &amp; Kyle</div>
+    <div class="item"><b>2027</b>MeTeORiC festival postponed from February 2026. We're very sorry.</div>
+    <div class="item"><b>Saturdays</b>Open printing sessions, 11–1 and 2–4.</div>
+  </aside>
+</div>
+<div class="double"></div>
+
+<div class="strip">
+  <div class="col">
+    <h4>Community Etching Press</h4>
+    <p>Intaglio printmaking is one of the oldest forms of printmaking. This press enables artists to create stunning hand crafted prints, each of which is a unique work of art.</p>
+    <p>All artists take a two hour orientation. Six artists per block. Orientation $40 · Session $25 · Private time $20/hr.</p>
+  </div>
+  <div class="col">
+    <h4>Agile Meteor Press</h4>
+    <p><em>Desert Town. Plenty of Water.</em> Small beautiful books of unique stories for nomads out there on a rock between the big loving arms of the Milky Way.</p>
+    <p>One book per season, by invitation or submission. Eight titles to date.</p>
+  </div>
+  <div class="col">
+    <h4>Index</h4>
+    <ul><li><a href="#">About</a></li><li><a href="#">Artists</a></li><li><a href="#">Exhibitions</a></li><li><a href="#">Calendar</a></li><li><a href="#">Etching Press</a></li><li><a href="#">Agile Meteor Press</a></li><li><a href="#">Glyphs</a></li><li><a href="#">Press</a></li><li><a href="#">Visit</a></li><li><a href="#">Shop</a></li></ul>
+  </div>
+</div>
+<div class="hair"></div>
+<footer>
+  312 Main Ave · Truth or Consequences · NM 87901<br>
+  <a href="mailto:intentionallyconfusing@gmail.com">intentionallyconfusing@gmail.com</a><br>
+  shop · agile meteor press · instagram · facebook · youtube
+</footer>
+</div></body></html>

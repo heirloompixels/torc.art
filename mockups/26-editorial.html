@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>26 Editorial — Truth or Consequences Contemporary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#fdfcf9;--ink:#191712;--muted:#8d8779;--accent:#1f4b3f;--rule:#e6e1d5;
+--jost:'Jost',Futura,sans-serif;--ui:'Inter',system-ui,sans-serif;--body:'EB Garamond',Georgia,serif;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:20px;line-height:1.68}
+a{color:inherit;text-decoration:none}
+.w{max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,56px)}
+header{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding:24px 0;border-bottom:1px solid var(--rule)}
+.brand{font-family:var(--ui);font-size:10px;letter-spacing:.28em;text-transform:uppercase;font-weight:500}
+nav{display:flex;gap:17px;flex-wrap:wrap}
+nav a{font-family:var(--ui);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+nav a:hover{color:var(--accent)}
+
+.feature{padding:clamp(50px,8vw,110px) 0 clamp(30px,4vw,60px);text-align:center}
+.kicker{font-family:var(--ui);font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--accent);margin-bottom:26px}
+h1{font-family:var(--body);font-weight:500;font-size:clamp(2.4rem,7.6vw,6rem);line-height:1.02;letter-spacing:-.025em;margin:0 auto;max-width:16ch}
+h1 em{font-style:italic;font-weight:400}
+.standfirst{font-family:var(--jost);font-weight:200;font-size:clamp(1.15rem,2.4vw,1.8rem);line-height:1.42;max-width:36ch;margin:30px auto 0;color:#3f3b33;letter-spacing:-.005em}
+.byline{font-family:var(--ui);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:32px}
+
+.hero-fig{margin:clamp(36px,5vw,70px) 0}
+.hero-fig img{width:100%;display:block}
+.hero-fig figcaption{font-family:var(--ui);font-size:10.5px;letter-spacing:.1em;color:var(--muted);margin-top:12px;text-align:center;text-transform:uppercase}
+
+.article{max-width:40rem;margin:0 auto;padding-bottom:clamp(30px,5vw,60px)}
+.article p{margin:0 0 1.2em}
+.article p.open::first-letter{font-family:var(--jost);float:left;font-size:4em;line-height:.76;padding:.06em .1em 0 0;font-weight:200;color:var(--accent)}
+.article h2{font-family:var(--ui);font-size:10px;letter-spacing:.3em;text-transform:uppercase;font-weight:600;color:var(--accent);margin:2.4em 0 1em}
+.pull{font-family:var(--jost);font-weight:200;font-size:clamp(1.4rem,3vw,2.2rem);line-height:1.24;letter-spacing:-.02em;
+ border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:26px 0;margin:2em 0;color:#2c2a24}
+.sc{font-variant-caps:all-small-caps;letter-spacing:.08em}
+
+.rail{border-top:1px solid var(--rule);padding:clamp(34px,5vw,64px) 0;display:grid;grid-template-columns:1fr;gap:clamp(24px,4vw,50px)}
+@media(min-width:900px){.rail{grid-template-columns:repeat(3,1fr)}}
+.rail h3{font-family:var(--ui);font-size:10px;letter-spacing:.26em;text-transform:uppercase;font-weight:600;color:var(--accent);margin:0 0 16px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+.rail .item{padding:10px 0;border-bottom:1px solid #f0ece1;font-size:1.05rem;line-height:1.5}
+.rail .item:last-child{border-bottom:none}
+.rail .item b{font-family:var(--ui);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px;font-weight:600}
+.rail .item .t{font-family:var(--jost);font-weight:300;font-size:1.35rem;display:block}
+.rail .item a:hover .t{color:var(--accent)}
+
+footer{border-top:1px solid var(--rule);padding:clamp(36px,5vw,72px) 0 70px;text-align:center;
+ font-family:var(--ui);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);line-height:2.6}
+footer a:hover{color:var(--accent)}
+</style></head><body><div class="w">
+
+<header><span class="brand">Truth or Consequences Contemporary</span>
+<nav><a href="#">About</a><a href="#">Artists</a><a href="#">Exhibitions</a><a href="#">Calendar</a><a href="#">Etching Press</a><a href="#">Agile Meteor Press</a><a href="#">Glyphs</a><a href="#">Press</a><a href="#">Visit</a><a href="#">Shop</a></nav></header>
+
+<div class="feature">
+  <div class="kicker">Art in the Oasis</div>
+  <h1>A Gallery in the Middle of <em>Nowhere</em></h1>
+  <p class="standfirst">Obsessed with understanding optimal ways to use art in the transmission of lived emotions from one human being to another.</p>
+  <div class="byline">312 Main Ave · Truth or Consequences · New Mexico</div>
+</div>
+
+<figure class="hero-fig"><img src="../static/box_prints.jpg" alt="Intaglio prints laid out around a deep red presentation box"><figcaption>Intaglio prints laid out on a wooden table around a deep red presentation box</figcaption></figure>
+
+<div class="article">
+  <p class="open">Contemporary art space focusing on experiment and experiential works. We bring cutting edge projects to life in the strange vortex which is Truth or Consequences, New Mexico — on the historic Main Street of a small desert town on the banks of the Rio Grande, in the foothills of the Greater Gila region.</p>
+  <p>We travel to remote places around the world and gather experiences which we turn into objects. We do not work separately from the rhythms of the natural world — we try to integrate with them, and to remember how small a part of it we are.</p>
+
+  <div class="pull">Truth or Consequences Contemporary is the physical space we occupy in our minds. A refuge for the arts supporting a laboratory to answer the questions of what is relevant as we move into this new world.</div>
+
+  <h2>Four iterations, twelve years</h2>
+  <p><span class="sc">Mud Mountain Studio</span> and <span class="sc">100th Monkey Gallery</span>, with Olin West. <span class="sc">Seba</span>, a hip-hop influenced art space. <span class="sc">Desert Archaic</span>, a creative oasis. And <span class="sc">Truth or Consequences Contemporary</span>, which puts all of it together to carry rural art to an international audience.</p>
+  <p>Our building at 312 Main St is historically known as the Luchini Electric Building, and has stood since 1916. Built like a proverbial tank, it'll still be standing in 2116, 2216 and beyond.</p>
+
+  <h2>Fieldwork</h2>
+  <p>We are in and out of the gallery this summer as we do our annual Fieldwork — creating and rejuvenating out in the wild. Orders from the <a href="#" style="border-bottom:1px solid var(--rule)">shop</a> will ship slower than normal — please get in touch if you need a rush order.</p>
+  <p style="font-family:var(--jost);font-weight:200;font-size:1.6rem">Thank you, Jeannie &amp; Kyle</p>
+</div>
+
+<div class="rail">
+  <div>
+    <h3>On the walls</h3>
+    <div class="item"><b>May 9–21, 2026</b><a href="#"><span class="t">First Exit</span></a>NMSU BFA &amp; MFA Student Show — eighteen artists.</div>
+    <div class="item"><b>Apr 11 – May 6, 2026</b><a href="#"><span class="t">What Hands Do</span></a>Jeannie Ortiz — new works in new mediums.</div>
+    <div class="item"><b>Feb 14, 2026</b><a href="#"><span class="t">Nakatani Bow Show</span></a>One night during Art Hop.</div>
+  </div>
+  <div>
+    <h3>Press</h3>
+    <div class="item"><b>June 9, 2025</b><a href="#"><span class="t">Smithsonian Magazine</span></a>Picks Truth or Consequences as one of the 15 best small towns to visit in the USA.</div>
+    <div class="item"><b>November 7, 2025</b><a href="#"><span class="t">Pasatiempo</span></a>Better for verse: word comrades get support from a pair of fellow artisans.</div>
+    <div class="item"><b>Grant</b><a href="#"><span class="t">Main Street America</span></a>Backing Small Business Grant funded our facade signage.</div>
+  </div>
+  <div>
+    <h3>Sections</h3>
+    <div class="item"><a href="#"><span class="t">About</span></a></div>
+    <div class="item"><a href="#"><span class="t">Artists</span></a></div>
+    <div class="item"><a href="#"><span class="t">Exhibitions</span></a></div>
+    <div class="item"><a href="#"><span class="t">Calendar</span></a></div>
+    <div class="item"><a href="#"><span class="t">Community Etching Press</span></a></div>
+    <div class="item"><a href="#"><span class="t">Agile Meteor Press</span></a></div>
+    <div class="item"><a href="#"><span class="t">Glyphs</span></a></div>
+    <div class="item"><a href="#"><span class="t">Visit</span></a></div>
+    <div class="item"><a href="#"><span class="t">Shop</span></a></div>
+  </div>
+</div>
+
+<footer>
+  Truth or Consequences Contemporary · 312 Main Ave · TorC, NM 87901<br>
+  <a href="mailto:intentionallyconfusing@gmail.com">intentionallyconfusing@gmail.com</a><br>
+  <a href="#">Shop</a> · <a href="#">Agile Meteor Press</a> · <a href="#">Instagram</a> · <a href="#">Facebook</a> · <a href="#">YouTube</a>
+</footer>
+</div></body></html>

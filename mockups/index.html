@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design Mockups — Truth or Consequences Contemporary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f1f0ec;--ink:#171614;--muted:#83807a;--accent:#1b1bd6;--rule:#dedad2;
+--jost:'Jost',Futura,sans-serif;--ui:'Inter',system-ui,sans-serif;--body:'EB Garamond',Georgia,serif;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.w{max-width:1560px;margin:0 auto;padding:0 clamp(18px,3vw,44px)}
+
+header{padding:34px 0 26px;border-bottom:1px solid var(--ink)}
+h1{font-family:var(--jost);font-weight:200;font-size:clamp(1.9rem,5.4vw,4rem);line-height:1;letter-spacing:-.03em;margin:0}
+.sub{font-family:var(--ui);font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-top:18px}
+.intro{max-width:64ch;margin:22px 0 0;color:#43413c}
+
+.bar{display:flex;gap:10px;flex-wrap:wrap;padding:18px 0;border-bottom:1px solid var(--rule);
+ font-family:var(--ui);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase}
+.bar button{font:inherit;letter-spacing:inherit;text-transform:inherit;background:none;border:1px solid var(--rule);
+ border-radius:100px;padding:8px 16px;cursor:pointer;color:#4d4a45;transition:background .2s,color .2s,border-color .2s}
+.bar button:hover{border-color:var(--ink)}
+.bar button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+.sheet{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:clamp(18px,2.4vw,34px);padding:clamp(24px,3vw,44px) 0}
+.card{display:block}
+.thumb{position:relative;width:100%;aspect-ratio:1440/900;overflow:hidden;background:#fff;
+ border:1px solid var(--rule);transition:border-color .2s,box-shadow .25s,transform .25s}
+.card:hover .thumb{border-color:var(--ink);box-shadow:0 16px 40px rgba(40,35,25,.16);transform:translateY(-3px)}
+.thumb img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+.meta{display:flex;justify-content:space-between;gap:12px;align-items:baseline;margin-top:12px}
+.meta .n{font-family:var(--ui);font-size:10px;letter-spacing:.16em;color:var(--muted)}
+.meta .t{font-family:var(--jost);font-weight:300;font-size:1.4rem;letter-spacing:-.015em}
+.card:hover .meta .t{color:var(--accent)}
+.note{font-size:1.02rem;color:#56534d;margin-top:4px;line-height:1.45}
+.tags{font-family:var(--ui);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+
+footer{border-top:1px solid var(--ink);padding:26px 0 70px;font-family:var(--ui);font-size:10.5px;
+ letter-spacing:.14em;text-transform:uppercase;color:var(--muted);line-height:2.2}
+</style>
+</head>
+<body>
+<div class="w">
+
+<header>
+  <h1>Design Mockups</h1>
+  <div class="sub">Truth or Consequences Contemporary · 34 directions</div>
+  <p class="intro">Thirty-four homepage designs built from the real site content, each using the site's three typefaces — Jost for display, Inter for interface, EB Garamond for reading. Click any thumbnail to open the full page. Filter by temperament below.</p>
+  <p class="intro" style="font-family:var(--ui);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:14px">Thumbnails show the top of each page at 1440&nbsp;px. Open a design to see it whole.</p>
+</header>
+
+<div class="bar" id="bar">
+  <button aria-pressed="true" data-f="all">All 34</button>
+  <button aria-pressed="false" data-f="quiet">Quiet / refined</button>
+  <button aria-pressed="false" data-f="editorial">Editorial</button>
+  <button aria-pressed="false" data-f="bold">Bold / graphic</button>
+  <button aria-pressed="false" data-f="dark">Dark</button>
+  <button aria-pressed="false" data-f="desert">Desert / place</button>
+  <button aria-pressed="false" data-f="systematic">Systematic</button>
+</div>
+
+<div class="sheet" id="sheet"></div>
+
+<footer>34 mockups · content from content/*.md · images from static/ · fonts: Jost · Inter · EB Garamond</footer>
+</div>
+
+<script>
+const items = [
+ ["01","kunsthalle","Kunsthalle","Stark white, hairline rules, an oversized Jost headline over a two-column editorial grid.","quiet editorial"],
+ ["02","desert-ledger","Desert Ledger","Warm sand ground on ruled paper, entries numbered like a field ledger.","desert editorial"],
+ ["03","broadsheet","Broadsheet","Newspaper front page — flag, dateline, justified columns, a sidebar of what's on.","editorial systematic"],
+ ["04","monolith","Monolith","Near-black full bleed, thin display type, hover-shifting index rows.","dark quiet"],
+ ["05","swiss-grid","Swiss Grid","Visible 12-column grid, red accent, everything set flush and interlocked.","systematic bold"],
+ ["06","marginalia","Marginalia","Asymmetric column with true margin notes running down both sides.","quiet editorial"],
+ ["07","lightning","Lightning","Night-blue and electric yellow, built around the cloud-and-bolt mark.","dark bold"],
+ ["08","vitrine","Vitrine","Floating white panels on a wall-grey ground; exhibitions set as museum labels.","quiet systematic"],
+ ["09","oasis","Oasis","Sky-to-sand gradient, arched images, water-green accents.","desert quiet"],
+ ["10","terracotta","Terracotta","Adobe clay palette, arch forms, a hand-drawn sun.","desert bold"],
+ ["11","index-mono","Index","Monospaced database view — records, field names, coordinates.","systematic quiet"],
+ ["12","poster","Poster","Full-width type poster with a running ticker and a giant hover-slide menu.","bold"],
+ ["13","riso","Riso","Two-colour risograph misregistration, blue and fluorescent orange on stock.","bold editorial"],
+ ["14","archive","Archive","Filing tabs over a manila folder, record card, rubber stamp.","systematic desert"],
+ ["15","horizon","Horizon","Letterspaced horizontal bands and a full-bleed image strip.","quiet bold"],
+ ["16","manifesto","Manifesto","Single centred column, drop caps, ornaments — read as a statement.","quiet editorial"],
+ ["17","nocturne","Nocturne","Charcoal and warm amber, framed plate, the calendar in two columns.","dark quiet"],
+ ["18","blueprint","Blueprint","Architectural sheet — title block, grid, dimension lines, schedules.","systematic"],
+ ["19","salt-flat","Salt Flat","Barely-there hairlines and enormous whitespace. The most restrained of the set.","quiet"],
+ ["20","split-screen","Split Screen","Fixed dark nav panel at left, scrolling content at right.","dark systematic"],
+ ["21","letterpress","Letterpress","Double-ruled border, fleurons, a printer's bill of contents.","editorial desert"],
+ ["22","meteor","Meteor","Starfield night, the press catalog as book spines. Leads with Agile Meteor Press.","dark bold"],
+ ["23","bauhaus","Bauhaus","Hard-ruled mosaic of primary blocks, circle and square.","bold systematic"],
+ ["24","contact-sheet","Contact Sheet","Film contact sheet — sprocket edges, numbered frames on a dark base.","dark systematic"],
+ ["25","zine","Zine","Photocopy contrast, inverted type, marquee — the loudest direction.","bold"],
+ ["26","editorial","Editorial","Magazine feature: kicker, standfirst, drop cap, pull quote, three rails.","editorial quiet"],
+ ["27","neue-gallery","Neue Gallery","Small caps, centred rules, italic titles. Old-world gallery restraint.","quiet editorial"],
+ ["28","topographic","Topographic","Contour lines behind the page, sections given map symbols in a legend.","desert systematic"],
+ ["29","monsoon","Monsoon","Storm-sky gradient with rain, then clearing to desert paper.","desert dark"],
+ ["30","kiosk","Kiosk","Rounded tiles, deep green hero, big touch targets and stat blocks.","bold systematic"],
+ ["31","catalogue","Catalogue","Catalogue raisonné — numbered entries, plates, artists set in columns.","editorial systematic"],
+ ["32","marquee","Marquee","Three counter-scrolling type bands as the masthead.","bold"],
+ ["33","concrete","Concrete","Concrete poetry — the title broken across a stepped typographic field.","bold quiet"],
+ ["34","sun-bleached","Sun Bleached","Warm bleached gradient, a soft sun disc, offset rose shadows.","desert quiet"]
+];
+const sheet = document.getElementById('sheet');
+sheet.innerHTML = items.map(([n,slug,title,note,tags]) => `
+ <a class="card" data-tags="${tags}" href="${n}-${slug}.html">
+  <div class="thumb"><img src="thumbs/${n}-${slug}.jpg" loading="lazy" decoding="async" alt="${title} — homepage design"></div>
+  <div class="meta"><span class="t">${title}</span><span class="n">${n}</span></div>
+  <div class="note">${note}</div>
+  <div class="tags">${tags.split(' ').join(' · ')}</div>
+ </a>`).join('');
+
+document.getElementById('bar').addEventListener('click', e => {
+  const b = e.target.closest('button'); if(!b) return;
+  document.querySelectorAll('#bar button').forEach(x => x.setAttribute('aria-pressed', x === b));
+  const f = b.dataset.f;
+  document.querySelectorAll('.card').forEach(c => {
+    c.style.display = (f === 'all' || c.dataset.tags.split(' ').includes(f)) ? '' : 'none';
+  });
+});
+</script>
+</body></html>
