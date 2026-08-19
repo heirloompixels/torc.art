@@ -42,6 +42,16 @@ outside the machinery tree. The gallery subdomains that are ours —
 gather.torc.art, proofing.torc.art, amp.torc.art — are Cloudflare Workers and
 have nothing to do with this build.
 
+**The certificate is the outstanding deployment problem.** GitHub Pages has
+never provisioned one for new.torc.art, so https does not answer at all. That
+is not cosmetic: `base_url` is https, and Zola's `get_url()` builds absolute
+URLs from it, so from 26c6c85 until 2026-08-18 the page linked its stylesheet
+at `https://new.torc.art/style.css` — an address that refuses connections —
+and every visitor got unstyled HTML with no visible error. The stylesheet is
+root-relative now so it cannot happen again, but until the certificate is
+provisioned, `og:image` still points at an https URL that does not answer and
+link previews have no image. Provision it in the repo's Pages settings.
+
 **CI has not run since 2025-06-01.** The action tracks `master`, so the next
 push builds on a Zola it has never used here. Watch the first one.
 
@@ -111,6 +121,8 @@ for the gallery. Revert that if the byline was deliberate.
 
 ## Still open
 
+- **https.** See above — the certificate is unprovisioned, so the site is
+  http-only and its social-card image is unreachable.
 - **The fonts are not ours.** EB Garamond and Inter come from Google Fonts and
   Jost from indestructibletype.com on every page load. For something meant to
   be the gallery's record, all three are open-licensed and should be
