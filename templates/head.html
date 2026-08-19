@@ -27,30 +27,32 @@
 <link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charset="utf-8" />
 
 <meta name="robots" content="index, follow">
-{% if page.title %}
+{# Only one of `page` and `section` is defined in any given render, so every
+   lookup below is guarded — an unguarded one is a hard error, not a fallthrough. #}
+{% if page is defined and page.title %}
 {% set title = page.title %}
-{% elif section.title %}
+{% elif section is defined and section.title %}
 {% set title = section.title %}
 {% elif config.title %}
 {% set title = config.title %}
 {% endif %}
-{% if page.extra.author %}
+{% if page is defined and page.extra.author is defined %}
 {% set author = page.extra.author %}
-{% elif section.extra.author %}
+{% elif section is defined and section.extra.author is defined %}
 {% set author = section.extra.author %}
 {% elif config.extra.author %}
 {% set author = config.extra.author %}
 {% endif %}
-{% if page.description %}
+{% if page is defined and page.description %}
 {% set description = page.description | truncate(length=150) %}
-{% elif section.description %}
+{% elif section is defined and section.description %}
 {% set description = section.description | truncate(length=150) %}
 {% elif config.description %}
 {% set description = config.description | truncate(length=150) %}
 {% endif %}
-{% if page.permalink %}
+{% if page is defined and page.permalink %}
 {% set url = page.permalink %}
-{% elif section.permalink %}
+{% elif section is defined and section.permalink %}
 {% set url = section.permalink %}
 {% elif config.base_url %}
 {% set url = config.base_url %}
