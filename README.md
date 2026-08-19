@@ -12,6 +12,11 @@ the non-shop content off Shopify; see
 [`migration/MIGRATION.md`](migration/MIGRATION.md). There is no blog and no
 search index.
 
+`dispatches/` holds the plan for the one substantial body of content still to
+come — the 2021–2026 Dispatches newsletter, arriving from the retired
+`intentionallyconfusing.com`. Nothing is built yet; see
+[`dispatches/DISPATCHES.md`](dispatches/DISPATCHES.md).
+
 ## Local development
 
 ```sh
@@ -63,6 +68,7 @@ push builds on a Zola it has never used here. Watch the first one.
 - `static/`: assets copied verbatim — logo, favicons, `style.css`, `CNAME`
 - `config.toml`: Zola site configuration
 - `migration/`: notes and tooling for the move off Shopify
+- `dispatches/`: the plan for importing the Dispatches run (not built)
 - `.github/workflows/main.yml`: build and deploy workflow
 
 ## What was repaired, 2026-08-18
@@ -121,6 +127,11 @@ for the gallery. Revert that if the byline was deliberate.
 
 ## Still open
 
+- **The Dispatches are coming here.** 34 posts and 217 MB of photography from
+  the retired `intentionallyconfusing.com`, which needs a section, a URL shape
+  and a decision about where the images live. Measured and planned in
+  [`dispatches/DISPATCHES.md`](dispatches/DISPATCHES.md), including a proposal
+  to move this site off GitHub Pages and onto Cloudflare before it launches.
 - **https.** See above — the certificate is unprovisioned, so the site is
   http-only and its social-card image is unreachable.
 - **The fonts are not ours.** EB Garamond and Inter come from Google Fonts and
