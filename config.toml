@@ -5,9 +5,10 @@ compile_sass = false
 minify_html = false
 default_language = "en"
 
-# No taxonomies. The site is one page; the template this repo was initialized
-# from declared a bookshelf's worth (recommender, authorname, pubyear, rating,
-# readstate) and nothing ever used them.
+# No taxonomies. The template this repo was initialized from declared a
+# bookshelf's worth (recommender, authorname, pubyear, rating, readstate) and
+# nothing ever used them. Real ones belong here when exhibitions and artists
+# become records rather than copy.
 
 [slugify]
 paths = "on"

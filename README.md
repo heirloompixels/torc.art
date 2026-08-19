@@ -4,9 +4,13 @@ Zola site for Truth or Consequences Contemporary — the gallery's own page.
 A contemporary art space in Truth or Consequences, New Mexico, focused on
 experiment and experiential work.
 
-One page. `content/_index.md` is the whole site: the statement, the list of
-projects, and the list of artists represented. There is no blog, no sections
-and no search index.
+`content/` holds the page copy: `_index.md` is the landing page, and a flat
+set of Markdown files beside it are the sections — about, artists,
+exhibitions, calendar, the community etching press, Agile Meteor Press,
+glyphs, press and visit. `migration/` holds the notes and tooling for moving
+the non-shop content off Shopify; see
+[`migration/MIGRATION.md`](migration/MIGRATION.md). There is no blog and no
+search index.
 
 ## Local development
 
@@ -25,7 +29,8 @@ zola build
 This is the one site in `machinery/sites/` that does not deploy to Cloudflare.
 
 - Source repo: `git@github.com:heirloompixels/torc.art.git`
-- GitHub Actions builds on pushes to `main` (`shalzz/zola-deploy-action@master`)
+- GitHub Actions builds on pushes to `main` (`shalzz/zola-deploy-action@master`),
+  authenticating with the automatic per-run `GITHUB_TOKEN`
 - Published branch: `gh-pages`, served by GitHub Pages
 - Public URL: `http://new.torc.art` — http only for now, the certificate is
   not provisioned yet. `static/CNAME` holds that hostname and `base_url` in
@@ -42,11 +47,12 @@ push builds on a Zola it has never used here. Watch the first one.
 
 ## Project structure
 
-- `content/_index.md`: the page
-- `templates/`: `base.html` (shell and footer), `head.html` (metadata),
-  `index.html` (renders the section)
+- `content/`: page copy (Markdown) — `_index.md` plus one file per section
+- `templates/`: `base.html` (shell, nav and footer), `head.html` (metadata),
+  `index.html` (the landing section), `page.html` (every other page)
 - `static/`: assets copied verbatim — logo, favicons, `style.css`, `CNAME`
 - `config.toml`: Zola site configuration
+- `migration/`: notes and tooling for the move off Shopify
 - `.github/workflows/main.yml`: build and deploy workflow
 
 ## What was repaired, 2026-08-18
@@ -114,6 +120,6 @@ for the gallery. Revert that if the byline was deliberate.
   `webring.xxiivv.com/#xxiivv` under the label "torc". That anchor is the
   template's, not the gallery's. Either the gallery is a member and the anchor
   is wrong, or it is not and the link should go.
-- The page is a single flat list of projects and artists. If this becomes the
-  record of the gallery, exhibitions and artists want to be content, not
-  bullets.
+- The pages are copy, not records. Exhibitions and artists are prose on a
+  page; if this is to be the gallery's record they want structure behind
+  them — a work, a show and a date that can be listed, sorted and linked.

@@ -5,19 +5,40 @@
 </head>
 <body>
       <main>
+          <nav class="subtle-nav">
+          <a href="/">home</a> |
+          <a href="/about/">about</a> |
+          <a href="/artists/">artists</a> |
+          <a href="/exhibitions/">exhibitions</a> |
+          <a href="/calendar/">calendar</a> |
+          <a href="/etching-press/">etching press</a> |
+          <a href="/agile-meteor-press/">agile meteor press</a> |
+          <a href="/glyphs/">glyphs</a> |
+          <a href="/press/">press</a> |
+          <a href="/visit/">visit</a> |
+          <a href="https://shop.torc.art">shop</a>
+          </nav>
+
           {% block content %}
           {% endblock content %}
       </main>
-      <footer class="site-footer">
+      <footer>
           <p>
-          <a href="/">home</a> |
-          {# submissions: the link pointed at a bare "https://" and went nowhere.
-             Restore it here when there is a real destination. #}
-          <a rel="me" href="https://instagram.com/meteoric.torc">instagram</a>
+          Truth or Consequences Contemporary<br />
+          312 Main Ave, Truth or Consequences, NM 87901<br />
+          <a href="mailto:intentionallyconfusing@gmail.com">intentionallyconfusing@gmail.com</a>
           </p>
           <p>
-          <a href="https://webring.xxiivv.com/#xxiivv" target="_blank" rel="noopener noreferrer">
-          torc</a>
+          <a href="https://shop.torc.art">shop</a> |
+          <a href="https://amp.torc.art">agile meteor press</a> |
+          <a rel="me" href="https://www.instagram.com/torc.art">instagram</a> |
+          <a href="https://www.facebook.com/torc.contemporary">facebook</a> |
+          <a href="https://www.youtube.com/@intentionallyconfusing">youtube</a>
+          </p>
+          <p>
+          <a href="https://jeannieortiz.com">jeannieortiz.com</a> |
+          <a href="https://kyleparkercunningham.com">kyleparkercunningham.com</a> |
+          <a href="https://intentionallyconfusing.com">intentionallyconfusing.com</a>
           </p>
           <div class="subtle-mono">
             built<br /> {{ now() | date(format="%Y-%m-%d") }}

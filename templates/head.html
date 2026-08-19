@@ -2,6 +2,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<!-- opengraph and favicons -->
 <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="shortcut icon" href="/favicon.ico" />
@@ -10,6 +11,11 @@
 <link rel="manifest" href="/site.webmanifest" />
 <meta name="theme-color" content="#f2f2f2">
 
+
+
+
+<!-- opengraph and favicons -->
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -17,40 +23,42 @@
 <link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charset="utf-8" />
 
 <meta name="robots" content="index, follow">
-{% if page.title %}
+{# Only one of `page` and `section` is defined in any given render, so every
+   lookup below is guarded — an unguarded one is a hard error, not a fallthrough. #}
+{% if page is defined and page.title %}
 {% set title = page.title %}
-{% elif section.title %}
+{% elif section is defined and section.title %}
 {% set title = section.title %}
 {% elif config.title %}
 {% set title = config.title %}
 {% endif %}
-{% if page.extra.author %}
+{% if page is defined and page.extra.author is defined %}
 {% set author = page.extra.author %}
-{% elif section.extra.author %}
+{% elif section is defined and section.extra.author is defined %}
 {% set author = section.extra.author %}
 {% elif config.extra.author %}
 {% set author = config.extra.author %}
 {% endif %}
-{% if page.description %}
+{% if page is defined and page.description %}
 {% set description = page.description | truncate(length=150) %}
-{% elif section.description %}
+{% elif section is defined and section.description %}
 {% set description = section.description | truncate(length=150) %}
 {% elif config.description %}
 {% set description = config.description | truncate(length=150) %}
 {% endif %}
-{% if page.permalink %}
-{% set url = page.permalink %}
-{% elif section.permalink %}
-{% set url = section.permalink %}
-{% elif config.base_url %}
-{% set url = config.base_url %}
-{% endif %}
-{% if page.extra.image %}
+{% if page is defined and page.extra.image is defined %}
 {% set image = get_url(path=page.extra.image, trailing_slash=false) %}
-{% elif section.extra.image %}
+{% elif section is defined and section.extra.image is defined %}
 {% set image = get_url(path=section.extra.image, trailing_slash=false) %}
 {% else %}
 {% set image = get_url(path=config.extra.default_image, trailing_slash=false) %}
+{% endif %}
+{% if page is defined and page.permalink %}
+{% set url = page.permalink %}
+{% elif section is defined and section.permalink %}
+{% set url = section.permalink %}
+{% elif config.base_url %}
+{% set url = config.base_url %}
 {% endif %}
 {% if title %}
 <title>{{ title }}</title>
@@ -67,7 +75,9 @@
 {% endif %}
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ url | safe }}">
+{% if title %}
 <meta property="og:site_name" content="{{ config.title }}">
+{% endif %}
 {% if title %}
 <meta property="og:title" content="{{ title }}">
 {% endif %}
@@ -97,23 +107,20 @@
 {% endblock css %}
 
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ArtGallery",
-  "name": {{ config.title | json_encode | safe }},
-  "description": {{ description | json_encode | safe }},
-  "url": {{ url | json_encode | safe }},
-  "image": {{ image | json_encode | safe }},
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Truth or Consequences",
-    "addressRegion": "NM",
-    "addressCountry": "US"
-  },
-  "sameAs": [
-    "https://instagram.com/meteoric.torc"
-  ]
-}
-</script>
+{"name":"Truth or Consequences Contemporary",
+"description":{{ description | json_encode | safe }},
+"@type":"ArtGallery",
+"email":"intentionallyconfusing@gmail.com",
+"address":{"@type":"PostalAddress","streetAddress":"312 Main Ave","addressLocality":"Truth or Consequences","addressRegion":"NM","postalCode":"87901","addressCountry":"US"},
+"url":{{ url | json_encode | safe }},
+"sameAs" : [
+   "https://shop.torc.art",
+   "https://amp.torc.art",
+   "https://www.instagram.com/torc.art",
+   "https://www.facebook.com/torc.contemporary",
+   "https://www.youtube.com/@intentionallyconfusing"
+   ],
+"headline":{{ title | json_encode | safe }},
+"@context":"http://schema.org"}</script>
 
 <meta name="format-detection" content="telephone=no">
