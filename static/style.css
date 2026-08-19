@@ -51,4 +51,11 @@ th { font-family: 'nnixbold'; font-weight: normal; background-color: var(--secon
 p {margin: 1em auto;   width: clamp(70%, 80%, 300px); font-size:1.2em;}
 h1,h2,h3,li {text-align: center;}
 
+nav.subtle-nav { font-family: 'Inter', sans-serif; font-size: 0.8em; font-weight: 300; line-height: 2; text-align: center; margin-bottom: 3em; }
+footer { text-align: center; margin-top: 4em; }
+footer p { width: auto; font-size: 1em; }
+dl { margin: 1em auto; width: clamp(70%, 80%, 300px); }
+dt { font-family: 'Inter', sans-serif; font-weight: 500; margin-top: 1em; }
+dd { margin-left: 0; }
+
 
