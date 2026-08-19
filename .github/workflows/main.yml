@@ -5,6 +5,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
+    # The deploy step pushes the built site to PAGES_BRANCH in this repo.
+    permissions:
+      contents: write
     steps:
       - name: checkout
         uses: actions/checkout@v4
@@ -13,7 +16,6 @@ jobs:
         env:
           # Target branch
           PAGES_BRANCH: gh-pages
-          # Provide personal access token
-          TOKEN: ${{ secrets.TOKEN }}
-          # Or if publishing to the same repo, use the automatic token
-          #TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Publishing to this same repo, so the automatic per-run token is
+          # enough — no personal access token to mint, rotate, or have expire.
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
