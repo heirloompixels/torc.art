@@ -103,7 +103,13 @@
 {% endblock metatags %}
 
 {% block css %}
-<link rel="stylesheet" type="text/css" href="{{ get_url(path='/style.css', trailing_slash=false) | safe }}"/>
+{# Root-relative on purpose. get_url() builds an absolute URL from base_url,
+   which is https — and the GitHub Pages certificate for new.torc.art is not
+   provisioned, so https does not answer and the browser silently got no
+   stylesheet at all. The metadata below stays absolute and stays https: it is
+   read by scrapers, not fetched to render the page, and it will be right the
+   day the certificate lands. #}
+<link rel="stylesheet" type="text/css" href="/style.css"/>
 {% endblock css %}
 
 <script type="application/ld+json">
