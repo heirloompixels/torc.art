@@ -218,3 +218,40 @@ account is **not** one of these. It says the old account's claims on
 TorC serves both, which is exactly what the API confirms. It reads as a
 warning about the old account, not a claim about the hostname, and it is
 correct.
+
+## Reproducing the measurements
+
+Every number above came from these two steps, run on 2026-08-18 against
+`machinery/sites/intentionallyconfusing.com`. They read the archive and write
+only to a scratch directory.
+
+Select the 34 bundles from the archive's index — the `why` column is the
+filter, not a hand-kept list, so it stays true if the index is revised:
+
+```python
+import csv, os
+rows = [r for r in csv.DictReader(open('docs/content-index.csv'))
+        if 'dispatch series' in r['why']]
+for r in rows:
+    for f in sorted(os.listdir(r['bundle'])):
+        if f != 'index.md' and not f.lower().endswith('.pdf'):
+            print(os.path.join(r['bundle'], f))
+```
+
+Encode one file (ImageMagick 7). `-auto-orient` before the resize matters:
+much of this came off phones and carries EXIF rotation, and `-strip` discards
+that tag afterwards, so skipping it silently sideways-rotates a chunk of the
+run.
+
+```sh
+magick "$SRC" -auto-orient -resize '1600x1600>' -strip \
+  -quality 80 -define webp:method=6 "$OUT/$(basename "${SRC%.*}").webp"
+```
+
+The `>` in the geometry is what keeps the 81 already-small files from being
+upscaled. 292 images take about 45 seconds at `-P 8` on this laptop.
+
+Two things to carry into the real port that the benchmark did not do: it
+flattened every output into one directory under a hashed name, so the real
+run needs the `dispatches/<slug>/` key layout; and it skipped the PDF, which
+is uploaded as-is.
