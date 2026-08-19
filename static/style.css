@@ -1,54 +1,111 @@
-@font-face { font-family: 'ampbook'; src: url("/fonts/nnixbook.woff2") format("woff2"); }
-@font-face { font-family: 'ampitalic'; src: url("/fonts/nnixitalic.woff2") format("woff2"); }
-@font-face { font-family: 'ampbold'; src: url("/fonts/nnixbold.woff2") format("woff2"); }
-@font-face { font-family: 'ampmono'; src: url("/fonts/nnixmono.woff2") format("woff2"); }
-@font-face { font-family: 'ampmedium'; src: url("/fonts/nnixmedium.woff2") format("woff2"); }
+/* Truth or Consequences Contemporary
+ *
+ * Vanilla CSS, no build step. The look is a centred single column on a warm
+ * grey ground: Jost for the display heading, Inter for section headings and
+ * links, EB Garamond for everything read at length.
+ *
+ * Fonts are still fetched from Google Fonts and indestructibletype.com. See
+ * README, "Known cruft" — for an archive they should be self-hosted.
+ */
 
+:root {
+  --bg-color: #f2f2f2;
+  --secondary-bg-color: #d9d9d9;
+  --muted-color: #6b6b6b;
+  --link-hover-color: #00008b;
+  --border-radius: 15px;
 
-:root { --bg-color: #f2f2f2; --secondary-bg-color: #d9d9d9; --border-radius: 15px; }
+  --font-display: 'Jost', 'Futura', 'Inter', sans-serif;
+  --font-ui: 'Inter', system-ui, sans-serif;
+  --font-body: 'EB Garamond', Georgia, serif;
+  --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+}
+
 html, body { background-color: var(--bg-color); margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; }
+body { min-height: 100vh; }
 
+main {
+  max-width: 80ch;
+  padding: 2ch;
+  margin: auto;
+  font-family: var(--font-body);
+  font-size: 100%;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
 
-main { max-width: 80ch; padding: 2ch; margin: auto; font-family: 'EB Garamond'; font-size: 100%; line-height: 1.6; min-height: 100vh; }
+/* Headings set large enough to overflow a phone unless they are told the
+ * viewport's width matters more than the type scale. */
+h1, h2, h3 { overflow-wrap: break-word; }
 
-code, pre, tt, kbd, samp { overflow-wrap: break-word; word-wrap: break-word; white-space: pre-wrap; overflow-x: auto; width: 100%; box-sizing: border-box; background-color: var(--secondary-bg-color); font-family: "nnixmono"; font-size: 90%; font-weight: 500; }
+h1 {
+  font-family: var(--font-display);
+  line-height: 1.05;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: clamp(2.25rem, 11vw, 4.07em);
+}
 
-.subtle-mono { font-weight:500; font-size: 90%; font-family: "nnixmono"; color: var(--secondary-bg-color); }
+h2 {
+  font-family: var(--font-ui);
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.54em;
+}
 
+h3 { font-family: var(--font-body); font-style: italic; font-weight: normal; font-size: 1.16em; }
+em { font-style: italic; }
+b, strong { font-weight: 600; font-size: inherit; }
 
+p { margin: 1em auto; width: 70%; max-width: 60ch; font-size: 1.2em; }
+h1, h2, h3, li { text-align: center; }
 
-h1 { font-family: 'Jost', 'Futura', 'Inter', san-serif; line-height: 1em; font-optical-sizing:auto; font-style: normal; font-weight: 500; font-size: 4.07em; }
-
-h2 { font-family: 'Inter', sans-serif; font-optical-sizing: auto; font-style:normal; font-weight: 400; font-size: 1.54em; }
-
-h3 { font-family: 'nnixitalic'; font-weight: normal; font-size: 1.16em; }
-emph { font-family: 'nnixbook'; font-weight: normal; font-size: 1.16em; }
-b, strong { font-family: 'nnixbold'; font-weight: normal; font-size: inherit; }
-footer { max-width: 80ch; padding: 2ch; margin: auto; font-family: 'EB Garamond'; }
-
-a:link, a:visited { color: inherit; font-family: 'courier'; text-decoration: underline; }
-a:link, a:visited { color: inherit; font-family: 'Inter'; font-weight: 300; text-decoration: underline; }
-a:hover, a:focus { text-decoration: none; color:#00008B; }
+a:link, a:visited { color: inherit; font-family: var(--font-ui); font-weight: 300; text-decoration: underline; }
+a:hover, a:focus { text-decoration: none; color: var(--link-hover-color); }
+a:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
 
 img { border-radius: var(--border-radius); max-width: 100%; height: auto; }
-.smallfeature { border-radius: var(--border-radius); display: block; margin: 1rem auto; width: clamp(50%, 80%, 300px); }
-.smallsplash { border-radius: var(--border-radius); display: block; margin: 1rem 0; width: clamp(50%, 80%, 300px); }
 figure { margin: 0 0 1em; }
+.smallfeature { border-radius: var(--border-radius); display: block; margin: 1rem auto; width: min(80%, 300px); }
+.smallsplash { border-radius: var(--border-radius); display: block; margin: 1rem 0; width: min(80%, 300px); }
 
 ul { margin-left: 1em; padding: 0; list-style: none; }
 ul li::before { content: "+"; padding-right: 4px; }
 ul.ing li::before { content: none; padding-right: 0; }
 li ul { margin-left: 2em; }
+
+code, pre, tt, kbd, samp {
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: var(--secondary-bg-color);
+  font-family: var(--font-mono);
+  font-size: 90%;
+}
+
 table { border-collapse: collapse; }
 td { background-color: var(--bg-color); overflow: hidden; text-align: left; word-break: normal; padding: 5px 20px; font-size: 100%; }
-th { font-family: 'nnixbold'; font-weight: normal; background-color: var(--secondary-bg-color); text-align: left; padding: 8px 15px; border-radius: var(--border-radius); border: 2px solid var(--bg-color); font-size: 100%; }
-.timeline { max-width: 100%; margin: 10px auto; padding: 10px; border-left: 2px solid #000000; position: relative; }
+th { font-weight: 600; background-color: var(--secondary-bg-color); text-align: left; padding: 8px 15px; border-radius: var(--border-radius); border: 2px solid var(--bg-color); font-size: 100%; }
+
+.timeline { max-width: 100%; margin: 10px auto; padding: 10px; border-left: 2px solid #000; position: relative; }
 .timeline-item { position: relative; margin: 30px 30px; padding-left: 30px; }
-.date { font-family: 'nnixmedium'; margin-bottom: 5px; color: inherit; position: absolute; top: 0px; left: 10px; text-align: right; }
-.event { padding: 20px; margin-left: 30px; margin-top: 0px; }
+.date { font-family: var(--font-mono); margin-bottom: 5px; color: inherit; position: absolute; top: 0; left: 10px; text-align: right; }
+.event { padding: 20px; margin-left: 30px; margin-top: 0; }
 
-
-p {margin: 1em auto;   width: clamp(70%, 80%, 300px); font-size:1.2em;}
-h1,h2,h3,li {text-align: center;}
-
-
+/* The footer sits outside <main>, so it repeats main's column geometry
+ * rather than inheriting it. */
+.site-footer {
+  max-width: 80ch;
+  padding: 2ch;
+  margin: 0 auto;
+  margin-top: 64px;
+  box-sizing: border-box;
+  font-family: var(--font-body);
+}
+.site-footer p { width: auto; max-width: none; font-size: 1em; margin: 1em 0; }
+.subtle-mono { font-weight: 500; font-size: 90%; font-family: var(--font-mono); color: var(--muted-color); }

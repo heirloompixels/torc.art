@@ -5,13 +5,9 @@ compile_sass = false
 minify_html = false
 default_language = "en"
 
-taxonomies = [
-	{ name = "recommender" },
-	{ name = "authorname" },
-	{ name = "pubyear" },
-	{ name = "rating" },
-	{ name = "readstate" }
-]
+# No taxonomies. The site is one page; the template this repo was initialized
+# from declared a bookshelf's worth (recommender, authorname, pubyear, rating,
+# readstate) and nothing ever used them.
 
 [slugify]
 paths = "on"
@@ -21,18 +17,16 @@ anchors = "on"
 render_emoji = true
 external_links_target_blank = true
 smart_punctuation = true
-highlight_code = false
 
 [link_checker]
 internal_level = "warn"
 
-[extra]
-author = "kpc"
-default_theme = "light"
-twitter_card = true
-epoch = "PLACEHOLDER"
-
-
-
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
+
+[extra]
+author = "Truth or Consequences Contemporary"
+default_theme = "light"
+twitter_card = true
+# Social-card image, overridable per page or section with extra.image
+default_image = "/box_prints.jpg"
