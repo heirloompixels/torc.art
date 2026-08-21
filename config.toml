@@ -31,3 +31,69 @@ default_theme = "light"
 twitter_card = true
 # Social-card image, overridable per page or section with extra.image
 default_image = "/box_prints.jpg"
+
+# ── The theme ────────────────────────────────────────────────────────────
+# One word, and the whole site changes. It selects the landing page's layout
+# (templates/homes/<theme>.html) and the stylesheet every page loads
+# (static/themes/<theme>.css). Nothing else in the repo knows the theme's
+# name, and no content file does. See THEMES.md to add one.
+theme = "poster"
+
+tagline = "A Gallery in the Middle of Nowhere"
+founded = "Est. 2010 · 312 Main since 2023"
+
+[extra.contact]
+name = "Truth or Consequences Contemporary"
+street = "312 Main Ave"
+locality = "Truth or Consequences, NM 87901"
+building = "Luchini Electric Building, 1916"
+email = "intentionallyconfusing@gmail.com"
+
+# Nav entries that are not pages of this site. Rendered after the pages.
+[[extra.nav_external]]
+name = "Shop"
+url = "https://shop.torc.art"
+blurb = "buy the work"
+
+[[extra.social]]
+name = "Instagram"
+url = "https://www.instagram.com/torc.art"
+me = true
+
+[[extra.social]]
+name = "Facebook"
+url = "https://www.facebook.com/torc.contemporary"
+
+[[extra.social]]
+name = "YouTube"
+url = "https://www.youtube.com/@intentionallyconfusing"
+
+[[extra.elsewhere]]
+name = "Agile Meteor Press"
+url = "https://amp.torc.art"
+
+[[extra.elsewhere]]
+name = "jeannieortiz.com"
+url = "https://jeannieortiz.com"
+
+[[extra.elsewhere]]
+name = "kyleparkercunningham.com"
+url = "https://kyleparkercunningham.com"
+
+[[extra.elsewhere]]
+name = "intentionallyconfusing.com"
+url = "https://intentionallyconfusing.com"
+
+# ── The theme registry ───────────────────────────────────────────────────
+# One block per theme, keyed by the name `extra.theme` takes. Everything a
+# theme needs the HTML `<head>` to know goes here, so no template carries a
+# per-theme special case. Adding a theme adds a block; nothing edits one.
+[extra.themes.poster]
+label = "Poster"
+description = "Full-width type poster, running ticker, sliding index. Interiors quiet."
+color = "#f0efea"
+
+[extra.themes.plain]
+label = "Plain"
+description = "The site's first look — a centred column on warm grey."
+color = "#f2f2f2"

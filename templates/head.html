@@ -9,7 +9,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <meta name="apple-mobile-web-app-title" content="TorC Contemporary" />
 <link rel="manifest" href="/site.webmanifest" />
-<meta name="theme-color" content="#f2f2f2">
+<meta name="theme-color" content="{{ config.extra.themes[config.extra.theme].color }}">
 
 
 
@@ -106,10 +106,16 @@
 {# Root-relative on purpose. get_url() builds an absolute URL from base_url,
    which is https — and the GitHub Pages certificate for new.torc.art is not
    provisioned, so https does not answer and the browser silently got no
-   stylesheet at all. The metadata below stays absolute and stays https: it is
+   stylesheet at all. The metadata above stays absolute and stays https: it is
    read by scrapers, not fetched to render the page, and it will be right the
-   day the certificate lands. #}
-<link rel="stylesheet" type="text/css" href="/style.css"/>
+   day the certificate lands.
+
+   Two stylesheets, and the order matters. base.css is the reset and the
+   geometry every theme needs and none of them should have to restate. The
+   theme file is the whole look, and it is the only one that changes when
+   config.extra.theme changes. #}
+<link rel="stylesheet" href="/base.css">
+<link rel="stylesheet" href="/themes/{{ config.extra.theme }}.css">
 {% endblock css %}
 
 <script type="application/ld+json">

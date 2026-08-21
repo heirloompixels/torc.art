@@ -1,0 +1,28 @@
+{# Shared by every theme; see chrome/header.html. #}
+{% set c = config.extra.contact %}
+<footer class="site-foot">
+  <div class="foot-block foot-address">
+    <p class="foot-name">{{ c.name }}</p>
+    <p>{{ c.street }}<br>{{ c.locality }}</p>
+    <p><a href="mailto:{{ c.email }}">{{ c.email }}</a></p>
+  </div>
+  <nav class="foot-block foot-links" aria-label="Elsewhere">
+    <ul class="foot-social">
+      {%- for s in config.extra.social %}
+      <li><a{% if s.me %} rel="me"{% endif %} href="{{ s.url | safe }}">{{ s.name }}</a></li>
+      {%- endfor %}
+    </ul>
+    <ul class="foot-elsewhere">
+      {%- for x in config.extra.nav_external %}
+      <li><a href="{{ x.url | safe }}">{{ x.name }}</a></li>
+      {%- endfor %}
+      {%- for x in config.extra.elsewhere %}
+      <li><a href="{{ x.url | safe }}">{{ x.name }}</a></li>
+      {%- endfor %}
+    </ul>
+  </nav>
+  <div class="foot-block foot-colophon">
+    <p><a href="/manifest/">Manifest</a> — who wrote what</p>
+    <p>Built {{ now() | date(format="%Y-%m-%d") }}</p>
+  </div>
+</footer>

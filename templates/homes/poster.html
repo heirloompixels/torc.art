@@ -1,0 +1,81 @@
+{# Theme: poster. Reads the slots in content/_index.md; owns no copy. #}
+{% set x = section.extra %}
+{% set index = get_section(path="_index.md") %}
+
+<main class="home-poster">
+
+<div class="poster-hero">
+  <h1 class="poster-stack">
+    {%- for line in x.title_lines %}
+    <span class="poster-line poster-line-{{ loop.index }}">{{ line }}</span>
+    {%- endfor %}
+  </h1>
+  {%- if x.marquee %}
+  <div class="ticker" aria-hidden="true">
+    {#- Two identical runs: the animation translates by -50%, so the second
+        run is exactly under the first when it wraps and the seam is
+        invisible. Reduced motion stops it — see themes/poster.css. -#}
+    <div class="ticker-run">{% for i in range(end=2) %}{% for m in x.marquee %}<span class="ticker-item">{{ m }}</span>{% endfor %}{% endfor %}</div>
+  </div>
+  {%- endif %}
+</div>
+
+<div class="band">
+  {%- if x.pull_quote %}
+  <div class="band-cell">
+    <p class="big-quote">{{ x.pull_quote }}</p>
+  </div>
+  {%- endif %}
+  {%- if x.statement %}
+  <div class="band-cell">
+    <h2>Statement</h2>
+    {{ x.statement | markdown | safe }}
+  </div>
+  {%- endif %}
+  <div class="band-cell">
+    <h2>Coordinates</h2>
+    {%- set c = config.extra.contact %}
+    <p>{{ c.street }}<br>{{ c.locality }}{% if c.building %}<br>{{ c.building }}{% endif %}</p>
+    <p><a href="mailto:{{ c.email }}">{{ c.email }}</a></p>
+  </div>
+</div>
+
+{%- if x.hero %}
+<figure class="fig">
+  <img src="{{ x.hero.src | safe }}" alt="{{ x.hero.alt }}">
+</figure>
+{%- endif %}
+
+{%- if x.notice and x.notice.title %}
+<section class="notice">
+  <h2 class="notice-title">
+    {%- if x.notice.url %}<a href="{{ x.notice.url | safe }}">{% endif %}
+    {{- x.notice.title }}{% if x.notice.subtitle %}<br><span class="notice-sub">{{ x.notice.subtitle }}</span>{% endif %}
+    {%- if x.notice.url %}</a>{% endif %}
+  </h2>
+  <div class="notice-body">
+    {{ x.notice.body | markdown | safe }}
+    {%- if x.notice.signature %}<p class="notice-sign">{{ x.notice.signature }}</p>{% endif %}
+  </div>
+</section>
+{%- endif %}
+
+{#- The index is every weighted page plus the external entries, numbered in
+    one continuous run across both loops. -#}
+{% set_global n = 0 %}
+<nav class="menu" aria-label="Everything">
+  {%- for p in index.pages %}
+  {%- set_global n = n + 1 %}
+  <a href="{{ p.path | safe }}">{{ p.title }}<span class="menu-num">{% if n < 10 %}0{% endif %}{{ n }}</span></a>
+  {%- endfor %}
+  {%- for e in config.extra.nav_external %}
+  {%- set_global n = n + 1 %}
+  <a href="{{ e.url | safe }}">{{ e.name }}<span class="menu-num">{% if n < 10 %}0{% endif %}{{ n }}</span></a>
+  {%- endfor %}
+</nav>
+
+{%- if x.activities %}
+<p class="strip">{% for a in x.activities %}<span>{{ a }}</span>{% endfor %}</p>
+{%- endif %}
+
+</main>

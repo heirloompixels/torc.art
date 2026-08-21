@@ -1,0 +1,46 @@
+{# Theme: plain — the site's first look, kept as the quiet option and as the
+   proof that a theme swap costs one word in config.toml. Same slots as
+   every other theme; no copy of its own. #}
+{% set x = section.extra %}
+{% set index = get_section(path="_index.md") %}
+
+<main class="home-plain prose">
+
+<img class="plain-mark" src="/logo.svg" alt="Truth or Consequences Contemporary — a line drawing of a cloud with a lightning bolt" width="160" height="160">
+
+<h1>{{ x.title_lines | join(sep=" ") }}</h1>
+
+<p class="plain-tagline">{{ config.extra.tagline }}</p>
+
+{%- if x.hero %}
+<figure><img src="{{ x.hero.src | safe }}" alt="{{ x.hero.alt }}"></figure>
+{%- endif %}
+
+{%- if x.pull_quote %}
+<p class="plain-quote">{{ x.pull_quote }}</p>
+{%- endif %}
+
+{{ x.statement | markdown | safe }}
+
+{%- if x.notice and x.notice.title %}
+<h2>{{ x.notice.title }}{% if x.notice.subtitle %} — {{ x.notice.subtitle }}{% endif %}</h2>
+{{ x.notice.body | markdown | safe }}
+{%- if x.notice.signature %}<p>{{ x.notice.signature }}</p>{% endif %}
+{%- endif %}
+
+<h2>Here</h2>
+<ul class="plain-index">
+  {%- for p in index.pages %}
+  <li><a href="{{ p.path | safe }}">{{ p.title }}</a>{% if p.extra.blurb %} — {{ p.extra.blurb }}{% endif %}</li>
+  {%- endfor %}
+  {%- for e in config.extra.nav_external %}
+  <li><a href="{{ e.url | safe }}">{{ e.name }}</a>{% if e.blurb %} — {{ e.blurb }}{% endif %}</li>
+  {%- endfor %}
+</ul>
+
+{%- if x.activities %}
+<h2>Projects</h2>
+<p>{{ x.activities | join(sep=", ") }} — the full map is on the <a href="/projects/">projects</a> page.</p>
+{%- endif %}
+
+</main>
