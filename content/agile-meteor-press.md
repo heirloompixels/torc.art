@@ -1,8 +1,12 @@
 +++
 title = "Agile Meteor Press"
 description = "A small press at an oasis — hyper local publishing from Truth or Consequences, New Mexico."
+weight = 70
 
 [extra]
+blurb = "our publishing imprint"
+nav = true
+nav_title = "A.M.P."
 author = "gallery + claude"
 +++
 

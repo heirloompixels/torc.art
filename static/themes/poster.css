@@ -1,0 +1,327 @@
+/* Theme: poster — Truth or Consequences Contemporary
+ *
+ * From mockups/12-poster.html. The landing page is a type poster: the name
+ * at 18vw, a running ticker, a three-column band, and an index you slide a
+ * finger down. The interior pages are the opposite on purpose — a single
+ * left-aligned column, the same palette, the orange kept for rules and
+ * labels. The gallery shouts once, on the way in, and then gets out of the
+ * way of fourteen years of prose.
+ *
+ * Loaded after base.css. Everything visual is here; nothing here is
+ * structural. See THEMES.md.
+ */
+
+:root {
+  --paper: #f0efea;
+  --ink: #111;
+  --hot: #ff4d1c;
+  --muted: #7c7a73;
+  --rule: #cdcbc4;
+
+  --jost: 'Jost', Futura, 'Century Gothic', sans-serif;
+  --ui: 'Inter', system-ui, -apple-system, sans-serif;
+  --body: 'EB Garamond', Georgia, serif;
+  --mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+
+  --gutter: clamp(16px, 3vw, 40px);
+  --wide: 1500px;
+  --measure: 68ch;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+a { text-decoration: none; }
+::selection { background: var(--hot); color: var(--paper); }
+
+/* A label: Inter, small, letterspaced, upper. Used for every piece of
+ * interface text in the theme — nav, footer, section headings, the ticker. */
+.site-nav, .site-tagline, .wordmark-name, .site-foot,
+.band h2, .ticker, .menu-num, .strip, .prose h2 {
+  font-family: var(--ui);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+}
+
+/* ── Chrome ──────────────────────────────────────────────────────────── */
+
+.site-head, .site-foot,
+.home-poster, .prose {
+  max-width: var(--wide);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.site-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+  padding-block: 16px;
+  font-size: 10px;
+}
+
+.wordmark { display: flex; align-items: center; gap: 9px; }
+.wordmark-mark { width: 26px; height: auto; }
+.wordmark-name { font-weight: 500; }
+
+.site-tagline { margin: 0; color: var(--muted); font-size: 10px; }
+@media (max-width: 700px) { .site-tagline { display: none; } }
+
+.site-nav ul { display: flex; flex-wrap: wrap; gap: 6px 15px; }
+.site-nav a { color: var(--muted); }
+.site-nav a:hover, .site-nav a:focus { color: var(--hot); }
+.site-nav [aria-current="page"] { color: var(--ink); border-bottom: 1px solid var(--hot); }
+
+.site-foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px 40px;
+  padding-block: 30px 70px;
+  border-top: 1px solid var(--rule);
+  margin-top: clamp(40px, 6vw, 80px);
+  font-size: 10px;
+  line-height: 2.1;
+  color: var(--muted);
+}
+.site-foot p { margin: 0; }
+.site-foot a:hover, .site-foot a:focus { color: var(--hot); }
+.foot-name { color: var(--ink); font-weight: 500; }
+.foot-links { display: flex; flex-wrap: wrap; gap: 4px 30px; }
+.foot-social li, .foot-elsewhere li { list-style: none; }
+
+/* ── The landing page ────────────────────────────────────────────────── */
+
+.poster-hero {
+  padding-block: clamp(20px, 4vw, 50px) clamp(40px, 6vw, 80px);
+  border-top: 4px solid var(--ink);
+  border-bottom: 4px solid var(--ink);
+}
+
+.poster-stack { margin: 0; }
+.poster-line {
+  display: block;
+  font-family: var(--jost);
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 0.78;
+  letter-spacing: -0.04em;
+}
+/* Three lines is what the name wants; the nth-child rules below are the
+ * fallback if content/_index.md ever gives it a different number. */
+.poster-line { font-size: clamp(2.1rem, 10.6vw, 10.2rem); }
+.poster-line-1 { font-size: clamp(3rem, 18.3vw, 18rem); }
+.poster-line-2 { font-size: clamp(2.6rem, 11.8vw, 11rem); color: var(--hot); }
+.poster-line-3 { font-weight: 200; letter-spacing: -0.03em; }
+
+.ticker {
+  overflow: hidden;
+  white-space: nowrap;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  margin-top: clamp(22px, 3vw, 40px);
+  padding-block: 9px;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+}
+.ticker-run { display: inline-block; animation: ticker-slide 34s linear infinite; }
+.ticker-item::after { content: " · "; }
+@keyframes ticker-slide { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .ticker-run { animation: none; } }
+
+.band {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-bottom: 2px solid var(--ink);
+}
+@media (min-width: 900px) { .band { grid-template-columns: 1fr 1fr 1fr; } }
+.band-cell {
+  padding: clamp(24px, 3vw, 44px) clamp(0px, 2vw, 32px);
+  border-left: 1px solid var(--rule);
+}
+.band-cell:first-child { border-left: none; padding-left: 0; }
+@media (max-width: 899px) { .band-cell { border-left: none; padding-inline: 0; } }
+.band h2 { font-size: 10px; letter-spacing: 0.26em; margin: 0 0 14px; color: var(--hot); font-weight: 500; }
+.band p { margin: 0 0 0.9em; }
+.band p:last-child { margin-bottom: 0; }
+.band a { text-decoration: underline; text-underline-offset: 3px; }
+.band a:hover { color: var(--hot); }
+
+.big-quote {
+  font-family: var(--jost);
+  font-weight: 200;
+  font-size: clamp(1.6rem, 3.6vw, 2.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+.fig { border-bottom: 2px solid var(--ink); }
+.fig img { width: 100%; display: block; filter: contrast(1.1) saturate(0.85); }
+
+.notice {
+  display: grid;
+  gap: 26px;
+  padding-block: clamp(28px, 4vw, 60px);
+  border-bottom: 2px solid var(--ink);
+}
+@media (min-width: 820px) { .notice { grid-template-columns: 1fr 1.4fr; } }
+.notice-title {
+  margin: 0;
+  font-family: var(--jost);
+  font-weight: 500;
+  font-size: clamp(1.6rem, 4vw, 2.8rem);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+}
+.notice-title a:hover { color: var(--hot); }
+.notice-sub { color: var(--hot); }
+.notice-body p { margin: 0 0 0.9em; }
+.notice-body a { text-decoration: underline; text-underline-offset: 3px; }
+.notice-body a:hover { color: var(--hot); }
+.notice-sign {
+  font-family: var(--jost);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+.menu { display: block; border-bottom: 2px solid var(--ink); }
+.menu a {
+  display: block;
+  padding-block: clamp(10px, 1.5vw, 18px);
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--jost);
+  font-weight: 300;
+  font-size: clamp(1.6rem, 5.4vw, 4.2rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  transition: color 0.2s, transform 0.25s;
+}
+.menu a:last-child { border-bottom: none; }
+.menu a:hover, .menu a:focus { color: var(--hot); transform: translateX(14px); }
+@media (prefers-reduced-motion: reduce) { .menu a { transition: none; } .menu a:hover { transform: none; } }
+.menu-num { font-size: 10px; letter-spacing: 0.2em; color: var(--muted); vertical-align: super; margin-left: 14px; }
+
+.strip { margin: 22px 0 0; font-size: 10px; color: var(--muted); line-height: 2; }
+.strip span:not(:last-child)::after { content: " · "; }
+
+/* ── Interior pages ──────────────────────────────────────────────────────
+ * The quiet half. One left-aligned column at a readable measure, the same
+ * paper and ink, the orange demoted to rules, labels and link hover. */
+
+.prose {
+  max-width: var(--measure);
+  margin-inline: auto;
+  padding-block: clamp(28px, 5vw, 64px) clamp(24px, 4vw, 48px);
+  font-size: 1.06rem;
+  line-height: 1.62;
+}
+
+.prose > h1:first-child { margin-top: 0; }
+.prose h1 {
+  font-family: var(--jost);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: -0.025em;
+  line-height: 0.95;
+  font-size: clamp(2.1rem, 7vw, 3.6rem);
+  margin: 0 0 0.7em;
+  padding-bottom: 0.28em;
+  border-bottom: 3px solid var(--ink);
+}
+
+.prose h2 {
+  font-size: 10.5px;
+  letter-spacing: 0.26em;
+  font-weight: 600;
+  color: var(--hot);
+  margin: 2.6em 0 0.9em;
+  padding-top: 0.9em;
+  border-top: 1px solid var(--rule);
+}
+
+.prose h3 {
+  font-family: var(--jost);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  font-size: 1.22rem;
+  margin: 1.9em 0 0.5em;
+}
+
+.prose h4 { font-family: var(--ui); font-size: 0.86rem; letter-spacing: 0.08em; margin: 1.6em 0 0.4em; }
+
+.prose p { margin: 0 0 1.05em; }
+.prose a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; text-decoration-color: var(--rule); }
+.prose a:hover, .prose a:focus { color: var(--hot); text-decoration-color: var(--hot); }
+
+.prose ul, .prose ol { margin: 0 0 1.05em; padding-left: 1.15em; }
+.prose li { margin-bottom: 0.35em; }
+.prose ul { list-style: none; padding-left: 0; }
+.prose ul > li { padding-left: 1.15em; text-indent: -1.15em; }
+.prose ul > li::before { content: "—"; color: var(--hot); padding-right: 0.5em; text-indent: 0; }
+.prose ul ul { margin: 0.35em 0 0.35em 1.15em; }
+
+/* exhibitions.md and calendar.md are definition lists — a title, then what
+ * it was. The term carries the weight, the description carries the prose. */
+.prose dl { margin: 0 0 1.4em; }
+.prose dt {
+  font-family: var(--jost);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  font-size: 1.1rem;
+  margin-top: 1.5em;
+  padding-top: 0.5em;
+  border-top: 1px solid var(--rule);
+}
+.prose dd { margin: 0.35em 0 0; }
+
+.prose blockquote {
+  margin: 1.5em 0;
+  padding-left: 1.1em;
+  border-left: 3px solid var(--hot);
+  font-size: 1.12em;
+  line-height: 1.45;
+}
+.prose blockquote p:last-child { margin-bottom: 0; }
+
+.prose hr { border: none; border-top: 3px solid var(--ink); margin: 2.6em 0; }
+
+.prose figure { margin: 1.6em 0; }
+.prose img { display: block; width: 100%; }
+.prose figcaption { font-family: var(--ui); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-top: 0.6em; }
+
+/* The etching press page prices things. Tables size to their content by
+ * default, which puts them wider than a phone; let the cells wrap. */
+.prose table { width: 100%; margin: 1.4em 0; font-size: 0.95rem; }
+.prose th {
+  font-family: var(--ui);
+  font-size: 0.66rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 0.5em 0.7em 0.5em 0;
+  border-bottom: 2px solid var(--ink);
+  color: var(--hot);
+}
+.prose td { text-align: left; padding: 0.55em 0.7em 0.55em 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+.prose tr:last-child td { border-bottom: none; }
+
+.prose code, .prose kbd, .prose samp { font-family: var(--mono); font-size: 0.86em; background: #e4e2db; padding: 0.1em 0.35em; }
+.prose pre { background: #e4e2db; padding: 1em; margin: 0 0 1.05em; }
+.prose pre code { background: none; padding: 0; }
+
+/* Editorial holds and unverified facts are HTML comments in the source, but
+ * the strong lead-ins the deep-history pages use are not — keep them ink. */
+.prose strong { font-weight: 600; }
+.prose em { font-style: italic; }

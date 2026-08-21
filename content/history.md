@@ -1,8 +1,11 @@
 +++
 title = "History"
 description = "Fourteen years of making art happen in Truth or Consequences — Mud Mountain Studio, Seba, Desert Archaic, and Truth or Consequences Contemporary."
+weight = 20
 
 [extra]
+blurb = "fourteen years, four names, one town"
+nav = true
 author = "claude"
 +++
 

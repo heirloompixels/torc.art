@@ -1,8 +1,10 @@
 +++
 title = "Fieldwork"
 description = "The gallery's other half — every summer we go out into the wild to create and rejuvenate, and the work comes home with us."
+weight = 110
 
 [extra]
+blurb = "our summers in the wild"
 author = "claude"
 +++
 

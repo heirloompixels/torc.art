@@ -1,8 +1,11 @@
 +++
 title = "Press"
 description = "Press coverage of Truth or Consequences Contemporary."
+weight = 130
 
 [extra]
+blurb = "what has been written about us"
+nav = true
 author = "gallery"
 +++
 

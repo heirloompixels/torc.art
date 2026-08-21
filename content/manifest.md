@@ -1,8 +1,10 @@
 +++
 title = "Manifest"
 description = "Every page on this site, and who wrote it."
+weight = 900
 
 [extra]
+blurb = "who wrote what"
 author = "claude"
 +++
 

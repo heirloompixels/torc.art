@@ -1,8 +1,11 @@
 +++
 title = "Calendar"
 description = "Openings, art hops, performances and festivals at Truth or Consequences Contemporary."
+weight = 50
 
 [extra]
+blurb = "openings, art hops, performances"
+nav = true
 author = "gallery + claude"
 +++
 

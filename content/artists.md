@@ -1,8 +1,11 @@
 +++
 title = "Artists"
 description = "Artists shown and represented by Truth or Consequences Contemporary."
+weight = 30
 
 [extra]
+blurb = "the people we show"
+nav = true
 author = "gallery"
 +++
 

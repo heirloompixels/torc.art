@@ -1,8 +1,10 @@
 +++
 title = "MeTeORiC"
 description = "A free arts and film festival in Truth or Consequences, New Mexico — community led, horizontally curated, returning in 2027."
+weight = 80
 
 [extra]
+blurb = "the festival, returning in 2027"
 author = "claude"
 +++
 

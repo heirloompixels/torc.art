@@ -1,0 +1,21 @@
+{# Shared by every theme. The markup is the same everywhere on purpose: a
+   theme changes how the header looks, not what it is. Order and membership
+   come from the pages themselves — `weight` orders, `extra.nav` admits. #}
+{% set index = get_section(path="_index.md") %}
+<header class="site-head">
+  <a class="wordmark" href="/">
+    <img class="wordmark-mark" src="/logo.svg" alt="" width="40" height="40">
+    <span class="wordmark-name">{{ config.extra.contact.name }}</span>
+  </a>
+  <p class="site-tagline">{{ config.extra.tagline }}</p>
+  <nav class="site-nav" aria-label="Sections">
+    <ul>
+      {%- for p in index.pages %}{% if p.extra.nav %}
+      <li><a href="{{ p.path | safe }}"{% if current_path is defined and current_path == p.path %} aria-current="page"{% endif %}>{{ p.extra.nav_title | default(value=p.title) }}</a></li>
+      {%- endif %}{% endfor %}
+      {%- for x in config.extra.nav_external %}
+      <li class="is-external"><a href="{{ x.url | safe }}">{{ x.name }}</a></li>
+      {%- endfor %}
+    </ul>
+  </nav>
+</header>

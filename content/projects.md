@@ -1,8 +1,10 @@
 +++
 title = "Projects"
 description = "The constellation around the gallery — the shop, the press, the Periodic, membership, and the projects to come."
+weight = 100
 
 [extra]
+blurb = "the whole constellation"
 author = "claude"
 +++
 

@@ -1,5 +1,21 @@
 {% extends "base.html" %}
-
+{% block bodyclass %}home{% endblock bodyclass %}
 {% block content %}
-{{ section.content | safe }}
+{#- ── Theme dispatch ────────────────────────────────────────────────────
+    The landing page's layout is the one thing a theme has to bring its own
+    markup for; everything else it does with CSS. Tera takes a literal path
+    only — `{% include "homes/" ~ theme ~ ".html" %}` is a parse error on
+    zola 0.22.1 — so the registry is written out by hand. Adding a theme is
+    one line here, one template in homes/, one stylesheet in
+    static/themes/. Nothing else in the repo learns its name.            -#}
+{% set theme = config.extra.theme %}
+{% if theme == "poster" %}{% include "homes/poster.html" %}
+{% elif theme == "plain" %}{% include "homes/plain.html" %}
+{% else %}
+<p class="theme-error"><strong>Unknown theme <code>{{ theme }}</code>.</strong>
+Add it to the dispatch in <code>templates/index.html</code>, or set
+<code>extra.theme</code> in <code>config.toml</code> to one that exists.
+Falling back to <code>plain</code>.</p>
+{% include "homes/plain.html" %}
+{% endif %}
 {% endblock content %}

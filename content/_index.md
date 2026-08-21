@@ -1,52 +1,70 @@
 +++
 title = "Truth or Consequences Contemporary"
 description = "A gallery in the middle of nowhere. Contemporary art in the oasis — Truth or Consequences, New Mexico."
+sort_by = "weight"
 
+# ── The landing page is data, not prose ──────────────────────────────────
+#
+# Every field below is a named slot. A theme reads the slots it has room for
+# and ignores the rest, so changing `extra.theme` in config.toml never
+# touches this file and never rewrites a word of the gallery's copy. The
+# page body is deliberately empty: if copy lived down there, the layout
+# would live down there with it and the themes could not be swapped.
+#
+# Strings marked "markdown" below are rendered through the markdown filter,
+# so links and emphasis work in them.
 [extra]
 author = "gallery + claude"
+
+# The name, broken where a display theme wants to break it. Themes that set
+# it as one line join these with a space.
+title_lines = ["Truth or", "Consequences", "Contemporary"]
+
+# Short phrases. The poster runs them as a ticker; quieter themes may set
+# them as a single rule of small caps, or drop them.
+marquee = [
+  "A Gallery in the Middle of Nowhere",
+  "Art in the Oasis",
+  "312 Main Ave",
+  "Truth or Consequences NM",
+]
+
+# The one sentence a theme can afford to set very large.
+pull_quote = "Obsessed with the transmission of lived emotions from one human being to another."
+
+# markdown
+statement = """
+Contemporary art space focusing on experiment and experiential works. We bring
+cutting edge projects to life in the strange vortex which is Truth or
+Consequences, New Mexico.
+
+Handloom, sculpture, intaglio, painting, printmaking, art clothing, adornment,
+knives, and books.
+"""
+
+# The list under the footer rule — what the gallery does, in a breath.
+activities = [
+  "Exhibition Space", "Agile Meteor Press", "Workshops", "Performance",
+  "Dance", "Art Equipment", "MeTeORiC", "Idea Idea", "Printmaking",
+  "Stone Sculpture",
+]
+
+[extra.hero]
+src = "/box_prints.jpg"
+alt = "Intaglio prints laid out on a wooden table around a deep red presentation box"
+
+# The standing notice. Empty `title` retires it and every theme drops the
+# block; nothing else needs editing when the season changes.
+[extra.notice]
+title = "Fieldwork"
+subtitle = "Summer 2026"
+url = "/fieldwork/"
+# markdown
+body = """
+We are in and out of the gallery this summer as we do our annual
+[Fieldwork](/fieldwork/) — creating and rejuvenating out in the wild. Orders
+from the [shop](https://shop.torc.art) will ship slower than normal — please
+get in touch if you need a rush order.
+"""
+signature = "Jeannie & Kyle"
 +++
-
-<img style="display: block; margin:auto; height: 12em;" src="/logo.svg" alt="Truth or Consequences Contemporary — a line drawing of a cloud with a lightning bolt" />
-
-# Truth or Consequences Contemporary
-
-A Gallery in the Middle of Nowhere.
-
-<img style="display: block; margin:auto;" src="/box_prints.jpg" alt="Intaglio prints laid out on a wooden table around a deep red presentation box" />
-
-A gallery in the middle of nowhere obsessed with understanding optimal ways to use art in the transmission of lived emotions from one human being to another.
-
-Contemporary art space focusing on experiment and experiential works. We bring cutting edge projects to life in the strange vortex which is Truth or Consequences, New Mexico.
-
-You can visit us at 312 Main Ave, Truth or Consequences, NM 87901.
-
-## Fieldwork
-
-We are in and out of the gallery this summer — summer 2026 — as we do our annual [Fieldwork](/fieldwork/), creating and rejuvenating out in the wild.
-
-Orders from the [shop](https://shop.torc.art) will ship slower than normal — please get in touch if you need a rush order.
-
-Thank You,<br />
-Jeannie & Kyle
-
-## Here
-
-- [About](/about/) — who we are and how we got here
-- [History](/history/) — fourteen years, four names, one town
-- [Artists](/artists/) — the people we show
-- [Exhibitions](/exhibitions/) — what is and was on the walls
-- [Calendar](/calendar/) — openings, art hops, performances
-- [Community Etching Press](/etching-press/) — press time, orientation, pricing
-- [Agile Meteor Press](/agile-meteor-press/) — our publishing imprint
-- [MeTeORiC](/meteoric/) — the festival, returning in 2027
-- [Members](/members/) — supporting membership at members.torc.art
-- [Projects](/projects/) — the whole constellation
-- [Fieldwork](/fieldwork/) — our summers in the wild
-- [Glyphs](/glyphs/) — leave your mark on Main Street
-- [Press](/press/) — what has been written about us
-- [Visit](/visit/) — where we are and how to reach us
-- [Shop](https://shop.torc.art) — buy the work
-
-## Projects
-
-Exhibition space, [Agile Meteor Press](/agile-meteor-press/), workshops and education, performance, dance, art equipment, the [MeTeORiC festival](/meteoric/), Idea Idea, [printmaking](/etching-press/), stone sculpture — the full map is on the [projects](/projects/) page.
