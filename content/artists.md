@@ -1,6 +1,9 @@
 +++
 title = "Artists"
 description = "Artists shown and represented by Truth or Consequences Contemporary."
+
+[extra]
+author = "gallery"
 +++
 
 # Artists

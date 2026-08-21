@@ -1,6 +1,9 @@
 +++
 title = "Truth or Consequences Contemporary"
 description = "A gallery in the middle of nowhere. Contemporary art in the oasis — Truth or Consequences, New Mexico."
+
+[extra]
+author = "gallery + claude"
 +++
 
 <img style="display: block; margin:auto; height: 12em;" src="/logo.svg" alt="Truth or Consequences Contemporary — a line drawing of a cloud with a lightning bolt" />
@@ -19,7 +22,7 @@ You can visit us at 312 Main Ave, Truth or Consequences, NM 87901.
 
 ## Fieldwork
 
-We are in and out of the gallery this summer as we do our annual Fieldwork — creating and rejuvenating out in the wild.
+We are in and out of the gallery this summer — summer 2026 — as we do our annual [Fieldwork](/fieldwork/), creating and rejuvenating out in the wild.
 
 Orders from the [shop](https://shop.torc.art) will ship slower than normal — please get in touch if you need a rush order.
 
@@ -29,11 +32,16 @@ Jeannie & Kyle
 ## Here
 
 - [About](/about/) — who we are and how we got here
+- [History](/history/) — fourteen years, four names, one town
 - [Artists](/artists/) — the people we show
 - [Exhibitions](/exhibitions/) — what is and was on the walls
 - [Calendar](/calendar/) — openings, art hops, performances
 - [Community Etching Press](/etching-press/) — press time, orientation, pricing
 - [Agile Meteor Press](/agile-meteor-press/) — our publishing imprint
+- [MeTeORiC](/meteoric/) — the festival, returning in 2027
+- [Members](/members/) — supporting membership at members.torc.art
+- [Projects](/projects/) — the whole constellation
+- [Fieldwork](/fieldwork/) — our summers in the wild
 - [Glyphs](/glyphs/) — leave your mark on Main Street
 - [Press](/press/) — what has been written about us
 - [Visit](/visit/) — where we are and how to reach us
@@ -41,13 +49,4 @@ Jeannie & Kyle
 
 ## Projects
 
-- Exhibition Space
-- Agile Meteor Press
-- Workshops & Education
-- Performance
-- Dance
-- Art Equipment
-- MeTeORiC Festival
-- Idea Idea
-- Printmaking
-- Stone Sculpture
+Exhibition space, [Agile Meteor Press](/agile-meteor-press/), workshops and education, performance, dance, art equipment, the [MeTeORiC festival](/meteoric/), Idea Idea, [printmaking](/etching-press/), stone sculpture — the full map is on the [projects](/projects/) page.

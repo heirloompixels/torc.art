@@ -5,12 +5,21 @@ A contemporary art space in Truth or Consequences, New Mexico, focused on
 experiment and experiential work.
 
 `content/` holds the page copy: `_index.md` is the landing page, and a flat
-set of Markdown files beside it are the sections — about, artists,
+set of Markdown files beside it are the sections — about, history, artists,
 exhibitions, calendar, the community etching press, Agile Meteor Press,
-glyphs, press and visit. `migration/` holds the notes and tooling for moving
-the non-shop content off Shopify; see
-[`migration/MIGRATION.md`](migration/MIGRATION.md). There is no blog and no
-search index.
+MeTeORiC, fieldwork, glyphs, members, projects, press, visit and the
+manifest. `migration/` holds the notes and tooling for moving the non-shop
+content off Shopify; see [`migration/MIGRATION.md`](migration/MIGRATION.md).
+There is no blog and no search index.
+
+Every page carries an `extra.author` field in its front matter — `gallery`
+for Jeannie's and Kyle's own copy, `claude` for pages an AI assistant
+composed from the gallery's archives, `gallery + claude` for a mix — and
+`/manifest/` renders the honest who-wrote-what list, following the
+convention on kyleparkercunningham.com. The deep-history pages (history,
+meteoric, members, projects, fieldwork) were written 2026-08-20 from the
+kpc-brain's sources; editorial holds and unverified facts are recorded as
+HTML comments at the top of the affected pages — read those before editing.
 
 `dispatches/` holds the plan for the one substantial body of content still to
 come — the 2021–2026 Dispatches newsletter, arriving from the retired

@@ -1,6 +1,9 @@
 +++
 title = "Press"
 description = "Press coverage of Truth or Consequences Contemporary."
+
+[extra]
+author = "gallery"
 +++
 
 # Press

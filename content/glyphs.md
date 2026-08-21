@@ -1,6 +1,9 @@
 +++
 title = "Glyphs"
 description = "Leave your own glyph on a 1916 building on Main Street in Truth or Consequences."
+
+[extra]
+author = "gallery"
 +++
 
 # Glyphs

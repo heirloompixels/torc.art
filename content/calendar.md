@@ -1,6 +1,9 @@
 +++
 title = "Calendar"
 description = "Openings, art hops, performances and festivals at Truth or Consequences Contemporary."
+
+[extra]
+author = "gallery + claude"
 +++
 
 # Calendar
@@ -72,9 +75,34 @@ The inaugural illumination of our new art signage installation at 8:45pm, during
 <a href="https://www.smithsonianmag.com/travel/the-15-best-small-towns-to-visit-in-2025-180986681/">Smithsonian Magazine picks Truth or Consequences, New Mexico</a> as one of the 15 best small towns in the USA. TorC Contemporary is highlighted in the article for the art we have on view and our community etching press.
 </dd>
 
+<dt>February 21st–23rd, 2025 — MeTeORiC</dt>
+<dd>
+The <a href="/meteoric/">MeTeORiC festival</a>, across venues all over town.
+</dd>
+
+<dt>February 24th, 2024 — Grand Opening: Home</dt>
+<dd>
+The Grand Opening Ceremony of Truth or Consequences Contemporary at 312 Main, held on the Saturday night of MeTeORiC 2024, with the inaugural exhibition <a href="/exhibitions/">Home</a> — dance, poetry, a DJ, and a performance by Hieronymus Bogs.
+</dd>
+
+<dt>February 23rd–25th, 2024 — MeTeORiC</dt>
+<dd>
+The festival returns, with Tatsuya Nakatani performing twice in one evening.
+</dd>
+
+<dt>December 7th, 2023 — the first pARTluck</dt>
+<dd>
+A gathering to eat food, discuss, and make art together — potluck + art. The evening marked the opening of the renovated space, twelve years to the day since we arrived in Truth or Consequences.
+</dd>
+
 <dt>August 18th, 2023 — 312 Main St</dt>
 <dd>
 We are moving to a new space. Opening October 2023.
+</dd>
+
+<dt>October 2019 — the first MeTeORiC</dt>
+<dd>
+The inaugural <a href="/meteoric/">MeTeORiC festival</a>: some thirty artists across Truth or Consequences.
 </dd>
 
 </dl>

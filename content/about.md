@@ -1,6 +1,9 @@
 +++
 title = "About"
-description = "Jeannie Ortiz and Kyle Parker Cunningham, and the twelve-year road to Truth or Consequences Contemporary."
+description = "Jeannie Ortiz and Kyle Parker Cunningham, and the fourteen-year road to Truth or Consequences Contemporary."
+
+[extra]
+author = "gallery + claude"
 +++
 
 # About
@@ -21,12 +24,14 @@ We met in college in Bozeman, Montana, then travelled — India, the American We
 
 Truth or Consequences Contemporary is the physical space we occupy in our minds. A refuge for the arts supporting a laboratory to answer the questions of "what is relevant as we move into this new world."
 
-This is a twelve-year creative run in this town, in four iterations:
+This is a fourteen-year creative run in this town, in four iterations:
 
-- **Mud Mountain Studio** and **100th Monkey Gallery**, with Olin West
-- **Seba**, a hip-hop influenced art space
-- **Desert Archaic**, a creative oasis
+- **Mud Mountain Studio**, which Olin West invited us into in June 2012 — the space that traced its lineage back to his Hundredth Monkey Gallery
+- **Seba**, a hip-hop influenced art space and collective
+- **Desert Archaic**, a creative oasis — with **Intentionally Confusing**, the online membership that carried it through the pandemic
 - **Truth or Consequences Contemporary**, which puts all of it together to carry rural art to an international audience
+
+The whole story, told mostly in our own words from the letters and wall texts of those years, is on the [history](/history/) page.
 
 ## The Building
 
