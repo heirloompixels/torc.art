@@ -1,0 +1,38 @@
+/* base.css — Truth or Consequences Contemporary
+ *
+ * The reset and the geometry every theme needs and none of them should have
+ * to restate. Nothing here is a look: no colour, no typeface, no size that
+ * a theme would want a different value for. If a rule here would ever be
+ * overridden by a theme, it belongs in the theme instead.
+ *
+ * Loaded before /themes/<theme>.css on every page. See THEMES.md.
+ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+html, body { overflow-x: clip; }
+body { margin: 0; min-height: 100vh; }
+
+/* Display type large enough to look like display type is, at phone widths,
+ * wider than the screen — and an element wider than the viewport widens the
+ * whole document and drags everything else off the right edge with it. Every
+ * theme's headings are clamped; these two keep the prose honest as well. */
+h1, h2, h3, h4, p, li, dt, dd, figcaption, th, td { overflow-wrap: break-word; }
+h1, h2, h3, h4 { text-wrap: balance; }
+
+img, svg, video { max-width: 100%; height: auto; }
+figure { margin: 0; }
+
+a { color: inherit; }
+:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+
+ul, ol { padding-left: 1.2em; }
+nav ul { list-style: none; padding: 0; margin: 0; }
+
+table { border-collapse: collapse; max-width: 100%; }
+code, pre, kbd, samp { white-space: pre-wrap; overflow-wrap: break-word; }
+pre { overflow-x: auto; }
+
+/* Rendered only when the theme name in config.toml has no dispatch entry. */
+.theme-error { margin: 1em; padding: 1em; border: 2px solid currentColor; }

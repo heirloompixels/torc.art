@@ -1,0 +1,114 @@
+/* Theme: plain — Truth or Consequences Contemporary
+ *
+ * The site's first look, kept: a centred single column on a warm grey
+ * ground, Jost for the display heading, Inter for interface text, EB
+ * Garamond for everything read at length. It is here because a theme
+ * system with one theme in it is not a theme system, and because this is
+ * the quiet fallback if a loud one ever stops fitting.
+ *
+ * Loaded after base.css. See THEMES.md.
+ */
+
+:root {
+  --bg: #f2f2f2;
+  --panel: #d9d9d9;
+  --muted: #6b6b6b;
+  --hover: #00008b;
+  --radius: 15px;
+
+  --display: 'Jost', 'Futura', 'Inter', sans-serif;
+  --ui: 'Inter', system-ui, sans-serif;
+  --body: 'EB Garamond', Georgia, serif;
+  --mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+}
+
+body { background: var(--bg); font-family: var(--body); line-height: 1.6; }
+
+.site-head, .site-foot, .prose {
+  max-width: 80ch;
+  margin-inline: auto;
+  padding: 2ch;
+}
+
+/* ── Chrome ──────────────────────────────────────────────────────────── */
+
+.site-head { text-align: center; padding-bottom: 0; }
+/* This theme sets the tagline large under the title, the way the site's
+ * first version did, so the header does not say it twice. */
+.site-head .site-tagline { display: none; }
+.wordmark { display: inline-flex; align-items: center; gap: 0.5em; text-decoration: none; }
+.wordmark-mark { width: 28px; }
+.wordmark-name, .site-tagline { font-family: var(--ui); font-weight: 300; font-size: 0.9em; }
+.site-tagline { color: var(--muted); margin: 0.4em 0 1.4em; }
+
+.site-nav { font-family: var(--ui); font-size: 0.8em; font-weight: 300; line-height: 2; }
+.site-nav ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 0 0.6em; }
+/* The pipes the old nav had, without putting them in the markup. */
+.site-nav li:not(:last-child)::after { content: " |"; color: var(--muted); padding-left: 0.6em; }
+.site-nav a { text-decoration: underline; }
+.site-nav a:hover, .site-nav a:focus { text-decoration: none; color: var(--hover); }
+.site-nav [aria-current="page"] { font-weight: 500; text-decoration: none; }
+
+.site-foot { text-align: center; margin-top: 4em; font-family: var(--body); }
+.site-foot p { margin: 0.5em 0; }
+.foot-name { font-weight: 600; }
+.foot-links { display: block; }
+.foot-social, .foot-elsewhere { display: flex; flex-wrap: wrap; justify-content: center; gap: 0 0.6em; margin: 1em 0; }
+.foot-social li:not(:last-child)::after,
+.foot-elsewhere li:not(:last-child)::after { content: " |"; color: var(--muted); padding-left: 0.6em; }
+.foot-colophon { font-family: var(--mono); font-weight: 500; font-size: 0.9em; color: var(--muted); }
+.site-foot a { font-family: var(--ui); font-weight: 300; text-decoration: underline; }
+.site-foot a:hover { text-decoration: none; color: var(--hover); }
+
+/* ── Prose, landing page and interior alike ──────────────────────────── */
+
+.prose { margin-top: 3em; }
+.prose h1, .prose h2, .prose h3, .prose li { text-align: center; }
+
+.prose h1 {
+  font-family: var(--display);
+  font-weight: 500;
+  line-height: 1.05;
+  font-size: clamp(2.25rem, 11vw, 4.07em);
+}
+.prose h2 { font-family: var(--ui); font-weight: 400; font-size: 1.54em; }
+.prose h3 { font-family: var(--body); font-style: italic; font-weight: normal; font-size: 1.16em; }
+
+.prose p { margin: 1em auto; width: 70%; max-width: 60ch; font-size: 1.2em; }
+.prose a { font-family: var(--ui); font-weight: 300; text-decoration: underline; }
+.prose a:hover, .prose a:focus { text-decoration: none; color: var(--hover); }
+
+.prose img { border-radius: var(--radius); margin-inline: auto; }
+.prose figure { margin: 0 0 1em; }
+
+.prose dl { margin: 1em auto; width: 70%; max-width: 60ch; }
+.prose dt { font-family: var(--ui); font-weight: 500; margin-top: 1em; }
+.prose dd { margin-left: 0; }
+
+.prose ul { list-style: none; margin-left: 1em; padding: 0; }
+.prose ul li::before { content: "+"; padding-right: 4px; }
+.prose li ul { margin-left: 2em; }
+
+.prose blockquote { margin: 1em auto; width: 70%; max-width: 60ch; font-style: italic; }
+.prose hr { border: none; border-top: 1px solid var(--panel); margin: 2em auto; width: 40%; }
+
+.prose code, .prose pre, .prose kbd, .prose samp {
+  background: var(--panel); font-family: var(--mono); font-size: 90%;
+}
+.prose pre { padding: 1em; }
+
+.prose table { margin: 1em auto; }
+.prose td { background: var(--bg); text-align: left; padding: 5px clamp(6px, 3vw, 20px); }
+.prose th {
+  font-weight: 600; background: var(--panel); text-align: left;
+  padding: 8px clamp(6px, 2.5vw, 15px); border: 2px solid var(--bg);
+  border-radius: var(--radius);
+}
+
+/* ── The landing page's own pieces ───────────────────────────────────── */
+
+.plain-mark { display: block; height: 12em; width: auto; margin: 0 auto 1em; }
+.plain-tagline { font-family: var(--ui); font-weight: 300; text-align: center; }
+.plain-quote { font-style: italic; }
+.plain-index { margin-top: 1em; }
+.plain-index li { margin-bottom: 0.3em; }
