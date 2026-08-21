@@ -1,6 +1,9 @@
 +++
 title = "Visit"
 description = "Find Truth or Consequences Contemporary at 312 Main Ave, Truth or Consequences, New Mexico."
+
+[extra]
+author = "gallery"
 +++
 
 # Visit
