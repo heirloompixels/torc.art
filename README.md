@@ -4,13 +4,20 @@ Zola site for Truth or Consequences Contemporary — the gallery's own page.
 A contemporary art space in Truth or Consequences, New Mexico, focused on
 experiment and experiential work.
 
-`content/` holds the page copy: `_index.md` is the landing page, and a flat
-set of Markdown files beside it are the sections — about, history, artists,
+`content/` holds the page copy: `_index.md` is the landing page — data, not
+prose, see **The look is a theme** below — and a flat set of Markdown files
+beside it are the sections — about, history, artists,
 exhibitions, calendar, the community etching press, Agile Meteor Press,
 MeTeORiC, fieldwork, glyphs, members, projects, press, visit and the
 manifest. `migration/` holds the notes and tooling for moving the non-shop
 content off Shopify; see [`migration/MIGRATION.md`](migration/MIGRATION.md).
 There is no blog and no search index.
+
+Each page's front matter carries three fields the site's furniture is built
+from: `weight` orders it, `extra.nav` admits it to the header, and
+`extra.blurb` is the one-line hook the landing page's index prints beside it.
+A page with no `weight` is not merely unsorted — the section is sorted, so an
+unweighted page is **not built at all**.
 
 Every page carries an `extra.author` field in its front matter — `gallery`
 for Jeannie's and Kyle's own copy, `claude` for pages an AI assistant
@@ -25,6 +32,27 @@ HTML comments at the top of the affected pages — read those before editing.
 come — the 2021–2026 Dispatches newsletter, arriving from the retired
 `intentionallyconfusing.com`. Nothing is built yet; see
 [`dispatches/DISPATCHES.md`](dispatches/DISPATCHES.md).
+
+## The look is a theme
+
+The whole look of the site is one word in `config.toml`:
+
+```toml
+[extra]
+theme = "poster"
+```
+
+Change it, rebuild, and everything changes — the landing page's layout and
+every page's styling — without touching `content/` or rewriting a word of
+copy. `poster` is the current one, from `mockups/12-poster.html`: a type
+poster on the way in, and a deliberately quiet single column for the fourteen
+years of prose behind it. `plain` is the site's first look, kept as the
+fallback.
+
+The landing page's copy lives as named slots in `content/_index.md` and its
+layout lives in `templates/homes/<theme>.html`, so a theme can never take the
+copy with it when it goes. [`THEMES.md`](THEMES.md) is the manual: why it is
+built this way, how to add a theme, and how to add a slot.
 
 ## Local development
 
@@ -71,10 +99,15 @@ push builds on a Zola it has never used here. Watch the first one.
 
 ## Project structure
 
-- `content/`: page copy (Markdown) — `_index.md` plus one file per section
-- `templates/`: `base.html` (shell, nav and footer), `head.html` (metadata),
-  `index.html` (the landing section), `page.html` (every other page)
-- `static/`: assets copied verbatim — logo, favicons, `style.css`, `CNAME`
+- `content/`: page copy (Markdown) — one file per section, plus `_index.md`,
+  which is the landing page's data rather than its prose
+- `templates/`: `base.html` (the shell), `head.html` (metadata and the theme's
+  stylesheet), `chrome/` (the header and footer every theme shares),
+  `index.html` (the landing page's theme dispatch), `homes/` (one landing-page
+  layout per theme), `page.html` (every other page), `404.html`
+- `static/`: assets copied verbatim — logo, favicons, `CNAME`, `base.css` (the
+  reset and geometry every theme needs) and `themes/<name>.css` (the looks)
+- `THEMES.md`: how the theme system works and how to add one
 - `config.toml`: Zola site configuration
 - `migration/`: notes and tooling for the move off Shopify
 - `dispatches/`: the plan for importing the Dispatches run (not built)
