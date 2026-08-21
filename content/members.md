@@ -1,8 +1,10 @@
 +++
 title = "Members"
 description = "Supporting membership at members.torc.art — one account for the whole torc.art constellation, and a way to fund art that could not otherwise exist."
+weight = 90
 
 [extra]
+blurb = "supporting membership at members.torc.art"
 author = "claude"
 +++
 

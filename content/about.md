@@ -1,8 +1,11 @@
 +++
 title = "About"
 description = "Jeannie Ortiz and Kyle Parker Cunningham, and the fourteen-year road to Truth or Consequences Contemporary."
+weight = 10
 
 [extra]
+blurb = "who we are and how we got here"
+nav = true
 author = "gallery + claude"
 +++
 

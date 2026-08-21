@@ -1,8 +1,12 @@
 +++
 title = "Community Etching Press"
 description = "Time on our etching press for artists of the southwest and beyond — why it exists, orientation, open sessions, pricing and materials."
+weight = 60
 
 [extra]
+blurb = "press time, orientation, pricing"
+nav = true
+nav_title = "Etching Press"
 author = "gallery + claude"
 +++
 

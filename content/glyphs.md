@@ -1,8 +1,11 @@
 +++
 title = "Glyphs"
 description = "Leave your own glyph on a 1916 building on Main Street in Truth or Consequences."
+weight = 120
 
 [extra]
+blurb = "leave your mark on Main Street"
+nav = true
 author = "gallery"
 +++
 

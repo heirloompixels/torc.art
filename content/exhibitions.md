@@ -1,8 +1,11 @@
 +++
 title = "Exhibitions"
 description = "Current, upcoming and past exhibitions at Truth or Consequences Contemporary."
+weight = 40
 
 [extra]
+blurb = "what is and was on the walls"
+nav = true
 author = "gallery + claude"
 +++
 

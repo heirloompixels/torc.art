@@ -1,8 +1,11 @@
 +++
 title = "Visit"
 description = "Find Truth or Consequences Contemporary at 312 Main Ave, Truth or Consequences, New Mexico."
+weight = 140
 
 [extra]
+blurb = "where we are and how to reach us"
+nav = true
 author = "gallery"
 +++
 
