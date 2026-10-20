@@ -1,0 +1,16 @@
++++
+title = "Dispatch \u2116 12 \u00b7 Forage Forage Forage Fungi Friends"
+date = 2021-10-21T01:44:18Z
+path = "dispatch-12"
+description = "Heavy clouds dropping rain from full bellies bring forth moss, overgrown berry bushes, decomposing logs and ephemeral springs. Slowly at first and then all at once the mushrooms appear and we head out in search of marvelous fungal fruits hiding in a happy forest. "
+
+[extra]
+author = "gallery"
+byline = ["Kyle Parker Cunningham", "Jeannie Ortiz"]
+tags = ["dispatches", "fungi"]
+image = "https://media.torc.art/dispatches/dispatch-12/8140D12F-DDF2-48E8-865F-392BEC3E27E7.webp"
+original_url = "https://intentionallyconfusing.com/dispatch-12/"
+ghost_id = "6170b429515a653247e8961f"
++++
+
+<p>Happy harvest moon everyone! </p><p>Fall has fully arrived here in the Southwest. We hope this season finds you all well packing away winter squash and gobling up the last vegetables from the garden. (Or getting your seeds in the ground, as it may be)   </p><p>We have been back at home in Truth or Consequences, New Mexico for some time now and are easing back into the rhythm of creation.  Our months living in nature and on the road were much needed moments of recharge so another cycle of art may come into being. </p><p>Expect the pace of emails to pick up now that we are home and focused solely on creation.  Jeannie will be sending some emails about stock and custom availability soon, so do make sure to keep an eye out for those to be the first to know.    </p><p>As we sit here and contemplate the winter to come we think back upon the mushroom harvest grateful for our pantry filled with jars of dried mushrooms.  We created this short film back in August as we collected, preserved and prepared a bountiful harvest of wild mushrooms for food and dye.  The film is a meditation on being with these beings, we hope you enjoy. </p><hr><figure class="kg-card kg-embed-card"><iframe width="200" height="113" src="https://www.youtube.com/embed/P3SZjaMTMuI?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></figure><h3 id="forage-forage-forage-fungi-friends">Forage Forage Forage Fungi Friends</h3><p>Heavy clouds dropping rain from full bellies bring forth moss, overgrown berry bushes, decomposing logs and ephemeral springs. Slowly at first and then all at once the mushrooms appear and we head out in search of marvelous fungal fruits hiding in a happy forest. These are our summer friends, some we have known so long they have become part of our family and with others we are just becoming acquainted. </p><p>The work of a forager is that of curiosity and appreciation.  The mycelium brings to us a bounty to nourish our human form with their ancient wisdom and nutrients; even the simple act of finding them is medicine for the soul. We patiently walk the forest investigating the most improbable nooks so we might continually be surprised by the delights we find. Collecting choice specimens to bring home and prepare for a meal, dry for the long winter to come or to be used to dye yarn for our weaving art.  Every mushroom is a good mushroom and each is loved and adored with awe.</p>

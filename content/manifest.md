@@ -25,6 +25,7 @@ This page lists every page and marks, honestly, who authored its writing. **gall
 | [Community Etching Press](/etching-press/) | gallery + claude |
 | [Agile Meteor Press](/agile-meteor-press/) | gallery + claude |
 | [MeTeORiC](/meteoric/) | claude — the "what is meteoric" and curation sections are the festival's own public copy |
+| [Dispatches](/dispatches/) | gallery + claude — the posts are theirs, from intentionallyconfusing.com, as they were written; Claude wrote the one-line introduction |
 | [Fieldwork](/fieldwork/) | claude — quoting the Dispatches, which are Jeannie's and Kyle's |
 | [Glyphs](/glyphs/) | gallery |
 | [Members](/members/) | claude |

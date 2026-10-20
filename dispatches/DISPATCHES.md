@@ -3,6 +3,25 @@
 *Written 2026-08-18. Nothing here is built yet. This is the plan and the
 measurements behind it, so the work can start cold.*
 
+## Status (2026-10-19): built, on a draft PR
+
+Kyle asked for the archive to be landed overnight. Every post on
+intentionallyconfusing.com (179) was read in full and routed by what it says,
+not its byline; `docs/ic-routing.tsv` holds the 61 that came here — the
+Dispatches run, the Desert Archaic exhibition posts, the shared trails and
+the gallery's announcements — with the reason for each and what to check.
+`scripts/import_ic.py` wrote them to `content/journal/` (7 as drafts, two of
+them the paid-supporters Sketchbooks), each at its old slug, listed on
+`/dispatches/`. Images are WebP at 1600 px under `dispatches/<slug>/` on
+media.torc.art, as below, uploaded by `scripts/upload_media.sh`.
+
+Decided here, since nobody was awake to ask: the URL shape is the old slug at
+the root (open decision 3), and the joint-byline sale posts (decision 5) went
+wherever reading each one put them. Still open: pre-launch
+privacy and how the site deploys (1, 2), and the gaps in the run (4).
+**Merging deploys**, through a GitHub Action that has not run since
+2025-06-01 — be at the keyboard for it.
+
 The Dispatches are a numbered newsletter Kyle and Jeannie ran on
 `intentionallyconfusing.com` from 2021 to 2026. That site is retired and its
 content is being dispersed to three destinations. The Dispatches come here.
