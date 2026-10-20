@@ -1,0 +1,15 @@
++++
+title = "Dispatch \u2116 17 \u00b7 New Season & New Customs"
+date = 2022-03-25T17:58:22Z
+path = "dispatch-17"
+
+[extra]
+author = "gallery"
+byline = ["Jeannie Ortiz", "Kyle Parker Cunningham"]
+tags = ["dispatches"]
+image = "https://media.torc.art/dispatches/dispatch-17/5D21DF87-FB4D-4504-A520-429E14560384.webp"
+original_url = "https://intentionallyconfusing.com/dispatch-17/"
+ghost_id = "623b60e92b71470572ceff27"
++++
+
+<p>Happy Equinox! May the shifting of seasons find you well. </p><p>We've just returned from a few weeks of travel during which time we were unable to work on the computer. This trip was originally scheduled to leave March 1st of 2020 and after two years of postponment we were finally able to go (or loose the paid for booking), though I must say that we were both a bit aprehensive about it.  </p><p>The trip was a visit to Italy with Jeannie's Mother to Milan, Verona and the Alps.  Our days were filled with exploration and great inspiration - but this is a story for another time. We are enamoured with the places we visited and want to return to Europe to setup a studio and create art in the near future.  Our apprehension, it turns out, was not for naught as we have both come down with covid since our return, mild so far.  It is strange to finally have this disease after these two long years of being ultra careful.   </p><p>So here we are, back home in New Mexico, catching up on things, smiling at the blooms and buzzes of spring, and settling into another season of creation. For now we are in isolation in our studios, which is our want, creating and dreaming of the art and ancient cobble stone streets of Italy.</p><p>This post will be short and sweet:  an announcement that I have drawn two names for custom spots. One name was drawn from the ongoing customs list, and the other from the much shorter list of our paid sustaining members.  </p><p>Thank you to all of you for following along on this journey, and to supporting us if you are able.  </p><p>Wishing you all a health and happiness, Jeannie &amp; Kyle</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://media.torc.art/dispatches/dispatch-17/IMG_2723-copy.webp" class="kg-image" alt="A close up image of a yellow Iris, its petals glittering" loading="lazy" width="1600" height="1200"><figcaption>A blooming Iris</figcaption></figure><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://media.torc.art/dispatches/dispatch-17/image.webp" class="kg-image" alt="A women stands in the shadow of a granite cliff silhouetted by evening light while holding a rainbow and grey handwoven shawl. " loading="lazy" width="1600" height="1066"><figcaption>A custom shawl by J. Ortiz from February 2022</figcaption></figure><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://media.torc.art/dispatches/dispatch-17/IMG_2720-copy.webp" class="kg-image" alt="A close up image of pink peach blossoms on a branch with blue sky and more branches in the background " loading="lazy" width="1600" height="1200"><figcaption>Peach blossoms! Hooray!&nbsp;</figcaption></figure>

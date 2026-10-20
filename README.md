@@ -11,7 +11,7 @@ exhibitions, calendar, the community etching press, Agile Meteor Press,
 MeTeORiC, fieldwork, glyphs, members, projects, press, visit and the
 manifest. `migration/` holds the notes and tooling for moving the non-shop
 content off Shopify; see [`migration/MIGRATION.md`](migration/MIGRATION.md).
-There is no blog and no search index.
+There is no search index.
 
 Each page's front matter carries three fields the site's furniture is built
 from: `weight` orders it, `extra.nav` admits it to the header, and
@@ -28,9 +28,11 @@ meteoric, members, projects, fieldwork) were written 2026-08-20 from the
 kpc-brain's sources; editorial holds and unverified facts are recorded as
 HTML comments at the top of the affected pages — read those before editing.
 
-`dispatches/` holds the plan for the one substantial body of content still to
-come — the 2021–2026 Dispatches newsletter, arriving from the retired
-`intentionallyconfusing.com`. Nothing is built yet; see
+`content/journal/` holds the Dispatches and the other joint posts from the
+retired `intentionallyconfusing.com` (2021–2026), imported 2026-10-19 by
+`scripts/import_ic.py` and listed on `/dispatches/`; they are the one part of
+the site with dates, so they are a section of their own, sorted by date, and
+the only pages that use `templates/post.html`. See
 [`dispatches/DISPATCHES.md`](dispatches/DISPATCHES.md).
 
 ## The look is a theme

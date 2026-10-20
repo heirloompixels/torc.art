@@ -2,6 +2,7 @@
 <html lang="{{ config.default_language }}">
 <head>
     {% include "head.html" %}
+    {% block extra_head %}{% endblock extra_head %}
 </head>
 {# The theme name is on the body so a stylesheet can scope itself, and so a
    theme can style the landing page and the interior pages differently

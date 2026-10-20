@@ -1,0 +1,28 @@
+/* The journal: posts from intentionallyconfusing.com under any theme. Ghost
+   wrote its own card markup into every post body; this is the least that
+   makes it read, in the theme's own variables where it has them. */
+.post .kicker { font-family: var(--ui, sans-serif); font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; margin: 0 0 1em; }
+.post .post-meta { font-family: var(--ui, sans-serif); font-size: 0.8rem; letter-spacing: 0.06em; color: var(--muted, #666); margin: -0.4em 0 2em; }
+.post img { height: auto; }
+.kg-card { margin: 1.6em 0; }
+.kg-width-wide, .kg-width-full { margin-inline: 0; }
+.kg-gallery-container { display: flex; flex-direction: column; gap: 6px; }
+.kg-gallery-row { display: flex; gap: 6px; }
+.kg-gallery-image { flex: 1 1 0%; }
+.kg-gallery-image img { width: 100%; height: 100%; object-fit: cover; }
+.kg-bookmark-card a { display: flex; border: 1px solid var(--rule, #ccc); text-decoration: none; }
+.kg-bookmark-content { padding: 12px 14px; flex: 1; min-width: 0; }
+.kg-bookmark-description { font-size: 0.9em; color: var(--muted, #666); }
+.kg-bookmark-metadata { font-size: 0.8em; color: var(--muted, #666); display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.kg-bookmark-icon { width: 16px; height: 16px; display: inline; }
+.kg-bookmark-thumbnail { width: 30%; max-width: 180px; flex-shrink: 0; }
+.kg-bookmark-thumbnail img { height: 100%; object-fit: cover; }
+.kg-embed-card { display: flex; flex-direction: column; align-items: center; }
+.kg-embed-card iframe, .post video { max-width: 100%; }
+.along { display: flex; justify-content: space-between; gap: 1em; margin-top: 3em; padding-top: 1em; border-top: 1px solid var(--rule, #ccc); font-family: var(--ui, sans-serif); font-size: 0.85rem; }
+.along .next { text-align: right; }
+.journal-index .lede { font-size: 1.15em; }
+.journal-index ol, .journal-index ul.journal { list-style: none; padding: 0; }
+.journal-index li { padding: 0.35em 0 !important; text-indent: 0 !important; border-bottom: 1px solid var(--rule, #ccc); display: flex; justify-content: space-between; gap: 1em; }
+.journal-index li::before { content: none !important; }
+.journal-index time { font-family: var(--ui, sans-serif); font-size: 0.8rem; color: var(--muted, #666); white-space: nowrap; }
