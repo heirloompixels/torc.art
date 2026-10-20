@@ -100,7 +100,8 @@ def main():
             if not src.exists():
                 missing.append(f"{slug}: {kind}/{rel}")
                 return f"https://intentionallyconfusing.com/content/{kind}/{rel}"
-            name = Path(rel).name
+            # A key ending in ".." is refused by R2's upload, so trailing dots go.
+            name = re.sub(r"\.+(?=\.[^.]+$)", "", Path(rel).name)
             if kind == "images" and src.suffix.lower() in (".jpg", ".jpeg", ".png", ".gif", ".webp", ".heic"):
                 key = f"dispatches/{slug}/{Path(name).stem}.webp"
                 try:
