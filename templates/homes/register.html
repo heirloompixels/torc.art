@@ -1,0 +1,52 @@
+{# Theme: register — the site as the gallery's archive, set as a ledger.
+   Broadside's type and inks; the Forme structure the house design names for
+   pages that need more than one column: a numbered rail (the shared header,
+   restyled) and a register of the record by date. #}
+{% set x = section.extra %}
+{% set index = get_section(path="_index.md") %}
+{% set journal = get_section(path="journal/_index.md") %}
+
+<main class="rg-home">
+
+<header class="rg-head">
+  <p class="rg-kicker">{{ x.marquee | slice(start=2) | join(sep=" · ") }}</p>
+  <h1 class="rg-title">{{ x.title_lines | join(sep=" ") }}</h1>
+  {%- if x.pull_quote %}<p class="rg-lede">{{ x.pull_quote }}</p>{% endif %}
+</header>
+
+{%- if x.hero %}
+<figure class="rg-hero"><img src="{{ x.hero.src | safe }}" alt="{{ x.hero.alt }}" width="2000" height="1333"><figcaption>{{ x.hero.alt }}</figcaption></figure>
+{%- endif %}
+
+<section class="rg-row">
+  <h2 class="rg-margin">Statement</h2>
+  <div class="rg-body">{{ x.statement | markdown | safe }}</div>
+</section>
+
+{%- if x.notice and x.notice.title %}
+<section class="rg-row">
+  <h2 class="rg-margin">{{ x.notice.title }}{% if x.notice.subtitle %}<br><span>{{ x.notice.subtitle }}</span>{% endif %}</h2>
+  <div class="rg-body">{{ x.notice.body | markdown | safe }}{% if x.notice.signature %}<p class="rg-sign">{{ x.notice.signature }}</p>{% endif %}</div>
+</section>
+{%- endif %}
+
+<section class="rg-row">
+  <h2 class="rg-margin">The record<br><span>latest first</span></h2>
+  <ol class="rg-ledger">
+    {%- for p in journal.pages | slice(end=8) %}
+    <li><time datetime="{{ p.date }}">{{ p.date | date(format="%-d %b %Y") }}</time><a href="{{ p.path | safe }}">{{ p.title }}</a><span class="by">{{ p.extra.byline | default(value=[]) | join(sep=" & ") }}</span></li>
+    {%- endfor %}
+  </ol>
+  <p class="rg-more"><a href="/dispatches/">The whole record: {{ journal.pages | length }} letters and posts, 2021 to 2026</a></p>
+</section>
+
+<section class="rg-row">
+  <h2 class="rg-margin">Index</h2>
+  <ol class="rg-index">
+    {%- for p in index.pages %}
+    <li><a href="{{ p.path | safe }}">{{ p.title }}</a>{% if p.extra.blurb %}<span>{{ p.extra.blurb }}</span>{% endif %}</li>
+    {%- endfor %}
+  </ol>
+</section>
+
+</main>

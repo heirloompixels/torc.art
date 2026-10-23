@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block extra_head %}<link rel="stylesheet" href="/journal.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":{{ page.title | json_encode() | safe }},"datePublished":"{{ page.date }}","url":"{{ page.permalink }}","author":[{% for a in page.extra.byline | default(value=[]) %}{"@type":"Person","name":{{ a | json_encode() | safe }}}{% if not loop.last %},{% endif %}{% endfor %}],"publisher":{"@type":"ArtGallery","name":{{ config.extra.contact.name | json_encode() | safe }},"url":"{{ config.base_url }}/"}{% if page.extra.image %},"image":"{{ page.extra.image }}"{% endif %}}</script>
+{% endblock extra_head %}
+
+{% block content %}
+<main class="prose post">
+<p class="kicker"><a href="/dispatches/">Dispatches</a></p>
+<h1>{{ page.title }}</h1>
+<p class="post-meta"><time datetime="{{ page.date }}">{{ page.date | date(format="%-d %B %Y") }}</time>{% if page.extra.byline %} · {{ page.extra.byline | join(sep=" & ") }}{% endif %}</p>
+{%- if page.extra.image %}
+{%- set stem = page.extra.image | split(pat="/") | last | replace(from=".webp", to="") %}
+{%- if stem not in page.content %}
+<figure class="feature"><img src="{{ page.extra.image }}" alt=""></figure>
+{%- endif %}
+{%- endif %}
+{{ page.content | safe }}
+<nav class="along" aria-label="More from the journal">
+  {%- if page.lower %}<a href="{{ page.lower.path | safe }}">← {{ page.lower.title }}</a>{% else %}<span></span>{% endif %}
+  {%- if page.higher %}<a class="next" href="{{ page.higher.path | safe }}">{{ page.higher.title }} →</a>{% endif %}
+</nav>
+</main>
+{% endblock content %}

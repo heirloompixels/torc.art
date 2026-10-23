@@ -1,0 +1,39 @@
+# Every push to main builds the site and deploys it to the torc-art Worker
+# (wrangler.jsonc), which serves torc.art. It replaced the GitHub Pages
+# action on 2026-10-23, when the site took the apex from Shopify.
+#
+# The token is CLOUDFLARE_API_TOKEN in the repo's Actions secrets: a narrow
+# one made for this Worker alone (Account: Workers Scripts edit; zone
+# torc.art: Workers Routes edit, DNS edit), never the account-wide TorC token
+# from the laptop. Until the cutover (README.md § cutover) Shopify's record
+# holds the apex, so a deploy before it fails attaching the domain. That is
+# why the first deploy is scripts/cutover.py, by hand.
+name: deploy
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # Pinned: 0.23 rewrote the template engine and these templates predate it.
+      - name: install zola 0.22.1
+        run: |
+          curl -sSL https://github.com/getzola/zola/releases/download/v0.22.1/zola-v0.22.1-x86_64-unknown-linux-gnu.tar.gz | tar xz -C /usr/local/bin zola
+          zola --version
+      - name: build
+        run: zola build
+      - name: deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: npx --yes wrangler@4 deploy

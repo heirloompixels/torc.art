@@ -1,0 +1,59 @@
+{# Theme: broadside — the house design (atelier/signet/docs/design-broadside.md)
+   as torc.art's front page: one centred sheet, posted. A kicker, the name
+   with its last word in italic, the italic lede, the one strong rule, then
+   the sections between hairlines, and the index as a contents page. #}
+{% set x = section.extra %}
+{% set index = get_section(path="_index.md") %}
+{% set lines = x.title_lines %}
+
+<main class="sheet bs-home">
+
+<header class="bs-head">
+  <p class="kicker">{{ x.marquee | slice(start=2) | join(sep=" · ") }}</p>
+  <h1 class="title">{{ lines | slice(end=lines | length - 1) | join(sep=" ") }} <em>{{ lines | last }}</em></h1>
+  <p class="lede">{{ config.extra.tagline }}</p>
+</header>
+
+{%- if x.hero %}
+<figure class="bs-hero"><img src="{{ x.hero.src | safe }}" alt="{{ x.hero.alt }}" width="2000" height="1333"></figure>
+{%- endif %}
+
+{%- if x.pull_quote %}
+<section class="bs-sec">
+  <p class="bs-quote">{{ x.pull_quote }}</p>
+</section>
+{%- endif %}
+
+<section class="bs-sec">
+  <h2 class="label">Statement</h2>
+  <div class="bs-prose">{{ x.statement | markdown | safe }}</div>
+</section>
+
+{%- if x.notice and x.notice.title %}
+<section class="bs-sec">
+  <h2 class="label">{{ x.notice.title }}{% if x.notice.subtitle %} · {{ x.notice.subtitle }}{% endif %}</h2>
+  <div class="bs-prose">{{ x.notice.body | markdown | safe }}</div>
+  {%- if x.notice.signature %}<p class="bs-sign">{{ x.notice.signature }}</p>{% endif %}
+</section>
+{%- endif %}
+
+<section class="bs-sec">
+  <h2 class="label">Contents</h2>
+  <ol class="bs-contents">
+    {%- for p in index.pages %}
+    <li><a href="{{ p.path | safe }}"><span class="t">{{ p.title }}</span><span class="lead" aria-hidden="true"></span><span class="b">{{ p.extra.blurb | default(value="") }}</span></a></li>
+    {%- endfor %}
+    {%- for e in config.extra.nav_external %}
+    <li><a href="{{ e.url | safe }}"><span class="t">{{ e.name }}</span><span class="lead" aria-hidden="true"></span><span class="b">{{ e.blurb | default(value="") }}</span></a></li>
+    {%- endfor %}
+  </ol>
+</section>
+
+{%- if x.activities %}
+<section class="bs-sec">
+  <p class="bs-activities">{{ x.activities | join(sep=" · ") }}</p>
+  <p class="fleuron" aria-hidden="true">❦</p>
+</section>
+{%- endif %}
+
+</main>

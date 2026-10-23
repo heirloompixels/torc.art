@@ -1,8 +1,14 @@
 # torc.art
 
-Zola site for Truth or Consequences Contemporary — the gallery's own page.
-A contemporary art space in Truth or Consequences, New Mexico, focused on
-experiment and experiential work.
+Zola site for Truth or Consequences Contemporary, a contemporary art space in
+Truth or Consequences, New Mexico, focused on experiment and experiential work.
+
+**This site is the gallery's home and its archive of everything the gallery
+does; the shop is just the shop** (Kyle, 2026-10-23). Shows, events, the
+Dispatches, the press, the press kit, and anything the gallery has said about
+itself belong here, in its own words. shop.torc.art sells, and its pages
+carry only what selling needs. When something gallery-shaped turns up on the
+shop, it moves here.
 
 `content/` holds the page copy: `_index.md` is the landing page — data, not
 prose, see **The look is a theme** below — and a flat set of Markdown files
@@ -11,7 +17,7 @@ exhibitions, calendar, the community etching press, Agile Meteor Press,
 MeTeORiC, fieldwork, glyphs, members, projects, press, visit and the
 manifest. `migration/` holds the notes and tooling for moving the non-shop
 content off Shopify; see [`migration/MIGRATION.md`](migration/MIGRATION.md).
-There is no blog and no search index.
+There is no search index.
 
 Each page's front matter carries three fields the site's furniture is built
 from: `weight` orders it, `extra.nav` admits it to the header, and
@@ -28,9 +34,11 @@ meteoric, members, projects, fieldwork) were written 2026-08-20 from the
 kpc-brain's sources; editorial holds and unverified facts are recorded as
 HTML comments at the top of the affected pages — read those before editing.
 
-`dispatches/` holds the plan for the one substantial body of content still to
-come — the 2021–2026 Dispatches newsletter, arriving from the retired
-`intentionallyconfusing.com`. Nothing is built yet; see
+`content/journal/` holds the Dispatches and the other joint posts from the
+retired `intentionallyconfusing.com` (2021–2026), imported 2026-10-19 by
+`scripts/import_ic.py` and listed on `/dispatches/`; they are the one part of
+the site with dates, so they are a section of their own, sorted by date, and
+the only pages that use `templates/post.html`. See
 [`dispatches/DISPATCHES.md`](dispatches/DISPATCHES.md).
 
 ## The look is a theme
@@ -68,34 +76,44 @@ zola build
 
 ## Deployment
 
-This is the one site in `machinery/sites/` that does not deploy to Cloudflare.
+The site is the `torc-art` Cloudflare Worker on the TorC account, serving the
+Zola build as static assets at **torc.art** (`wrangler.jsonc`). It was on
+GitHub Pages at new.torc.art, over http only, until 2026-10-23.
 
-- Source repo: `git@github.com:heirloompixels/torc.art.git`
-- GitHub Actions builds on pushes to `main` (`shalzz/zola-deploy-action@master`),
-  authenticating with the automatic per-run `GITHUB_TOKEN`
-- Published branch: `gh-pages`, served by GitHub Pages
-- Public URL: `http://new.torc.art` — http only for now, the certificate is
-  not provisioned yet. `static/CNAME` holds that hostname and `base_url` in
-  `config.toml` already claims https, which is correct once the certificate
-  lands.
+- **Every push to `main` deploys** (`.github/workflows/deploy.yml`): Zola
+  0.22.1 builds, then `wrangler deploy`, with a narrow token in the repo
+  secret `CLOUDFLARE_API_TOKEN` (Account: Workers Scripts edit; zone
+  torc.art: Workers Routes edit, DNS edit). So this repo keeps **draft PRs**:
+  a merge is a deploy, and someone should be at the keyboard.
+- **By hand:** `scripts/deploy-worker.sh` (or `--dry-run`), with the
+  laptop's TorC credentials.
+- **`src/worker.js`** sits in front of the assets: new.torc.art and plain
+  http go to https://torc.art; Shopify's old paths on the apex (`/products`,
+  `/collections`, `/cart`, `/pages`, `/blogs` and the rest) go to
+  shop.torc.art with the path kept, because until this site took it, every
+  torc.art address landed on the shop; and `/rss/`, the old
+  intentionallyconfusing.com feed address, goes to `/rss.xml`.
+- intentionallyconfusing.com's bulk redirects (111 of them) land on this
+  site's root paths: every imported post keeps its old slug.
 
-The apex `torc.art` is not this repo. It 301s to `shop.torc.art`, which lives
-outside the machinery tree. The gallery subdomains that are ours —
-gather.torc.art, proofing.torc.art, amp.torc.art — are Cloudflare Workers and
-have nothing to do with this build.
+### Cutover
 
-**The certificate is the outstanding deployment problem.** GitHub Pages has
-never provisioned one for new.torc.art, so https does not answer at all. That
-is not cosmetic: `base_url` is https, and Zola's `get_url()` builds absolute
-URLs from it, so from 26c6c85 until 2026-08-18 the page linked its stylesheet
-at `https://new.torc.art/style.css` — an address that refuses connections —
-and every visitor got unstyled HTML with no visible error. The stylesheet is
-root-relative now so it cannot happen again, but until the certificate is
-provisioned, `og:image` still points at an https URL that does not answer and
-link previews have no image. Provision it in the repo's Pages settings.
+Shopify holds the apex (an A record to `23.227.38.65`) and GitHub Pages holds
+new.torc.art (a CNAME), so the Worker cannot attach either name until they
+go. In order:
 
-**CI has not run since 2025-06-01.** The action tracks `master`, so the next
-push builds on a Zola it has never used here. Watch the first one.
+1. Remove torc.art from the shop's domains in Shopify admin. shop.torc.art
+   and www.torc.art stay with Shopify.
+2. `scripts/cutover.py` checks the Worker on workers.dev, builds, saves both
+   records to `docs/cutover-records.json`, deletes them, deploys with the
+   names attached, and checks the live site. `--undo` puts the records back.
+3. Turn off GitHub Pages in the repo's settings, and add the CI token.
+4. Merge PR #4. From then on CI deploys.
+
+The apex's MX and TXT records (Email Routing, the site verification) are not
+touched. The other subdomains are not this repo: gather, proofing, futures
+and members are their own Workers, amp and meteoric are GitHub Pages, media
+is R2, and shop, www and account are Shopify.
 
 ## Project structure
 
@@ -169,13 +187,11 @@ for the gallery. Revert that if the byline was deliberate.
 
 ## Still open
 
-- **The Dispatches are coming here.** 34 posts and 217 MB of photography from
-  the retired `intentionallyconfusing.com`, which needs a section, a URL shape
-  and a decision about where the images live. Measured and planned in
-  [`dispatches/DISPATCHES.md`](dispatches/DISPATCHES.md), including a proposal
-  to move this site off GitHub Pages and onto Cloudflare before it launches.
-- **https.** See above — the certificate is unprovisioned, so the site is
-  http-only and its social-card image is unreachable.
+- **The press kit's photographs.** Only one image is in it. The 2024 gallery
+  photographs made for the Southwest Contemporary field guide are on the
+  double pink drive (`Design/torCc/SWC-FieldGuide`) and wait for Kyle.
+- **The redrafted copy.** The pages marked `claude` in /manifest/ are drafts
+  in Jeannie's and Kyle's voice and wait on their read.
 - **The fonts are not ours.** EB Garamond and Inter come from Google Fonts and
   Jost from indestructibletype.com on every page load. For something meant to
   be the gallery's record, all three are open-licensed and should be

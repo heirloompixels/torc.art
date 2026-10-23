@@ -24,7 +24,11 @@ An agile meteor adapts to the inevitability of demise: planetary impact. For but
 
 ## Lineage
 
-The press is younger than its story. In 2017 a working letterpress was acquired at a local auction with a $1,500 Meow Wolf DIY grant, and by the next winter we were teaching letterpress workshops at Desert Archaic that we called "trials for much bigger ambitions." In January 2021, in the depth of the pandemic, Desert Archaic grew a publishing wing — Desert Archaic Press, whose first book, *Modern Ancient* by Jeannie Ortiz and Kyle Parker Cunningham, was "an art exhibition in the form of a book." We wrote then: "How do we show art when the simple act of gathering together is dangerous? How do we escape the constant trend towards the virtual and bring some physicality back into the world? That ancient art form of the book becomes cutting edge again." Agile Meteor Press, launched July 2025, is that wing grown into an imprint of its own.
+The press is new but the story goes back a ways. In 2017 we bought a working letterpress at a local auction with a $1,500 DIY grant from Meow Wolf, and by the next winter we were teaching letterpress workshops at Desert Archaic, which we called "trials for much bigger ambitions."
+
+In January 2021, deep in the pandemic, Desert Archaic grew a publishing wing, Desert Archaic Press. Its first book was *Modern Ancient*, made by the two of us, "an art exhibition in the form of a book." We wrote then: "How do we show art when the simple act of gathering together is dangerous? How do we escape the constant trend towards the virtual and bring some physicality back into the world? That ancient art form of the book becomes cutting edge again."
+
+Agile Meteor Press launched in July 2025, and it is that same wing grown into an imprint of its own.
 
 ## How we make them
 
@@ -40,17 +44,11 @@ We publish one book per season based on invitations or submissions. Almost all o
 - a.m.p. no. 2 — *TorC no.75* (November 1st, 2025)
 - a.m.p. no. 3 — *Hiraeth* (October 2025)
 - a.m.p. no. 4 — *Women of Consequences* (November 14th, 2025)
-- a.m.p. no. 5 — *Olin: Erotic Drawings*
-- a.m.p. no. 6 — *Mud Mountain*
-- a.m.p. no. 7 — *Working Title*
 - a.m.p. no. 8 — *Symbology & Characterizations* (October 11th, 2025)
 
-## Upcoming
-
-- *Olin: Drawings* — a.m.p. no. 5
-- *Mud Mountain* — a.m.p. no. 6
-- *Hieronymous Bogs* — a.m.p. no. 7
-- *A Book of Spores* — a.m.p. no. 9
+<!-- Upcoming titles are held back (Kyle, 2026-10-23: "upcoming is correct,
+     but it's all on hold currently"): no. 5 Olin: Drawings, no. 6 Mud
+     Mountain, no. 7 Hieronymous Bogs, no. 9 A Book of Spores. -->
 
 ## More
 

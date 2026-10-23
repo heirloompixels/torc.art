@@ -17,33 +17,28 @@ A gallery in the middle of nowhere obsessed with understanding optimal ways to u
 
 Artists and Adventurers. We live in sunny Truth or Consequences New Mexico, moments away from the banks of the Rio Grande and in the foothills of the Greater Gila region.
 
-We travel to remote places around the world and gather experiences which we turn into objects. We do not work separately from the rhythms of the natural world — we try to integrate with them, and to remember how small a part of it we are.
+We search out the wild corners of the world, exploring and learning, bringing back stories and impressions and then set ourselves fast at work to create objects to share. The modern is ancient in our work. We live inside the rhythms of the world not outside and apart from them. We remember that nature exists and we are merely but human, small creatures on this great piece of rock hurtling around the sun. Nature is the best guide.
 
-Jeannie's work lives at [jeannieortiz.com](https://jeannieortiz.com). Kyle's lives at [kyleparkercunningham.com](https://kyleparkercunningham.com) and [intentionallyconfusing.com](https://intentionallyconfusing.com).
+Jeannie's work lives at [jeannieortiz.com](https://jeannieortiz.com) and Kyle's at [kyleparkercunningham.com](https://kyleparkercunningham.com).
 
 ## A Story (of many)
 
-We met in college in Bozeman, Montana, then travelled — India, the American West — before landing in Truth or Consequences, New Mexico.
+Jeannie and Kyle met towards the sunset of their college years in Bozeman, Montana. We set out together on a grand adventure which took us to India and all over the American West. We settled in Truth or Consequences, New Mexico as a place to build our studio and share it with the world.
 
 Truth or Consequences Contemporary is the physical space we occupy in our minds. A refuge for the arts supporting a laboratory to answer the questions of "what is relevant as we move into this new world."
 
-This is a fourteen-year creative run in this town, in four iterations:
+Truth or Consequences Contemporary is the continuation of a fourteen year project in TorC NM. We have had four distinct iterations of this space so far: first with Olin West at Mud Mountain Studio and 100th Monkey Gallery, followed by Seba the hip hop party world art factory which then morphed into Desert Archaic, a creative vortex in the oasis. Truth or Consequences Contemporary is the culmination of everything we've learned over the past decade and more, and takes rural art to international levels.
 
-- **Mud Mountain Studio**, which Olin West invited us into in June 2012 — the space that traced its lineage back to his Hundredth Monkey Gallery
-- **Seba**, a hip-hop influenced art space and collective
-- **Desert Archaic**, a creative oasis — with **Intentionally Confusing**, the online membership that carried it through the pandemic
-- **Truth or Consequences Contemporary**, which puts all of it together to carry rural art to an international audience
-
-The whole story, told mostly in our own words from the letters and wall texts of those years, is on the [history](/history/) page.
+The long version, mostly in the words we wrote at the time, is on the [history](/history/) page.
 
 ## The Building
 
 Our building at 312 Main St is historically known as the Luchini Electric Building, and has stood since 1916. Built like a proverbial tank, it'll still be standing in 2116, 2216 and beyond.
 
-In celebration of the monsoon season — which brings the desert to life and sustains it through the year — we installed a new art signage piece on the facade, paying homage to that lineage.
+In celebration of the monsoon season, which brings the desert to life and sustains it through the year, we installed a new art signage piece on the facade, paying homage to that lineage.
 
 Kyle was struck by lightning while Jeannie belayed him rock climbing. That dramatic and life changing moment is now memorialized on our facade.
 
-This piece is a gift to our historic Main Street district — a welcome reminder that rebuilding our old buildings is the lightning helping to catalyze the formation of a strong and robust community. The installation was made possible through funding from the [National Main Street Backing Small Business Grant](https://mainstreet.org/the-latest/news/25-small-business-owners-receive-30-000-grants-through-backing-small-businesses-program).
+This piece is a gift to our historic Main Street district, a welcome reminder that rebuilding our old buildings is the lightning helping to catalyze the formation of a strong and robust community. The installation was made possible through funding from the [National Main Street Backing Small Business Grant](https://mainstreet.org/the-latest/news/25-small-business-owners-receive-30-000-grants-through-backing-small-businesses-program).
 
 See also the [Glyphs](/glyphs/) project, which invites you to add your own mark to the building.

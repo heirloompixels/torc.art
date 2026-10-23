@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block extra_head %}<link rel="stylesheet" href="/journal.css">{% endblock extra_head %}
+
+{% block content %}
+{%- set journal = get_section(path="journal/_index.md") %}
+<main class="prose journal-index">
+<h1>{{ page.title }}</h1>
+<p class="lede">We wrote these from 2021 to 2026, first on intentionallyconfusing.com. Here are the numbered Dispatches, and the letters, trails and announcements around them.</p>
+
+<h2>The Dispatches</h2>
+<ol class="run">
+{%- for p in journal.pages | reverse %}{% if p.extra.tags and "dispatches" in p.extra.tags %}
+  <li><a href="{{ p.path | safe }}">{{ p.title }}</a> <time datetime="{{ p.date }}">{{ p.date | date(format="%B %Y") }}</time></li>
+{%- endif %}{% endfor %}
+</ol>
+
+<h2>The journal</h2>
+<ul class="journal">
+{%- for p in journal.pages %}{% if not p.extra.tags or "dispatches" not in p.extra.tags %}
+  <li><a href="{{ p.path | safe }}">{{ p.title }}</a> <time datetime="{{ p.date }}">{{ p.date | date(format="%-d %B %Y") }}</time></li>
+{%- endif %}{% endfor %}
+</ul>
+</main>
+{% endblock content %}

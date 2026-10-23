@@ -16,6 +16,13 @@ Two themes exist today:
 |---|---|
 | `poster` | From `mockups/12-poster.html`. The landing page is a type poster — the name at 18vw, a running ticker, a three-column band, an index you slide a finger down. The interior pages are the quiet opposite: one left-aligned column, the same palette, the orange demoted to rules and labels. |
 | `plain` | The site's first look — a centred column on warm grey. Kept as the quiet fallback, and as the proof that the swap works. |
+| `broadside` | The house design (`atelier/signet/docs/design-broadside.md`), as the members portal and jeannieortiz.com wear it: one centred sheet, Centurion, hairlines, torc's paper and plum. Built 2026-10-23 as the starting point Kyle named. |
+| `handbill` | Broadside's type at the scale of a letterpress poster, in two colours: the plum as a second plate (the name's last line, the photograph printed in it, the notice reversed out of it, drop initials). 2026-10-23, an exploration. |
+| `register` | The site as the gallery's archive, set as a ledger: Broadside's type in the Forme structure, a numbered rail, section names hung in the margin, the record by date on the front page. 2026-10-23, an exploration. |
+
+The three Broadside themes share `static/themes/broadside-core.css` (the
+fonts, the inks, day and night) and the colophon's Night/Day switch in
+`chrome/footer.html`, which `base.css` hides from the others.
 
 ## Why it is built this way
 
