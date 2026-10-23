@@ -1,9 +1,13 @@
-base_url = "https://new.torc.art"
+base_url = "https://torc.art"
 title = "Truth or Consequences Contemporary"
 description = "art in the oasis"
 compile_sass = false
 minify_html = false
 default_language = "en"
+# One feed for the whole site. intentionallyconfusing.com's /rss/ is redirected
+# here, and src/worker.js sends /rss/ on to this file.
+generate_feeds = true
+feed_filenames = ["rss.xml"]
 
 # No taxonomies. The template this repo was initialized from declared a
 # bookshelf's worth (recommender, authorname, pubyear, rating, readstate) and

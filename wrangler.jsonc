@@ -1,0 +1,36 @@
+{
+  // torc.art as a Cloudflare Worker serving the Zola build. It moved off
+  // GitHub Pages (new.torc.art, http only) on the way to taking the apex from
+  // Shopify, so intentionallyconfusing.com's redirects have somewhere to land
+  // (README.md § deployment).
+  "name": "torc-art",
+  // src/worker.js answers new.torc.art, plain http, /rss/ and the shop's old
+  // paths; everything else is the build.
+  "main": "src/worker.js",
+  // Pinned so a stray CLOUDFLARE_ACCOUNT_ID can't deploy this elsewhere. TorC.
+  "account_id": "0170b714b0ee025091fed8a088f7a65a",
+  "compatibility_date": "2026-10-01",
+  "observability": { "enabled": true },
+  "assets": {
+    "directory": "public",
+    "binding": "ASSETS",
+    // The script sees every request first, or new.torc.art would be served
+    // the matching file instead of a redirect.
+    "run_worker_first": true,
+    // Zola serves every page as a folder with an index.html, at an address
+    // ending in a slash; a request without the slash gets a redirect to it.
+    "html_handling": "auto-trailing-slash",
+    // Zola writes public/404.html.
+    "not_found_handling": "404-page"
+  },
+  // Also served at torc-art.<account>.workers.dev, which is how a build is
+  // checked before it reaches the domain.
+  "workers_dev": true,
+  // A deploy attaches these, which cannot happen while Shopify's A record
+  // holds the apex and the GitHub Pages CNAME holds new.torc.art: the cutover
+  // deletes both first (README.md § cutover).
+  "routes": [
+    { "pattern": "torc.art", "custom_domain": true },
+    { "pattern": "new.torc.art", "custom_domain": true }
+  ]
+}
