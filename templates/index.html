@@ -11,6 +11,9 @@
 {% set theme = config.extra.theme %}
 {% if theme == "poster" %}{% include "homes/poster.html" %}
 {% elif theme == "plain" %}{% include "homes/plain.html" %}
+{% elif theme == "broadside" %}{% include "homes/broadside.html" %}
+{% elif theme == "handbill" %}{% include "homes/handbill.html" %}
+{% elif theme == "register" %}{% include "homes/register.html" %}
 {% else %}
 <p class="theme-error"><strong>Unknown theme <code>{{ theme }}</code>.</strong>
 Add it to the dispatch in <code>templates/index.html</code>, or set

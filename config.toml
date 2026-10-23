@@ -97,6 +97,21 @@ label = "Poster"
 description = "Full-width type poster, running ticker, sliding index. Interiors quiet."
 color = "#f0efea"
 
+[extra.themes.broadside]
+label = "Broadside"
+description = "The house design: one centred sheet, Centurion, hairlines, the plum as second ink."
+color = "#f7f4ef"
+
+[extra.themes.handbill]
+label = "Handbill"
+description = "Broadside's type at poster scale, printed in two colours."
+color = "#f7f4ef"
+
+[extra.themes.register]
+label = "Register"
+description = "The gallery's archive as a ledger: a numbered rail, the record by date."
+color = "#f7f4ef"
+
 [extra.themes.plain]
 label = "Plain"
 description = "The site's first look — a centred column on warm grey."

@@ -1,0 +1,136 @@
+/* broadside-core.css — what every Broadside theme on torc.art shares.
+ *
+ * Broadside is the house design (atelier/signet/docs/design-broadside.md):
+ * one type, two inks mixed in OKLab, day and night. torc.art's paper is
+ * #f7f4ef and its second ink is the plum the members portal already wears,
+ * so the site and the portal read as one shop. The three themes that import
+ * this (broadside, handbill, register) differ in layout only.
+ *
+ * Centurion is Kyle's kerned build of Ben Whitmore's Coelacanth (OFL,
+ * static/fonts/OFL.md), the same design as the metal Centaur in the cases.
+ */
+
+@font-face { font-family: "Centurion"; src: url("/fonts/Centurion-Roman.woff2") format("woff2"); font-weight: 400 600; font-style: normal; font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2002-2006, U+2009-200A, U+2010-2015, U+2018-201E, U+2020-2022, U+2026, U+2030, U+2032-2033, U+2039-203A, U+2044, U+20AC, U+2122, U+2212, U+FB01-FB02, U+2190-2193, U+2766; }
+@font-face { font-family: "Centurion"; src: url("/fonts/Centurion-Roman-Ext.woff2") format("woff2"); font-weight: 400 600; font-style: normal; font-display: swap;
+  unicode-range: U+0100-0130, U+0132-0151, U+0154-017F, U+0218-021B, U+2016-2017, U+2023-2025, U+2027-202F, U+2070-209F, U+2153-215E; }
+@font-face { font-family: "Centurion"; src: url("/fonts/Centurion-Italic.woff2") format("woff2"); font-weight: 400 600; font-style: italic; font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2002-2006, U+2009-200A, U+2010-2015, U+2018-201E, U+2020-2022, U+2026, U+2030, U+2032-2033, U+2039-203A, U+2044, U+20AC, U+2122, U+2212, U+FB01-FB02, U+2190-2193, U+2766; }
+@font-face { font-family: "Centurion"; src: url("/fonts/Centurion-Italic-Ext.woff2") format("woff2"); font-weight: 400 600; font-style: italic; font-display: swap;
+  unicode-range: U+0100-0130, U+0132-0151, U+0154-017F, U+0218-021B, U+2016-2017, U+2023-2025, U+2027-202F, U+2070-209F, U+2153-215E; }
+
+:root {
+  --bg: #f7f4ef;
+  --accent: #7d4060;
+  --accent-ink: #ffffff;
+
+  color-scheme: light;
+  --paper: var(--bg);
+  --ink: #131312;
+  --second: var(--accent);
+  --on-second: var(--accent-ink);
+
+  --serif: "Centurion", "Iowan Old Style", Palatino, Georgia, serif;
+  --display-cut: "opsz" 80;
+  --text-cut: "opsz" 18.67;
+  --caption-cut: "opsz" 12;
+  --ease: cubic-bezier(0.2, 0.7, 0.1, 1);
+  --measure: 35rem;
+  --gutter: max(1.1rem, env(safe-area-inset-left, 0px));
+  font-size: 18.67px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-mode="day"]) {
+    color-scheme: dark; --paper: #0d0d0c; --ink: #ebeae5;
+    --second: color-mix(in oklab, var(--accent) 50%, #ebeae5); --on-second: #0d0d0c;
+  }
+}
+:root[data-mode="night"] {
+  color-scheme: dark; --paper: #0d0d0c; --ink: #ebeae5;
+  --second: color-mix(in oklab, var(--accent) 50%, #ebeae5); --on-second: #0d0d0c;
+}
+:root {
+  --ink-2: color-mix(in oklab, var(--ink) 64%, var(--paper));
+  --ink-3: color-mix(in oklab, var(--ink) 46%, var(--paper));
+  --rule: color-mix(in oklab, var(--ink) 15%, var(--paper));
+  --rule-2: color-mix(in oklab, var(--ink) 7%, var(--paper));
+  --wash: color-mix(in oklab, var(--ink) 3.5%, var(--paper));
+  /* journal.css reads these */
+  --ui: var(--serif);
+  --muted: var(--ink-2);
+}
+
+html {
+  background: var(--paper); color: var(--ink);
+  transition: background-color 0.5s var(--ease), color 0.5s var(--ease);
+  scrollbar-gutter: stable;
+}
+body {
+  background: var(--paper); color: var(--ink);
+  font-family: var(--serif);
+  font-variation-settings: var(--text-cut);
+  font-size: 1.125rem; line-height: 1.5;
+  font-feature-settings: "onum", "pnum", "liga", "kern";
+  hanging-punctuation: first last;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+h1, h2, h3, h4 { font-weight: 400; }
+p { text-wrap: pretty; }
+img { display: block; }
+
+a {
+  color: var(--ink-2);
+  text-decoration: underline; text-decoration-color: var(--rule);
+  text-decoration-thickness: 1px; text-underline-offset: 0.22em;
+  transition: color 0.2s, text-decoration-color 0.2s;
+}
+a:hover { color: var(--second); text-decoration-color: currentColor; }
+::selection { background: var(--second); color: var(--on-second); }
+:focus-visible { outline: 1.5px solid var(--second); outline-offset: 3px; }
+
+/* The small capital: labels, kickers, nav. */
+.sc, .site-nav, .foot-mode button {
+  font-variation-settings: var(--caption-cut);
+  font-feature-settings: "c2sc", "smcp", "kern";
+  letter-spacing: 0.1em;
+}
+
+/* The mode switch in the footer, Broadside's colophon word. */
+.foot-mode { display: block; }
+.foot-mode button {
+  font: inherit; font-style: italic; color: var(--ink-2); background: none;
+  border: 0; padding: 0.4rem 0.2rem; cursor: pointer;
+  text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 0.22em;
+}
+.foot-mode button:hover { color: var(--second); }
+
+/* Tables, figures and quotes inside prose, the same in every Broadside theme. */
+.prose table { width: 100%; font-size: 0.95rem; margin: 1.5rem 0; }
+.prose th, .prose td { text-align: left; vertical-align: top; padding: 0.55rem 0.8rem 0.55rem 0; border-bottom: 1px solid var(--rule); }
+.prose thead th:empty { display: none; }
+.prose thead { display: none; }
+.prose td:first-child { font-style: italic; font-variation-settings: var(--caption-cut); color: var(--ink-2); white-space: nowrap; }
+.prose figure { margin: 2rem 0; }
+.prose figcaption { font-style: italic; font-variation-settings: var(--caption-cut); font-size: 0.85rem; color: var(--ink-2); margin-top: 0.6rem; }
+.prose blockquote { margin: 1.5rem 0; padding: 0 0 0 1.2rem; border-left: 1px solid var(--second); color: var(--ink-2); }
+.prose blockquote p + p { margin-top: 0.8em; }
+.prose hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem auto; width: 3rem; }
+
+@view-transition { navigation: auto; }
+@media (prefers-reduced-motion: reduce) {
+  html { transition: none; }
+  @view-transition { navigation: none; }
+}
+
+/* The cloud-and-lightning mark is drawn in black; at night it is inverted
+ * so it stays on the sheet. */
+@media (prefers-color-scheme: dark) { :root:not([data-mode="day"]) .wordmark-mark { filter: invert(0.92); } }
+:root[data-mode="night"] .wordmark-mark { filter: invert(0.92); }
+
+/* On a phone a two-column table has to wrap, labels and long addresses too. */
+@media (max-width: 560px) {
+  .prose td:first-child { white-space: normal; width: 34%; }
+  .prose td { overflow-wrap: anywhere; }
+  .prose table { table-layout: fixed; }
+}

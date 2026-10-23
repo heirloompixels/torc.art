@@ -1,0 +1,54 @@
+{# Theme: handbill — Broadside's type pushed to the scale of a letterpress
+   poster, printed in two colours: ink, and the plum as a second plate. The
+   name runs the width of the sheet, the photograph is printed in the second
+   ink, the standing notice is reversed out of a solid block of it. #}
+{% set x = section.extra %}
+{% set index = get_section(path="_index.md") %}
+{% set lines = x.title_lines %}
+
+<main class="hb-home">
+
+<p class="hb-strip">{{ x.marquee | join(sep=" ❧ ") }}</p>
+
+<h1 class="hb-name">
+  {%- for l in lines %}<span class="hb-line hb-line-{{ loop.index }}">{{ l }}</span>{% endfor -%}
+</h1>
+
+<div class="hb-oxford" aria-hidden="true"></div>
+
+{%- if x.hero %}
+<figure class="hb-plate"><img src="{{ x.hero.src | safe }}" alt="{{ x.hero.alt }}" width="2000" height="1333"></figure>
+{%- endif %}
+
+{%- if x.pull_quote %}
+<p class="hb-quote"><span class="q" aria-hidden="true">“</span>{{ x.pull_quote }}<span class="q" aria-hidden="true">”</span></p>
+{%- endif %}
+
+<div class="hb-band">
+  <section class="hb-statement">
+    <h2 class="hb-label">The gallery</h2>
+    {{ x.statement | markdown | safe }}
+  </section>
+  {%- if x.notice and x.notice.title %}
+  <section class="hb-notice">
+    <h2 class="hb-label">{{ x.notice.title }}{% if x.notice.subtitle %} · {{ x.notice.subtitle }}{% endif %}</h2>
+    {{ x.notice.body | markdown | safe }}
+    {%- if x.notice.signature %}<p class="hb-sign">{{ x.notice.signature }}</p>{% endif %}
+  </section>
+  {%- endif %}
+</div>
+
+<ol class="hb-index">
+  {%- for p in index.pages %}
+  <li><a href="{{ p.path | safe }}"><span class="n">{{ loop.index }}</span><span class="t">{{ p.title }}</span>{% if p.extra.blurb %}<span class="b">{{ p.extra.blurb }}</span>{% endif %}</a></li>
+  {%- endfor %}
+  {%- for e in config.extra.nav_external %}
+  <li><a href="{{ e.url | safe }}"><span class="n">↗</span><span class="t">{{ e.name }}</span>{% if e.blurb %}<span class="b">{{ e.blurb }}</span>{% endif %}</a></li>
+  {%- endfor %}
+</ol>
+
+{%- if x.activities %}
+<p class="hb-strip hb-strip-foot">{{ x.activities | join(sep=" · ") }}</p>
+{%- endif %}
+
+</main>
