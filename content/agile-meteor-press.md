@@ -44,17 +44,11 @@ We publish one book per season based on invitations or submissions. Almost all o
 - a.m.p. no. 2 — *TorC no.75* (November 1st, 2025)
 - a.m.p. no. 3 — *Hiraeth* (October 2025)
 - a.m.p. no. 4 — *Women of Consequences* (November 14th, 2025)
-- a.m.p. no. 5 — *Olin: Erotic Drawings*
-- a.m.p. no. 6 — *Mud Mountain*
-- a.m.p. no. 7 — *Working Title*
 - a.m.p. no. 8 — *Symbology & Characterizations* (October 11th, 2025)
 
-## Upcoming
-
-- *Olin: Drawings* — a.m.p. no. 5
-- *Mud Mountain* — a.m.p. no. 6
-- *Hieronymous Bogs* — a.m.p. no. 7
-- *A Book of Spores* — a.m.p. no. 9
+<!-- Upcoming titles are held back (Kyle, 2026-10-23: "upcoming is correct,
+     but it's all on hold currently"): no. 5 Olin: Drawings, no. 6 Mud
+     Mountain, no. 7 Hieronymous Bogs, no. 9 A Book of Spores. -->
 
 ## More
 

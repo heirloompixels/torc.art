@@ -46,7 +46,7 @@ Everything here goes back to Olin's Mud Mountain Studio and Hundredth Monkey Gal
 
 Olin West was born in Paris, Texas and raised on the plains of Wyoming. He spent time in Oklahoma City, Oakland and Denver before settling in Santa Fe in 1976, where he became a renowned silversmith and beadworker. In 1997 he moved his studio to Truth or Consequences and devoted his full attention to painting. His Tabbed Series, painted from 2005 to 2015, marked his departure from plein air painting into the metaphysical world of the abstract — "a study of duality," in the words of the gallery's 2018 exhibition of the work, where "one loses oneself into the paintings; doorways open, perceptions shift."
 
-Twelve years after he gave us our start, Olin showed work in *Home*, the first exhibition at Truth or Consequences Contemporary. [Agile Meteor Press](/agile-meteor-press/) is making two books with him in them, a volume of his drawings and *Mud Mountain*.
+Twelve years after he gave us our start, Olin showed work in *Home*, the first exhibition at Truth or Consequences Contemporary.
 
 ## Seba
 
