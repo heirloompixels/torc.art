@@ -85,7 +85,7 @@ The <a href="/meteoric/">MeTeORiC festival</a>, across venues all over town.
 
 <dt>February 24th, 2024 — Grand Opening: Home</dt>
 <dd>
-The Grand Opening Ceremony of Truth or Consequences Contemporary at 312 Main, held on the Saturday night of MeTeORiC 2024, with the inaugural exhibition <a href="/exhibitions/">Home</a> — dance, poetry, a DJ, and a performance by Hieronymus Bogs.
+The Grand Opening Ceremony of Truth or Consequences Contemporary at 312 Main, on the Saturday night of MeTeORiC 2024. Our first show was <a href="/exhibitions/">Home</a>, and the night had dance, poetry, a DJ and a performance by Hieronymus Bogs.
 </dd>
 
 <dt>February 23rd–25th, 2024 — MeTeORiC</dt>
@@ -95,7 +95,7 @@ The festival returns, with Tatsuya Nakatani performing twice in one evening.
 
 <dt>December 7th, 2023 — the first pARTluck</dt>
 <dd>
-A gathering to eat food, discuss, and make art together — potluck + art. The evening marked the opening of the renovated space, twelve years to the day since we arrived in Truth or Consequences.
+A gathering to eat food, discuss, and make art together, potluck + art. It was the first night in the renovated space, twelve years to the day since we arrived in Truth or Consequences.
 </dd>
 
 <dt>August 18th, 2023 — 312 Main St</dt>
@@ -105,9 +105,9 @@ We are moving to a new space. Opening October 2023.
 
 <dt>October 2019 — the first MeTeORiC</dt>
 <dd>
-The inaugural <a href="/meteoric/">MeTeORiC festival</a>: some thirty artists across Truth or Consequences.
+The first <a href="/meteoric/">MeTeORiC festival</a>, with some thirty artists all over Truth or Consequences.
 </dd>
 
 </dl>
 
-Weekly open printing sessions at the [Community Etching Press](/etching-press/) run most Saturdays.
+There are open printing sessions at the [Community Etching Press](/etching-press/) most Saturdays.

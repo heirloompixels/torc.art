@@ -50,29 +50,29 @@ The inaugural exhibition of Truth or Consequences Contemporary at 312 Main, open
 
 ## Before 312 Main
 
-The <a href="/history/">fourteen years before this building</a> were an exhibition history of their own. At Desert Archaic on Broadway the walls turned over monthly at the Second Saturday Art Hop for more than a decade — hundreds of installations of paintings, "an alternate reality where time and space melt to merge with the hyper consciousness," as the gallery's 2019 statement put it. A few landmarks among them:
+We were showing art in this town for a long time before we found this building (the <a href="/history/">history</a> page has the whole story). At Desert Archaic on Broadway the walls changed every month for the Second Saturday Art Hop, for more than a decade, hundreds of installations of paintings, "an alternate reality where time and space melt to merge with the hyper consciousness," as we wrote in 2019. A few of them:
 
 <dl>
 
 <dt>Tomorrow — 2019</dt>
 <dd>
-A site-specific installation of some 250 paintings on found and repurposed materials, with found objects and stone sculptures — shown at Desert Archaic and at NMSU, Las Cruces.
+A site specific installation of some 250 paintings on found and repurposed materials, with found objects and stone sculptures. Shown at Desert Archaic and at NMSU, Las Cruces.
 </dd>
 
 <dt>Olin West: Selections from the Tabbed Series — January–February 2018</dt>
 <dd>
-A decade of Olin West's tabbed paintings, 2005–2015 — "a metaphysical musing on color, variation and repetition," his departure from plein air painting into the metaphysical world of the abstract.
+Ten years of Olin West's tabbed paintings, 2005–2015, "a metaphysical musing on color, variation and repetition." This series was his departure from plein air painting into the metaphysical world of the abstract.
 </dd>
 
 <dt>Modern Ancient — 2021</dt>
 <dd>
-An art exhibition in the form of a book — Desert Archaic Press's first and only title, by Jeannie Ortiz and Kyle Parker Cunningham, released with a performance, film, adornment and art installation.
+An art exhibition in the form of a book, by the two of us. It was the first and only title from Desert Archaic Press, and we released it with a performance, a film, adornment and an art installation.
 </dd>
 
 </dl>
 
 ## On view
 
-The gallery holds a standing selection of handloom, sculpture, intaglio, painting, printmaking, art clothing, adornment and knives, alongside books from [Agile Meteor Press](/agile-meteor-press/).
+There is always work up in the gallery: handloom, sculpture, intaglio, painting, printmaking, art clothing, adornment and knives, and books from [Agile Meteor Press](/agile-meteor-press/).
 
-See the [calendar](/calendar/) for openings and events, and the [shop](https://shop.torc.art) to buy work.
+The [calendar](/calendar/) has openings and events, and the [shop](https://shop.torc.art) has work for sale.
