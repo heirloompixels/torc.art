@@ -60,6 +60,15 @@ Release party, 6–8pm at the gallery main space. Agile Meteor Press no. 4.
 "While making multiples of Elizabeth, the "of fog" artworks began to contemplate the power of objects in our lives and in reiterating ideas, the coldness of capitalism, and the healing power of making." To learn what an Elizabeth is, visit <a href="https://melissahaviland.com">melissahaviland.com</a>.
 </dd>
 
+<!-- Placeholder (Kyle, 2026-10-23: "Future Relics and Weaving will come in
+     time, just place hold them"). The shop has a "Weaving" show post dated
+     2024-09-27 with no text, and a Future Relics collection of 22 works
+     (paintings and stone sculpture) listed 2022-04 to 2024-03. -->
+<dt>Weaving — autumn 2024</dt>
+<dd>
+More about this show is coming.
+</dd>
+
 <dt>Home — opened February 24th, 2024</dt>
 <dd>
 The inaugural exhibition of Truth or Consequences Contemporary at 312 Main, opened with a Grand Opening Ceremony on the Saturday night of <a href="/meteoric/">MeTeORiC</a> 2024 — dance performances by Abigail Flora, Cydney Wilkes, Jeannie Ortiz, Avi Burg, Chris Slate and Joshua Cravens, poetry by Lucas Beau Leone, and a performance by Hieronymus Bogs. Work exploring the idea of home through dance, music, stone, paint, fiber, drawing, installation, photography, metal, ceramic and glass, by Priscila Spitler, Olin West, Hills Snyder, Nice Condo, Weshoyot Alvitre, Emily Spykman, Gary Cunningham, Felix Morello, Sarah Rosenthal, Reed Rische, Lucas Beau Leone, Alida Mataczynski, Thomas Phillip Laidig, Scott Horn, Petro Hul, James O'Connell, Colette Webster, Kyle Parker Cunningham and Jeannie Ortiz.
@@ -75,6 +84,11 @@ Home is something we all search for and if lucky, even if for brief moments, we 
 </blockquote>
 
 <a href="https://shop.torc.art/collections/home">Work from the show</a>
+</dd>
+
+<dt>Future Relics</dt>
+<dd>
+More about this body of work is coming. <a href="https://shop.torc.art/collections/future-relics">The work in the shop</a>.
 </dd>
 
 </dl>
