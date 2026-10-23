@@ -25,4 +25,4 @@ Our facade signage installation was made possible through the [National Main Str
 
 ## Enquiries
 
-Writing about us? Email [intentionallyconfusing@gmail.com](mailto:intentionallyconfusing@gmail.com) and we'll send images and a press kit.
+Writing about us? The [press kit](/press-kit/) has the facts, our descriptions and biographies, images and the logo. Email [intentionallyconfusing@gmail.com](mailto:intentionallyconfusing@gmail.com) for anything else.

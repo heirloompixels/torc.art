@@ -26,7 +26,7 @@ Allie Hale, Andrew Williams, Angelina Lopez, Asa Lambert, Celeste Croteaux, Chan
 
 <dt>What Hands Do — April 11th–May 6th, 2026</dt>
 <dd>
-A show by Jeannie Ortiz, a body of new works in new mediums. Opening reception March 14th, 2026. Jeannie writes:
+A show by Jeannie Ortiz, a body of new works in new mediums. Opening reception April 11th, 2026. Jeannie writes:
 
 <blockquote>
 

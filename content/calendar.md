@@ -28,14 +28,14 @@ The MeTeORiC festival, originally set for February 20th, 21st and 22nd 2026, has
 
 <dl>
 
+<dt>April 11th, 2026 — Jeannie Ortiz opening reception</dt>
+<dd>
+Opening of <a href="/exhibitions/">What Hands Do</a>, a body of new works in new mediums.
+</dd>
+
 <dt>March 20th, 2026 — Nakatani Gong Orchestra</dt>
 <dd>
 A 16 gong orchestra conducted by <a href="https://www.tatsuyanakatani.com">Tatsuya Nakatani</a>, performed at the gallery. Sixteen volunteer musicians joined the orchestra after a day of rehearsal.
-</dd>
-
-<dt>March 14th, 2026 — Jeannie Ortiz opening reception</dt>
-<dd>
-Opening of <a href="/exhibitions/">What Hands Do</a>, a body of new works in new mediums.
 </dd>
 
 <dt>February 14th, 2026 — Art Hop: Tatsuya Nakatani Bow Show</dt>

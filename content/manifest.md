@@ -31,6 +31,7 @@ This page lists every page and who wrote it. **gallery** means the words are Jea
 | [Members](/members/) | claude |
 | [Projects](/projects/) | claude |
 | [Press](/press/) | gallery |
+| [Press Kit](/press-kit/) | gallery + claude — the descriptions and biographies are theirs, as published; Claude wrote the fact sheet and captions |
 | [Visit](/visit/) | gallery |
 | [Manifest](/manifest/) | claude |
 
