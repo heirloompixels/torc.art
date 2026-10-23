@@ -83,6 +83,16 @@ The inaugural illumination of our new art signage installation at 8:45pm, during
 The <a href="/meteoric/">MeTeORiC festival</a>, across venues all over town.
 </dd>
 
+<dt>October 9th–12th, 2024 — of fog</dt>
+<dd>
+<a href="/exhibitions/">of fog</a>, by Melissa Haviland.
+</dd>
+
+<dt>August 9th + 10th, 2024 — Etching Press Opening Party</dt>
+<dd>
+We opened our community printmaking space. <a href="/etching-press/">The press</a>.
+</dd>
+
 <dt>February 24th, 2024 — Grand Opening: Home</dt>
 <dd>
 The Grand Opening Ceremony of Truth or Consequences Contemporary at 312 Main, on the Saturday night of MeTeORiC 2024. Our first show was <a href="/exhibitions/">Home</a>, and the night had dance, poetry, a DJ and a performance by Hieronymus Bogs.
