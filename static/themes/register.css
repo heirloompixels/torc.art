@@ -123,12 +123,12 @@ body { display: grid; grid-template-columns: minmax(0, 1fr); min-height: 100dvh;
 .prose dd > :first-child { margin-top: 0.35rem; }
 
 /* Pages made of dated entries (calendar, exhibitions; Kyle, 2026-10-24):
- * the section names are titles across the column, and the margin they
- * used holds each entry's date instead, so the entries get the full
+ * the section names are titles, set flush left with the dates beneath
+ * them, and the margin the names used holds each entry's date instead, so the entries get the full
  * width. Prose pages keep their names in the margin. */
 @media (min-width: 760px) {
   .prose:has(> dl) h2 {
-    float: none; width: auto; margin: 3.2rem 0 1.4rem calc(-1 * (var(--margin) + 2rem)); padding: 1.1rem 0 0 calc(var(--margin) + 2rem);
+    float: none; width: auto; margin: 3.2rem 0 1.4rem calc(-1 * (var(--margin) + 2rem)); padding: 1.1rem 0 0 0;
     text-align: left; border-top: 1px solid var(--rule);
     font-variation-settings: var(--display-cut); font-feature-settings: "kern"; letter-spacing: -0.005em;
     font-size: 1.75rem; line-height: 1.1; color: var(--ink);
@@ -140,7 +140,7 @@ body { display: grid; grid-template-columns: minmax(0, 1fr); min-height: 100dvh;
     display: grid; grid-template-columns: var(--margin) minmax(0, 1fr); column-gap: 2rem;
     align-items: baseline; margin-left: calc(-1 * (var(--margin) + 2rem));
   }
-  .prose:has(> dl) dt .when { grid-column: 1; text-align: right; }
+  .prose:has(> dl) dt .when { grid-column: 1; text-align: left; }
   .prose:has(> dl) dt .what { grid-column: 2; }
   /* Each row's hairline runs under the date as well, as a ledger's would. */
   .prose:has(> dl) dd { margin-left: 0; }
