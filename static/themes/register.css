@@ -62,9 +62,10 @@ body { display: grid; grid-template-columns: minmax(0, 1fr); min-height: 100dvh;
 .prose dt { padding-top: 0.9rem; margin-top: 0.9rem; border-top: 1px solid var(--rule-2); }
 .prose dt:first-child { border-top: 0; margin-top: 0; padding-top: 0.2rem; }
 .prose dt .when::after { content: none; }
+/* The date speaks in the menu's voice: the sans, in tracked capitals. */
 .prose dt .when {
-  display: block; font-variation-settings: var(--caption-cut); font-size: 0.85rem; color: var(--ink-3);
-  font-feature-settings: "onum", "pnum", "kern";
+  display: block; font-family: var(--sans); font-variation-settings: normal; font-feature-settings: "kern";
+  font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.6rem; color: var(--ink-2);
 }
 .prose dt .what { display: block; font-variation-settings: var(--display-cut); font-size: 1.3rem; line-height: 1.2; color: var(--ink); }
 .prose dd { margin: 0.35rem 0 0; color: var(--ink); }

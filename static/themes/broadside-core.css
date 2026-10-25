@@ -20,8 +20,8 @@
   unicode-range: U+0100-0130, U+0132-0151, U+0154-017F, U+0218-021B, U+2016-2017, U+2023-2025, U+2027-202F, U+2070-209F, U+2153-215E; }
 
 @font-face { font-family: "Jost Menu"; src: url("/fonts/Jost-Menu.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap;
-  /* Only what scripts/jost-menu.sh keeps: capitals, figures, the punctuation the menu and footer use. */
-  unicode-range: U+0020, U+0026-0027, U+002C-002E, U+0030-0039, U+0040-005A, U+00B7, U+2014, U+2019, U+2197; }
+  /* Only what scripts/jost-menu.sh keeps: capitals, figures, the punctuation the menu, footer and ledger dates use. */
+  unicode-range: U+0020, U+0026-0027, U+002B-002E, U+0030-0039, U+0040-005A, U+00B7, U+2013-2014, U+2019, U+2197; }
 
 :root {
   --bg: #f7f4ef;
