@@ -54,11 +54,26 @@ body { display: grid; grid-template-columns: minmax(0, 1fr); min-height: 100dvh;
 .prose p, .prose li { margin: 0 0 0.9em; }
 .prose blockquote { border-left: 1px solid var(--second); }
 
-/* Dated lists are the register proper: the date in its own column. */
-.prose dl { display: grid; grid-template-columns: 1fr; margin: 0 0 1rem; }
-.prose dt { font-variation-settings: var(--caption-cut); font-feature-settings: "c2sc", "smcp", "kern"; letter-spacing: 0.06em; font-size: 0.88rem; padding-top: 1rem; margin-top: 1rem; border-top: 1px solid var(--rule-2); }
-.prose dt:first-child { border-top: 0; margin-top: 0; padding-top: 0; }
+/* Dated lists are the register proper: the date in its own column, the
+ * entry beside it, a hairline between entries. On a phone the date sits
+ * above. */
+:root { --when: 8.6rem; }
+.prose dl { margin: 0 0 1rem; }
+.prose dt { padding-top: 0.9rem; margin-top: 0.9rem; border-top: 1px solid var(--rule-2); }
+.prose dt:first-child { border-top: 0; margin-top: 0; padding-top: 0.2rem; }
+.prose dt .when::after { content: none; }
+.prose dt .when {
+  display: block; font-variation-settings: var(--caption-cut); font-size: 0.85rem; color: var(--ink-3);
+  font-feature-settings: "onum", "pnum", "kern";
+}
+.prose dt .what { display: block; font-variation-settings: var(--display-cut); font-size: 1.3rem; line-height: 1.2; color: var(--ink); }
 .prose dd { margin: 0.35rem 0 0; color: var(--ink); }
+@media (min-width: 640px) {
+  .prose dt { display: grid; grid-template-columns: var(--when) minmax(0, 1fr); column-gap: 1.4rem; align-items: baseline; }
+  .prose dt .when { grid-column: 1; }
+  .prose dt .what { grid-column: 2; }
+  .prose dd { margin-left: calc(var(--when) + 1.4rem); }
+}
 
 /* ---- the front page ---------------------------------------------------------- */
 .rg-head { padding-bottom: 2rem; border-bottom: 1.5px solid var(--ink); }
@@ -105,3 +120,4 @@ body { display: grid; grid-template-columns: minmax(0, 1fr); min-height: 100dvh;
 @media (min-width: 760px) {
   .journal-index li { display: grid !important; grid-template-columns: 1fr auto; }
 }
+.prose dd > :first-child { margin-top: 0.35rem; }
