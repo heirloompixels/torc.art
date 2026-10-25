@@ -134,11 +134,14 @@ body { display: grid; grid-template-columns: minmax(0, 1fr); min-height: 100dvh;
     font-size: 1.75rem; line-height: 1.1; color: var(--ink);
   }
   .prose:has(> dl) h2 + * { border-top: 0; padding-top: 0; margin-top: 0; }
-  .prose:has(> dl) dt { display: block; position: relative; }
-  .prose:has(> dl) dt .when {
-    position: absolute; left: calc(-1 * (var(--margin) + 2rem)); width: var(--margin); top: 0.95rem;
-    text-align: right; line-height: 1.35;
+  /* The date and the entry's title share a baseline: the dt reaches back
+   * into the margin as a two-column grid aligned on the first baseline. */
+  .prose:has(> dl) dt {
+    display: grid; grid-template-columns: var(--margin) minmax(0, 1fr); column-gap: 2rem;
+    align-items: baseline; margin-left: calc(-1 * (var(--margin) + 2rem));
   }
-  .prose:has(> dl) dt:first-child .when { top: 0.25rem; }
+  .prose:has(> dl) dt .when { grid-column: 1; text-align: right; }
+  .prose:has(> dl) dt .what { grid-column: 2; }
+  /* Each row's hairline runs under the date as well, as a ledger's would. */
   .prose:has(> dl) dd { margin-left: 0; }
 }
