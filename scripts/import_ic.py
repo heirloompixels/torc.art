@@ -24,7 +24,7 @@ Decisions, so they live here and not in a session:
   column and the saving (64%). GIFs are single iPhone frames saved as GIF by
   accident and are re-encoded the same way. PDFs are hosted as they are.
 - **Six posts are held back** (HELD), not imported.
-- **Drafts stay drafts**, and the two posts that were for paying supporters
+- **Drafts stay drafts**, so do the UNFINISHED, and the two posts that were for paying supporters
   only are drafts too: torc.art has no members' side to put them behind.
 - **Links to other intentionallyconfusing.com posts** point at where that
   post lives now when it is known (here, or jeannieortiz.com via that site's
@@ -51,6 +51,10 @@ MEDIA = "https://media.torc.art"
 WIDTH = 1600
 
 RENAMED = {"about": "intentionally-confusing"}
+
+# Published on the old site but unfinished, so a draft here for Kyle (2026-10-25):
+# Part 3 stops at a heading it never wrote.
+UNFINISHED = {"grand-enchantment-trail-part-3"}
 
 # Not imported at all: each needs Kyle and Jeannie's word before it is public
 # again, and this repo is public, so even a draft here would publish it. They
@@ -151,7 +155,7 @@ def main():
         def link(m):
             s = m.group(1)
             if s in here:
-                return f"/{here[s]}/" if s not in HELD else f"https://intentionallyconfusing.com/{s}/"
+                return f"/{here[s]}/" if s not in HELD and s not in UNFINISHED else f"https://intentionallyconfusing.com/{s}/"
             if s in elsewhere:
                 return elsewhere[s]
             return f"https://intentionallyconfusing.com/{s}/"
@@ -164,7 +168,7 @@ def main():
         feature = GHOST_ASSET.sub(asset, g["feature_image"]) if g.get("feature_image") else ""
 
         held = None
-        draft = g["status"] != "published" or g["visibility"] != "public"
+        draft = g["status"] != "published" or g["visibility"] != "public" or r["slug"] in UNFINISHED
         date = (g["published_at"] or g["created_at"])[:19].replace(" ", "T") + "Z"
         tags = [t["name"] for t in (g.get("tags") or []) if not t["name"].startswith("#")]
         authors = [a["name"] for a in (g.get("authors") or [])]
