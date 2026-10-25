@@ -84,10 +84,6 @@ url = "https://jeannieortiz.com"
 name = "kyleparkercunningham.com"
 url = "https://kyleparkercunningham.com"
 
-[[extra.elsewhere]]
-name = "intentionallyconfusing.com"
-url = "https://intentionallyconfusing.com"
-
 # ── The theme registry ───────────────────────────────────────────────────
 # One block per theme, keyed by the name `extra.theme` takes. Everything a
 # theme needs the HTML `<head>` to know goes here, so no template carries a
