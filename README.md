@@ -87,8 +87,8 @@ GitHub Pages at new.torc.art, over http only, until 2026-10-23.
   a merge is a deploy, and someone should be at the keyboard.
 - **By hand:** `scripts/deploy-worker.sh` (or `--dry-run`), with the
   laptop's TorC credentials.
-- **`src/worker.js`** sits in front of the assets: new.torc.art and plain
-  http go to https://torc.art; Shopify's old paths on the apex (`/products`,
+- **`src/worker.js`** sits in front of the assets: new.torc.art,
+  www.torc.art and plain http go to https://torc.art (Kyle, 2026-10-25); Shopify's old paths on the apex (`/products`,
   `/collections`, `/cart`, `/pages`, `/blogs` and the rest) go to
   shop.torc.art with the path kept, because until this site took it, every
   torc.art address landed on the shop; and `/rss/`, the old
@@ -98,14 +98,14 @@ GitHub Pages at new.torc.art, over http only, until 2026-10-23.
 
 ### Cutover
 
-Shopify holds the apex (an A record to `23.227.38.65`) and GitHub Pages holds
-new.torc.art (a CNAME), so the Worker cannot attach either name until they
-go. In order:
+Shopify holds the apex (an A record to `23.227.38.65`) and www (a CNAME to
+`shops.myshopify.com`), and GitHub Pages holds new.torc.art (a CNAME), so
+the Worker cannot attach any of the three names until they go. In order:
 
-1. Remove torc.art from the shop's domains in Shopify admin. shop.torc.art
-   and www.torc.art stay with Shopify.
-2. `scripts/cutover.py` checks the Worker on workers.dev, builds, saves both
-   records to `docs/cutover-records.json`, deletes them, deploys with the
+1. Remove torc.art and www.torc.art from the shop's domains in Shopify
+   admin. shop.torc.art stays, and is already the primary domain.
+2. `scripts/cutover.py` checks the Worker on workers.dev, builds, saves the
+   three records to `docs/cutover-records.json`, deletes them, deploys with the
    names attached, and checks the live site. `--undo` puts the records back.
 3. Turn off GitHub Pages in the repo's settings, and add the CI token.
 4. Merge PR #4. From then on CI deploys.
@@ -113,7 +113,7 @@ go. In order:
 The apex's MX and TXT records (Email Routing, the site verification) are not
 touched. The other subdomains are not this repo: gather, proofing, futures
 and members are their own Workers, amp and meteoric are GitHub Pages, media
-is R2, and shop, www and account are Shopify.
+is R2, and shop and account are Shopify.
 
 ## Project structure
 

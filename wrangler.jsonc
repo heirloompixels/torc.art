@@ -4,7 +4,7 @@
   // Shopify, so intentionallyconfusing.com's redirects have somewhere to land
   // (README.md § deployment).
   "name": "torc-art",
-  // src/worker.js answers new.torc.art, plain http, /rss/ and the shop's old
+  // src/worker.js answers new.torc.art, www.torc.art, plain http, /rss/ and the shop's old
   // paths; everything else is the build.
   "main": "src/worker.js",
   // Pinned so a stray CLOUDFLARE_ACCOUNT_ID can't deploy this elsewhere. TorC.
@@ -27,10 +27,11 @@
   // checked before it reaches the domain.
   "workers_dev": true,
   // A deploy attaches these, which cannot happen while Shopify's A record
-  // holds the apex and the GitHub Pages CNAME holds new.torc.art: the cutover
-  // deletes both first (README.md § cutover).
+  // holds the apex, its CNAME holds www and the GitHub Pages CNAME holds
+  // new.torc.art: the cutover deletes all three first (README.md § cutover).
   "routes": [
     { "pattern": "torc.art", "custom_domain": true },
-    { "pattern": "new.torc.art", "custom_domain": true }
+    { "pattern": "new.torc.art", "custom_domain": true },
+    { "pattern": "www.torc.art", "custom_domain": true }
   ]
 }
