@@ -87,3 +87,15 @@ would lose it.
 - The two facts a theme must not invent: the gallery opened at 312 Main in
   2023 but the practice is fourteen years older, and the ticker and footer
   strips are gallery copy, not decoration. Both come from `_index.md`.
+
+## The menu's sans
+
+The three Broadside themes set the menu in a sans (Kyle, 2026-10-24):
+`Futura, "Futura PT", "Jost Menu", system-ui, sans-serif`. Apple systems
+draw it in their own Futura and never fetch Jost. Everywhere else gets
+`static/fonts/Jost-Menu.woff2`, Jost (OFL, `static/fonts/OFL-Jost.md`)
+trimmed to 6.8 KB: capitals, figures and `. · & ' ’ - ↗`, every weight.
+The menu is set in capitals, so its lowercase is never drawn. If a menu
+item ever needs a character outside that set (an accent, say), add it to
+`scripts/jost-menu.sh`, run it, and widen the `unicode-range` in
+`broadside-core.css` to match.

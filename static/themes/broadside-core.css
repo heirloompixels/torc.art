@@ -19,6 +19,10 @@
 @font-face { font-family: "Centurion"; src: url("/fonts/Centurion-Italic-Ext.woff2") format("woff2"); font-weight: 400 600; font-style: italic; font-display: swap;
   unicode-range: U+0100-0130, U+0132-0151, U+0154-017F, U+0218-021B, U+2016-2017, U+2023-2025, U+2027-202F, U+2070-209F, U+2153-215E; }
 
+@font-face { font-family: "Jost Menu"; src: url("/fonts/Jost-Menu.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap;
+  /* Only what scripts/jost-menu.sh keeps: capitals, figures, a little punctuation. */
+  unicode-range: U+0020, U+0026-0027, U+002D-002E, U+0030-0039, U+0041-005A, U+00B7, U+2019, U+2197; }
+
 :root {
   --bg: #f7f4ef;
   --accent: #7d4060;
@@ -31,9 +35,11 @@
   --on-second: var(--accent-ink);
 
   --serif: "Centurion", "Iowan Old Style", Palatino, Georgia, serif;
-  /* The menu's voice (Kyle, 2026-10-24): Futura first, then the geometric
-   * sans each system has nearest to it. Futura ships only on Apple systems. */
-  --sans: Futura, "Futura PT", "Century Gothic", "Avenir Next", Avenir, system-ui, sans-serif;
+  /* The menu's voice (Kyle, 2026-10-24): Futura where the system has it
+   * (Apple's do), else Jost, a Futura revival trimmed to the menu's
+   * characters (6.8 KB). A browser fetches a web font only when it has to
+   * draw with it, so where Futura is installed Jost is never downloaded. */
+  --sans: Futura, "Futura PT", "Jost Menu", system-ui, sans-serif;
   --display-cut: "opsz" 80;
   --text-cut: "opsz" 18.67;
   --caption-cut: "opsz" 12;

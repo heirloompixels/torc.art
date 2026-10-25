@@ -16,11 +16,15 @@
 
 <!-- opengraph and favicons -->
 
+{#- The summer themes' fonts, from other people's servers. The Broadside
+    themes carry their own (static/fonts/), so only poster and plain ask. #}
+{%- if config.extra.theme in ["poster", "plain"] %}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charset="utf-8" />
+{%- endif %}
 
 <meta name="robots" content="index, follow">
 {# Only one of `page` and `section` is defined in any given render, so every
