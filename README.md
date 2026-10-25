@@ -104,7 +104,9 @@ the Worker cannot attach any of the three names until they go. In order:
 
 1. Remove torc.art and www.torc.art from the shop's domains in Shopify
    admin. shop.torc.art stays, and is already the primary domain.
-2. `scripts/cutover.py` checks the Worker on workers.dev, builds, saves the
+2. `scripts/cutover.py --stage` deploys the build to torc-art.torc.workers.dev
+   alone (no domains), to be looked at. Then `scripts/cutover.py` checks that
+   staged Worker, builds, saves the
    three records to `docs/cutover-records.json`, deletes them, deploys with the
    names attached, and checks the live site. `--undo` puts the records back.
 3. Turn off GitHub Pages in the repo's settings, and add the CI token.

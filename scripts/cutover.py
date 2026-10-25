@@ -4,12 +4,15 @@
     scripts/cutover.py           build, swap the records, deploy with the domains
     scripts/cutover.py --undo    detach the Worker's domains and put the saved records back
     scripts/cutover.py --check   exit 1 while Shopify or GitHub Pages still holds a name
+    scripts/cutover.py --stage   build and deploy to torc-art.torc.workers.dev only, no domains
 
 README.md § cutover is the why. In order, so that nothing is deleted until
 everything that can fail without harm has passed:
 
 1. The staged Worker must answer and redirect, and the site is built
-   (deploy-worker.sh --dry-run), before any record moves.
+   (deploy-worker.sh --dry-run), before any record moves. Stage it first
+   with --stage: a deploy from wrangler.jsonc minus its routes, so nothing
+   but workers.dev changes.
 2. The apex A record and the www CNAME to Shopify, and the new.torc.art
    CNAME to GitHub Pages, are saved to docs/cutover-records.json, then deleted.
 3. The Worker is deployed with all three names attached (wrangler.jsonc routes);
@@ -107,11 +110,36 @@ def wrangler_env():
     return env
 
 
+def stage():
+    """Deploy the build to workers.dev alone: wrangler.jsonc without its routes."""
+    if subprocess.call([os.path.join(ROOT, "scripts", "deploy-worker.sh"), "--dry-run"], cwd=ROOT) != 0:
+        sys.exit("the build failed; nothing deployed")
+    # wrangler.jsonc's comments are whole lines, so dropping them leaves JSON.
+    with open(os.path.join(ROOT, "wrangler.jsonc")) as f:
+        config = json.loads("".join(l for l in f if not l.lstrip().startswith("//")))
+    config.pop("routes")
+    staged = os.path.join(ROOT, ".wrangler-stage.json")
+    with open(staged, "w") as f:
+        json.dump(config, f)
+    try:
+        wrangler = os.environ.get("WRANGLER", "npx --yes wrangler@4").split()
+        if subprocess.call(wrangler + ["deploy", "-c", staged], cwd=ROOT, env=wrangler_env()) != 0:
+            sys.exit("the staging deploy failed")
+    finally:
+        os.remove(staged)
+    for _ in range(20):
+        if get(STAGED + "/dispatch-20/")[0] == 200:
+            print(f"ok   staged at {STAGED}")
+            return
+        time.sleep(3)
+    sys.exit(f"{STAGED}/dispatch-20/ does not answer 200 yet; try --stage again in a minute")
+
+
 def cut_over():
     status, _, _ = get(STAGED + "/dispatch-20/")
     redirect = get(STAGED + "/products/anything")
     if status != 200 or redirect[0] != 301 or redirect[2] != "https://shop.torc.art/products/anything":
-        sys.exit(f"the staged Worker is not right ({status}, {redirect}); nothing done")
+        sys.exit(f"the staged Worker is not right ({status}, {redirect}); run --stage first. Nothing done")
 
     records = name_records()
     old = [r for r in records if is_old(r)]
@@ -186,6 +214,8 @@ if __name__ == "__main__":
     args = sys.argv[1:]
     if args == ["--undo"]:
         undo()
+    elif args == ["--stage"]:
+        stage()
     elif args == ["--check"]:
         sys.exit(1 if old_records() else 0)
     elif not args:
