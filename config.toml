@@ -41,7 +41,7 @@ default_image = "/box_prints.jpg"
 # (templates/homes/<theme>.html) and the stylesheet every page loads
 # (static/themes/<theme>.css). Nothing else in the repo knows the theme's
 # name, and no content file does. See THEMES.md to add one.
-theme = "poster"
+theme = "register"
 
 tagline = "A Gallery in the Middle of Nowhere"
 founded = "Est. 2010 · 312 Main since 2023"

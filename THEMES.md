@@ -10,7 +10,7 @@ theme = "poster"
 Change that word, run `zola build`, and the whole site changes. Nothing in
 `content/` moves, no copy is rewritten, and no other file needs an edit.
 
-Two themes exist today:
+Kyle chose `register` on 2026-10-24, from the three Broadside directions; it is the theme in `config.toml`. The others are kept, so the look stays one word away. The themes:
 
 | Name | What it is |
 |---|---|
