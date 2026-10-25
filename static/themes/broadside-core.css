@@ -31,6 +31,9 @@
   --on-second: var(--accent-ink);
 
   --serif: "Centurion", "Iowan Old Style", Palatino, Georgia, serif;
+  /* The menu's voice (Kyle, 2026-10-24): Futura first, then the geometric
+   * sans each system has nearest to it. Futura ships only on Apple systems. */
+  --sans: Futura, "Futura PT", "Century Gothic", "Avenir Next", Avenir, system-ui, sans-serif;
   --display-cut: "opsz" 80;
   --text-cut: "opsz" 18.67;
   --caption-cut: "opsz" 12;
@@ -89,8 +92,8 @@ a:hover { color: var(--second); text-decoration-color: currentColor; }
 ::selection { background: var(--second); color: var(--on-second); }
 :focus-visible { outline: 1.5px solid var(--second); outline-offset: 3px; }
 
-/* The small capital: labels, kickers, nav. */
-.sc, .site-nav, .foot-mode button {
+/* The small capital: labels, kickers. */
+.sc, .foot-mode button {
   font-variation-settings: var(--caption-cut);
   font-feature-settings: "c2sc", "smcp", "kern";
   letter-spacing: 0.1em;
@@ -134,3 +137,11 @@ a:hover { color: var(--second); text-decoration-color: currentColor; }
   .prose td { overflow-wrap: anywhere; }
   .prose table { table-layout: fixed; }
 }
+
+/* The menu is set in the sans: capitals, tracked, a size under the serif's,
+ * because Futura's capitals stand taller than Centurion's small capitals. */
+.site-nav {
+  font-family: var(--sans); font-variation-settings: normal; font-feature-settings: "kern";
+  text-transform: uppercase; letter-spacing: 0.14em; font-weight: 500;
+}
+.site-nav a { font-size: 0.68rem; }
