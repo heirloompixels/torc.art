@@ -189,6 +189,13 @@ for the gallery. Revert that if the byline was deliberate.
 
 ## Still open
 
+- **Submissions and a call for entry.** Kyle, 2026-10-26: torc.art needs a
+  submissions page and a call for entry, for artists to send work for shows
+  (and books, since [Agile Meteor Press](content/agile-meteor-press.md)
+  already says it publishes "based on invitations or submissions"). Not
+  started; it comes after the cutover settles. The footer once had a dead
+  "submissions" link (§ what was repaired); `base.html` marks where a real
+  one goes.
 - **The press kit's photographs.** Only one image is in it. The 2024 gallery
   photographs made for the Southwest Contemporary field guide are on the
   double pink drive (`Design/torCc/SWC-FieldGuide`) and wait for Kyle.

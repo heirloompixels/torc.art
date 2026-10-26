@@ -74,7 +74,7 @@ For writers, editors and curators. Everything here is free to use when you write
 | What happens here | Exhibitions, the [Community Etching Press](/etching-press/), [Agile Meteor Press](/agile-meteor-press/), performance, workshops, and the [MeTeORiC](/meteoric/) festival |
 | Web | [torc.art](https://torc.art) · shop at [shop.torc.art](https://shop.torc.art) |
 | Social | [Instagram @torc.art](https://www.instagram.com/torc.art) · [Facebook @torc.contemporary](https://www.facebook.com/torc.contemporary) |
-| Contact | [intentionallyconfusing@gmail.com](mailto:intentionallyconfusing@gmail.com) |
+| Contact | [intentionallyconfusing@gmail.com](mailto:intentionallyconfusing@gmail.com) · [(575) 519-4773](tel:+15755194773) |
 
 ## About the gallery
 

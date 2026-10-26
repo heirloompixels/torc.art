@@ -4,7 +4,7 @@
   <div class="foot-block foot-address">
     <p class="foot-name">{{ c.name }}</p>
     <p>{{ c.street }}<br>{{ c.locality }}</p>
-    <p><a href="mailto:{{ c.email }}">{{ c.email }}</a></p>
+    <p><a href="mailto:{{ c.email }}">{{ c.email }}</a>{% if c.phone %}<br><a href="tel:{{ c.phone_e164 }}">{{ c.phone }}</a>{% endif %}</p>
   </div>
   <nav class="foot-block foot-links" aria-label="Elsewhere">
     <ul class="foot-social">

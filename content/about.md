@@ -33,7 +33,7 @@ The long version, mostly in the words we wrote at the time, is on the [history](
 
 ## The Building
 
-Our building at 312 Main St is historically known as the Luchini Electric Building, and has stood since 1916. Built like a proverbial tank, it'll still be standing in 2116, 2216 and beyond.
+Our building at 312 Main Ave is historically known as the Luchini Electric Building, and has stood since 1916. Built like a proverbial tank, it'll still be standing in 2116, 2216 and beyond.
 
 In celebration of the monsoon season, which brings the desert to life and sustains it through the year, we installed a new art signage piece on the facade, paying homage to that lineage.
 

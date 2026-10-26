@@ -108,7 +108,7 @@ The festival returns, with Tatsuya Nakatani performing twice in one evening.
 A gathering to eat food, discuss, and make art together, potluck + art. It was the first night in the renovated space, twelve years to the day since we arrived in Truth or Consequences.
 </dd>
 
-<dt><span class="when">August 18th, 2023</span> <span class="what">312 Main St</span></dt>
+<dt><span class="when">August 18th, 2023</span> <span class="what">312 Main Ave</span></dt>
 <dd>
 We are moving to a new space. Opening October 2023.
 </dd>

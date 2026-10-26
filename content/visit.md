@@ -24,6 +24,7 @@ We are in and out of the gallery through the summer while we do our annual Field
 ## Get in touch
 
 - General and returns: [intentionallyconfusing@gmail.com](mailto:intentionallyconfusing@gmail.com)
+- Phone: [(575) 519-4773](tel:+15755194773)
 - Nakatani Gong Orchestra participation: [NGO.torc@gmail.com](mailto:NGO.torc@gmail.com)
 - Community Etching Press: see the [press page](/etching-press/) and email us to book
 
