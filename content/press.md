@@ -68,7 +68,7 @@ For writers, editors and curators. Everything here is free to use when you write
 |---|---|
 | Name | Truth or Consequences Contemporary (TorC Contemporary) |
 | Founders | Jeannie Ortiz and Kyle Parker Cunningham |
-| Address | 312 Main St, Truth or Consequences, New Mexico 87901 |
+| Address | 312 Main Ave, Truth or Consequences, New Mexico 87901 |
 | Building | The Luchini Electric Building, 1916 |
 | Opened | February 24th, 2024, at 312 Main. The project started in 2012, at Mud Mountain Studio |
 | What happens here | Exhibitions, the [Community Etching Press](/etching-press/), [Agile Meteor Press](/agile-meteor-press/), performance, workshops, and the [MeTeORiC](/meteoric/) festival |

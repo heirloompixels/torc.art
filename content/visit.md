@@ -1,6 +1,6 @@
 +++
 title = "Visit"
-description = "Find Truth or Consequences Contemporary at 312 Main St, Truth or Consequences, New Mexico."
+description = "Find Truth or Consequences Contemporary at 312 Main Ave, Truth or Consequences, New Mexico."
 weight = 140
 
 [extra]
@@ -12,7 +12,7 @@ author = "gallery"
 # Visit
 
 Truth or Consequences Contemporary<br />
-312 Main St<br />
+312 Main Ave<br />
 Truth or Consequences, NM 87901
 
 We are on the historic Main Street of a small desert town on the banks of the Rio Grande, in the foothills of the Greater Gila region.
