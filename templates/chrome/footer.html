@@ -24,5 +24,22 @@
   <div class="foot-block foot-colophon">
     <p><a href="/manifest/">Manifest</a> — who wrote what</p>
     <p>Built {{ now() | date(format="%Y-%m-%d") }}</p>
+    {#- Broadside's colophon word: Night or Day, remembered. Hidden by
+        base.css; the Broadside themes show it. #}
+    <p class="foot-mode">Set in Centurion &amp; Futura · <button type="button" data-mode-toggle>Night</button></p>
   </div>
+  <script>
+  (function () {
+    var b = document.querySelector("[data-mode-toggle]"); if (!b) return;
+    var root = document.documentElement;
+    function night() { var m = root.dataset.mode; return m ? m === "night" : matchMedia("(prefers-color-scheme: dark)").matches; }
+    function label() { b.textContent = night() ? "Day" : "Night"; }
+    label();
+    b.addEventListener("click", function () {
+      root.dataset.mode = night() ? "day" : "night";
+      try { localStorage.setItem("torc-mode", root.dataset.mode); } catch (e) {}
+      label();
+    });
+  })();
+  </script>
 </footer>

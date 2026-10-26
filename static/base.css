@@ -34,5 +34,13 @@ table { border-collapse: collapse; max-width: 100%; }
 code, pre, kbd, samp { white-space: pre-wrap; overflow-wrap: break-word; }
 pre { overflow-x: auto; }
 
+/* Dated entries (calendar, exhibitions) carry the date and the title as
+ * two spans. A theme that does not set them in columns reads them as one
+ * line, "date — title"; register sets the date in its own column. */
+dt .when:not(:empty)::after { content: " — "; }
+
+/* The colophon's Night/Day switch; only the Broadside themes show it. */
+.foot-mode { display: none; }
+
 /* Rendered only when the theme name in config.toml has no dispatch entry. */
 .theme-error { margin: 1em; padding: 1em; border: 2px solid currentColor; }

@@ -1,0 +1,15 @@
++++
+title = "Woven Clouds & Gold Leaf"
+date = 2025-12-10T15:26:32Z
+path = "woven-clouds-gold-leaf"
+
+[extra]
+author = "gallery"
+byline = ["Kyle & Jeannie"]
+tags = ["kyle", "weaving", "large weavings", "jeannie", "Handloom", "announcements", "special announcements"]
+image = "https://media.torc.art/dispatches/woven-clouds-gold-leaf/DSCF3892-copy.webp"
+original_url = "https://intentionallyconfusing.com/woven-clouds-gold-leaf/"
+ghost_id = "69384fe89a105704d45c7b29"
++++
+
+<p>Hello,</p><p>I hope that this finds you all well. <br>There are two things I'd like to share with you today. </p><p>The first being that there is a random draw for a chance to purchase Nephos Handwoven Art Yardage happening now and will close on Sunday December 14th. Nephos is an ode to clouds, woven on a warp of organic cotton-linen with a weft of naturally dyed raw silk. You can see a full album of photos, all of the information, and the form to enter <a href="https://jeannieortiz.com/nephos/" rel="noreferrer">HERE</a>. </p><figure class="kg-card kg-gallery-card kg-width-wide kg-card-hascaption"><div class="kg-gallery-container"><div class="kg-gallery-row"><div class="kg-gallery-image"><img src="https://media.torc.art/dispatches/woven-clouds-gold-leaf/goldEyeOcto-copy.webp" width="1500" height="1125" loading="lazy" alt=""></div><div class="kg-gallery-image"><img src="https://media.torc.art/dispatches/woven-clouds-gold-leaf/SDIM6321-copy.webp" width="1122" height="1500" loading="lazy" alt=""></div></div><div class="kg-gallery-row"><div class="kg-gallery-image"><img src="https://media.torc.art/dispatches/woven-clouds-gold-leaf/SDIM6326-copy.webp" width="1500" height="1122" loading="lazy" alt=""></div><div class="kg-gallery-image"><img src="https://media.torc.art/dispatches/woven-clouds-gold-leaf/SDIM6330-copy.webp" width="1500" height="1122" loading="lazy" alt=""></div></div></div><figcaption><p dir="ltr"><span style="white-space: pre-wrap;">Four intaglio prints by Kyle Parker Cunningham, just a few pieces from his new collection</span></p></figcaption></figure><p>The second lovely thing is that Kyle Parker Cunningham will be sharing new intaglio prints, many of which have been adorned with gold leaf. They are truly something to behold, poignant, playful and provocative. Many of them are up in our <a href="https://shop.torc.art" rel="noreferrer">online shop</a>, with more being added throughout the rest of this week. (Please note the gold-eyed octopus above, its hard to capture just how luminous his eyes are. It was so sweet I had to keep it.) </p><p>He will also be having a holiday ULTRA-MEGA-SUPER SALE on a bunch of Art during Art Hop at <a href="https://shop.torc.art" rel="noreferrer">Truth or Consequences Contemporary</a>, Saturday the 13th.&nbsp;Once a year we pull out treasures from the past and offer them an unbelievable discounts, all in the hopes of allowing magical gift giving to transpire.&nbsp;Treat yourself or find the perfect piece for a loved one. </p><p>Please don't hesitate to reach of with questions or comments. </p><p>Wishing you all the best during this season of change,<br>Jeannie</p>

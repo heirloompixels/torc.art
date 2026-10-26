@@ -1,0 +1,107 @@
+/* Theme: broadside — the house design, as signet, desk and jeannieortiz.com
+ * wear it: one centred column, hierarchy from type alone, hairlines, the
+ * plum as the second ink. See broadside-core.css for the type and inks. */
+@import url("/themes/broadside-core.css");
+
+body { display: flex; flex-direction: column; min-height: 100dvh; }
+
+/* ---- masthead: the wordmark centred, the nav in small capitals ---------- */
+.site-head { text-align: center; padding: 2.6rem var(--gutter) 0; }
+.wordmark { display: inline-flex; flex-direction: column; align-items: center; gap: 0.35rem; text-decoration: none; color: var(--second); }
+.wordmark-mark { width: 34px; height: auto; }
+.wordmark-name { font-variation-settings: var(--display-cut); font-size: 24.8px; line-height: 1.1; letter-spacing: -0.005em; }
+.wordmark:hover { color: var(--second); }
+.site-tagline { display: none; }
+.site-nav { margin-top: 1rem; font-size: 0.85rem; }
+.site-nav ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.15rem 1.1rem; max-width: 46rem; margin: 0 auto; }
+.site-nav a { color: var(--ink-2); text-decoration: none; padding: 0.3rem 0; display: inline-block; }
+.site-nav a:hover { color: var(--ink); }
+.site-nav a[aria-current="page"] { color: var(--ink); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.5em; text-decoration-color: var(--second); }
+
+/* ---- the sheet ----------------------------------------------------------- */
+.prose, .sheet { width: 100%; max-width: calc(var(--measure) + 2 * var(--gutter)); margin: 0 auto; padding: 3.2rem var(--gutter) 4rem; flex: 1; }
+
+.prose > h1:first-child, .bs-head .title {
+  font-variation-settings: var(--display-cut);
+  font-size: clamp(44.8px, 8vw, 73.6px); line-height: 1; letter-spacing: -0.012em;
+  text-align: center; margin: 0 0 1.2rem;
+}
+.prose > h1:first-child::after, .bs-head::after {
+  content: ""; display: block; width: 3rem; height: 0; border-top: 1.5px solid var(--ink); margin: 1.6rem auto 0;
+}
+.prose > h1:first-child + p > em:only-child, .lede { font-style: italic; color: var(--ink-2); font-size: 1.15rem; text-align: center; }
+
+.prose h2, .label {
+  font-variation-settings: var(--caption-cut);
+  font-feature-settings: "c2sc", "smcp", "kern"; letter-spacing: 0.14em;
+  font-size: 0.85rem; color: var(--ink-2); text-align: center;
+  margin: 3rem 0 1.2rem; padding-top: 2.4rem; border-top: 1px solid var(--rule);
+}
+.prose h1 + h2 { border-top: 0; padding-top: 0; margin-top: 2rem; }
+.prose h3 { font-style: italic; font-size: 1.15rem; text-align: center; margin: 2rem 0 0.6rem; }
+.prose p, .prose li, .prose dd { margin: 0 0 0.9em; }
+.prose ul, .prose ol { padding-left: 1.2em; }
+.prose li::marker { color: var(--ink-3); }
+
+/* Long prose under a centred head is justified, the way a notice is set;
+ * on a phone the measure is too short, so it is set ragged. */
+@media (min-width: 640px) {
+  .prose > p, .bs-prose p { text-align: justify; hyphens: auto; }
+}
+
+/* Lists of dated things (calendar, exhibitions): the date is the label. */
+.prose dl { margin: 0; }
+.prose dt {
+  font-variation-settings: var(--caption-cut); font-feature-settings: "c2sc", "smcp", "kern", "onum";
+  letter-spacing: 0.08em; font-size: 0.88rem; color: var(--ink); text-align: center;
+  margin-top: 2rem; padding-top: 1.6rem; border-top: 1px solid var(--rule-2);
+}
+.prose dt:first-child { border-top: 0; padding-top: 0; }
+.prose dd { margin: 0.5rem 0 0; text-align: center; }
+.prose dd p { margin: 0.6rem 0; }
+.prose dd blockquote { text-align: left; }
+
+/* ---- the front page -------------------------------------------------------- */
+.bs-head { text-align: center; }
+.kicker { font-variation-settings: var(--caption-cut); font-feature-settings: "c2sc", "smcp", "kern"; letter-spacing: 0.14em; font-size: 0.85rem; color: var(--ink-2); margin: 0 0 1.4rem; }
+.bs-head .title { font-size: clamp(40px, 9vw, 80px); }
+.bs-head .title em { color: var(--second); }
+.bs-head .lede { margin: 0; }
+.bs-hero { margin: 3rem 0 0; }
+@media (min-width: 760px) { .bs-hero { margin-inline: calc(-1 * min(9rem, 10vw)); } }
+.bs-hero img { width: 100%; }
+.bs-sec .label { margin-top: 3rem; }
+.bs-quote {
+  font-variation-settings: var(--display-cut); font-style: italic; font-size: clamp(1.6rem, 4.4vw, 2.2rem);
+  line-height: 1.2; text-align: center; text-wrap: balance; margin: 3rem 0 0;
+}
+.bs-prose p { margin: 0 0 0.9em; }
+.bs-sign { text-align: center; font-style: italic; color: var(--ink-2); }
+
+.bs-contents { list-style: none; padding: 0; margin: 0; }
+.bs-contents a { display: flex; align-items: baseline; gap: 0.5rem; padding: 0.35rem 0; text-decoration: none; color: var(--ink); }
+.bs-contents .t { white-space: nowrap; }
+.bs-contents .lead { flex: 1; border-bottom: 1px dotted var(--ink-3); transform: translateY(-0.3em); min-width: 1rem; }
+.bs-contents .b { font-style: italic; font-variation-settings: var(--caption-cut); font-size: 0.85rem; color: var(--ink-2); text-align: right; }
+.bs-contents a:hover .t { color: var(--second); text-decoration: underline; text-underline-offset: 0.22em; }
+@media (max-width: 560px) {
+  .bs-contents a { flex-direction: column; gap: 0; }
+  .bs-contents .lead { display: none; }
+  .bs-contents .b { text-align: left; }
+}
+.bs-activities { text-align: center; font-variation-settings: var(--caption-cut); font-feature-settings: "c2sc", "smcp", "kern"; letter-spacing: 0.1em; font-size: 0.8rem; color: var(--ink-2); line-height: 2; }
+.fleuron { text-align: center; color: var(--ink-3); font-size: 1.4rem; margin: 2.4rem 0 0; }
+
+/* ---- the colophon ----------------------------------------------------------- */
+.site-foot { text-align: center; font-style: italic; font-variation-settings: var(--caption-cut); font-size: 0.85rem; color: var(--ink-2); padding: 2.4rem var(--gutter) 3rem; border-top: 1px solid var(--rule-2); display: grid; gap: 1.2rem; justify-items: center; }
+.site-foot p { margin: 0.15rem 0; }
+.foot-name { font-style: normal; font-variation-settings: var(--display-cut); font-size: 1.15rem; color: var(--second); }
+.foot-links ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.2rem 1rem; }
+.foot-links ul + ul { margin-top: 0.3rem; }
+
+/* ---- the journal ------------------------------------------------------------- */
+.post .kicker { text-align: center; }
+.post .post-meta { text-align: center; font-style: italic; }
+.post > h1 { font-variation-settings: var(--display-cut); font-size: clamp(36px, 6vw, 56px); line-height: 1.05; text-align: center; margin: 0 0 0.6rem; }
+.journal-index h2 { text-align: center; }
+.journal-index .lede { text-align: center; }

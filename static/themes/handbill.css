@@ -1,0 +1,91 @@
+/* Theme: handbill — Broadside's type at poster scale, printed in two
+ * colours. The plum is a second plate: the name's last line, the
+ * photograph, the reversed notice, the drop initial, the labels. Everything
+ * else is one ink on the paper. */
+@import url("/themes/broadside-core.css");
+
+body { display: flex; flex-direction: column; min-height: 100dvh; }
+:root { --sheet: 74rem; }
+
+/* ---- masthead: the wordmark left, the nav between an Oxford rule -------- */
+.site-head { max-width: var(--sheet); width: 100%; margin: 0 auto; padding: 1.6rem var(--gutter) 0; display: grid; grid-template-columns: auto 1fr; align-items: end; gap: 0.6rem 1.4rem; }
+.wordmark { display: inline-flex; align-items: center; gap: 0.6rem; text-decoration: none; color: var(--second); }
+.wordmark-mark { width: 30px; }
+.wordmark-name { font-variation-settings: var(--display-cut); font-size: 1.35rem; line-height: 1; }
+.site-tagline { margin: 0; justify-self: end; font-style: italic; color: var(--ink-2); font-size: 0.9rem; }
+.site-nav { grid-column: 1 / -1; font-size: 0.8rem; border-top: 3px solid var(--ink); border-bottom: 1px solid var(--ink); padding: 0.45rem 0; margin-top: 0.4rem; position: relative; }
+.site-nav::before { content: ""; position: absolute; left: 0; right: 0; top: 2px; border-top: 1px solid var(--ink); }
+.site-nav ul { display: flex; flex-wrap: wrap; gap: 0.1rem 1.15rem; }
+.site-nav a { text-decoration: none; color: var(--ink); }
+.site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--second); }
+@media (max-width: 640px) { .site-tagline { display: none; } }
+
+/* ---- interior: a column set flush left under a big head -------------------- */
+.prose { width: 100%; max-width: var(--sheet); margin: 0 auto; padding: 3rem var(--gutter) 4.5rem; flex: 1; }
+.prose > * { max-width: var(--measure); }
+.prose > h1:first-child { max-width: none; font-variation-settings: var(--display-cut); font-size: clamp(52px, 11vw, 132px); line-height: 0.9; letter-spacing: -0.025em; margin: 0 0 0.25em; }
+.prose > h1:first-child::after { content: ""; display: block; height: 7px; border-top: 3px solid var(--ink); border-bottom: 1px solid var(--ink); margin-top: 0.22em; max-width: var(--measure); }
+.prose > h1:first-child + p::first-letter, .prose > h1:first-child + h2 + p::first-letter {
+  float: left; font-variation-settings: var(--display-cut); font-size: 4.1em; line-height: 0.82; color: var(--second); margin: 0.04em 0.08em 0 -0.02em;
+}
+.prose h2 {
+  font-variation-settings: var(--caption-cut); font-feature-settings: "c2sc", "smcp", "kern"; letter-spacing: 0.16em;
+  font-size: 0.85rem; color: var(--second); margin: 3rem 0 0.9rem; display: flex; align-items: center; gap: 0.7rem;
+}
+.prose h2::before { content: ""; width: 1.6rem; border-top: 3px solid var(--second); }
+.prose h3 { font-style: italic; font-size: 1.2rem; margin: 2rem 0 0.5rem; }
+.prose p, .prose li, .prose dd { margin: 0 0 0.9em; }
+@media (min-width: 640px) { .prose > p { text-align: justify; hyphens: auto; } }
+.prose dt { font-variation-settings: var(--caption-cut); font-feature-settings: "c2sc", "smcp", "kern"; letter-spacing: 0.08em; font-size: 0.9rem; margin-top: 1.8rem; padding-top: 0.9rem; border-top: 1px solid var(--ink); }
+.prose dt:first-child { margin-top: 0; }
+.prose dd { margin: 0.5rem 0 0; }
+.prose blockquote { border-left: 3px solid var(--second); }
+
+/* ---- the front page: the poster -------------------------------------------- */
+.hb-home { width: 100%; max-width: var(--sheet); margin: 0 auto; padding: 1.4rem var(--gutter) 4rem; flex: 1; }
+.hb-strip { margin: 0; font-variation-settings: var(--caption-cut); font-feature-settings: "c2sc", "smcp", "kern"; letter-spacing: 0.16em; font-size: 0.8rem; text-align: center; color: var(--ink); }
+.hb-name { overflow: hidden; margin: 1.6rem 0 0; font-variation-settings: var(--display-cut); line-height: 0.84; letter-spacing: -0.035em; }
+.hb-line { display: block; }
+.hb-line-1 { font-size: min(27vw, 370px); }
+.hb-line-2 { font-size: min(16.6vw, 228px); }
+.hb-line-3 { font-size: min(19vw, 262px); font-style: italic; color: var(--second); letter-spacing: -0.03em; }
+.hb-oxford { height: 9px; border-top: 5px solid var(--ink); border-bottom: 1px solid var(--ink); margin: 1.4rem 0 0; }
+
+.hb-plate { margin: 2rem 0 0; background: var(--second); }
+/* Printed in the second ink: the darks are plum, the lights are bare paper. */
+.hb-plate img { width: 100%; filter: grayscale(1) contrast(1.25) brightness(1.05); mix-blend-mode: screen; }
+
+.hb-quote { margin: 3.2rem auto 0; max-width: 54rem; font-variation-settings: var(--display-cut); font-style: italic; font-size: clamp(1.8rem, 4.8vw, 3.4rem); line-height: 1.08; text-align: center; text-wrap: balance; }
+.hb-quote .q { color: var(--second); }
+
+.hb-band { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-top: 3.2rem; border-top: 1px solid var(--ink); padding-top: 2rem; }
+@media (min-width: 820px) { .hb-band { grid-template-columns: 1.2fr 1fr; gap: 3rem; } }
+.hb-label { margin: 0 0 0.8rem; font-variation-settings: var(--caption-cut); font-feature-settings: "c2sc", "smcp", "kern"; letter-spacing: 0.16em; font-size: 0.85rem; color: var(--second); }
+.hb-statement p { font-size: 1.25rem; line-height: 1.4; margin: 0 0 0.8em; }
+.hb-statement p:first-of-type::first-letter { float: left; font-variation-settings: var(--display-cut); font-size: 3.6em; line-height: 0.8; color: var(--second); margin: 0.05em 0.08em 0 0; }
+.hb-notice { background: var(--second); color: var(--on-second); padding: 1.6rem 1.8rem 1.8rem; align-self: start; }
+.hb-notice .hb-label { color: var(--on-second); }
+.hb-notice p { margin: 0 0 0.8em; }
+.hb-notice a { color: var(--on-second); text-decoration-color: color-mix(in oklab, var(--on-second) 50%, transparent); }
+.hb-sign { font-style: italic; margin: 0; }
+
+.hb-index { list-style: none; padding: 0; margin: 3.2rem 0 0; display: grid; grid-template-columns: 1fr; border-top: 3px solid var(--ink); }
+@media (min-width: 720px) { .hb-index { grid-template-columns: 1fr 1fr; column-gap: 3rem; } }
+.hb-index a { display: grid; grid-template-columns: 2.4rem 1fr; grid-template-rows: auto auto; padding: 0.7rem 0; border-bottom: 1px solid var(--rule); text-decoration: none; color: var(--ink); }
+.hb-index .n { grid-row: 1 / 3; font-variation-settings: var(--display-cut); font-size: 1.6rem; line-height: 1; color: var(--second); }
+.hb-index .t { font-variation-settings: var(--display-cut); font-size: 1.4rem; line-height: 1.1; }
+.hb-index .b { font-style: italic; color: var(--ink-2); font-size: 0.9rem; }
+.hb-index a:hover .t { color: var(--second); }
+.hb-strip-foot { margin-top: 2.6rem; line-height: 2; }
+
+/* ---- footer ------------------------------------------------------------------ */
+.site-foot { max-width: var(--sheet); width: 100%; margin: 0 auto; padding: 1.6rem var(--gutter) 2.6rem; display: grid; gap: 1.4rem; grid-template-columns: 1fr; border-top: 3px solid var(--ink); font-size: 0.9rem; }
+@media (min-width: 720px) { .site-foot { grid-template-columns: 1.2fr 1fr 1fr; } }
+.site-foot p { margin: 0.1rem 0; }
+.foot-name { font-variation-settings: var(--display-cut); font-size: 1.3rem; color: var(--second); }
+.foot-links li { margin: 0.1rem 0; }
+.foot-colophon { font-style: italic; color: var(--ink-2); }
+
+/* ---- the journal ---------------------------------------------------------------- */
+.post > h1 { font-variation-settings: var(--display-cut); font-size: clamp(40px, 7vw, 80px); line-height: 0.95; letter-spacing: -0.02em; margin: 0 0 0.5rem; max-width: 50rem; }
+.post .kicker a { color: var(--second); }

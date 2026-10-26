@@ -34,9 +34,9 @@ read off the Shopify admin (*Content → Pages* and *Content → Blog posts*) be
 they can be redirected. Don't guess them — a redirect pointing at a URL that was
 never live is worse than none.
 
-The targets currently point at `new.torc.art`, which is where this site deploys
-(see `static/CNAME`). If the apex is ever repointed here, rewrite the targets to
-`torc.art` and re-import.
+The targets point at `torc.art`, which this site takes at its cutover
+(README.md § cutover). Until then they land on the shop again, so import them
+into Shopify only after it.
 
 ## Blog content
 

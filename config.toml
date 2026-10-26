@@ -1,9 +1,13 @@
-base_url = "https://new.torc.art"
+base_url = "https://torc.art"
 title = "Truth or Consequences Contemporary"
 description = "art in the oasis"
 compile_sass = false
 minify_html = false
 default_language = "en"
+# One feed for the whole site. intentionallyconfusing.com's /rss/ is redirected
+# here, and src/worker.js sends /rss/ on to this file.
+generate_feeds = true
+feed_filenames = ["rss.xml"]
 
 # No taxonomies. The template this repo was initialized from declared a
 # bookshelf's worth (recommender, authorname, pubyear, rating, readstate) and
@@ -37,7 +41,7 @@ default_image = "/box_prints.jpg"
 # (templates/homes/<theme>.html) and the stylesheet every page loads
 # (static/themes/<theme>.css). Nothing else in the repo knows the theme's
 # name, and no content file does. See THEMES.md to add one.
-theme = "poster"
+theme = "register"
 
 tagline = "A Gallery in the Middle of Nowhere"
 founded = "Est. 2010 · 312 Main since 2023"
@@ -80,10 +84,6 @@ url = "https://jeannieortiz.com"
 name = "kyleparkercunningham.com"
 url = "https://kyleparkercunningham.com"
 
-[[extra.elsewhere]]
-name = "intentionallyconfusing.com"
-url = "https://intentionallyconfusing.com"
-
 # ── The theme registry ───────────────────────────────────────────────────
 # One block per theme, keyed by the name `extra.theme` takes. Everything a
 # theme needs the HTML `<head>` to know goes here, so no template carries a
@@ -92,6 +92,21 @@ url = "https://intentionallyconfusing.com"
 label = "Poster"
 description = "Full-width type poster, running ticker, sliding index. Interiors quiet."
 color = "#f0efea"
+
+[extra.themes.broadside]
+label = "Broadside"
+description = "The house design: one centred sheet, Centurion, hairlines, the plum as second ink."
+color = "#f7f4ef"
+
+[extra.themes.handbill]
+label = "Handbill"
+description = "Broadside's type at poster scale, printed in two colours."
+color = "#f7f4ef"
+
+[extra.themes.register]
+label = "Register"
+description = "The gallery's archive as a ledger: a numbered rail, the record by date."
+color = "#f7f4ef"
 
 [extra.themes.plain]
 label = "Plain"

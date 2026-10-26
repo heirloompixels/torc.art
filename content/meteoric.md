@@ -27,17 +27,17 @@ We're building a festival where you're not just transported through art, but the
 
 The festival was created through a horizontal and decentralized curation. Artists from Truth or Consequences and around the world are given an open invitation to design their participation: *if you could make, show, or create something deeply unconstrained, what would you do? How can you use this festival to create something you've been dreaming of?* What results spans every conventional category — films, installations, aerial performances, knife forging, poetry, collective dinners, public forums, audio interviews, sculpture, music, and much more. Preference goes to artists who come and stay the weekend: the festival is trying to create a community for those days, and the first thing we are looking for is people who come to TorC.
 
-In Kyle's words, from the festival's early years: the festival is "a means to inspire people to create the experience they want to see in the world — we are just merely an entity to help make that happen. All art is judged merely by the fact that it exists and is communicating — nothing more."
+As Kyle put it in the festival's early years, it is "a means to inspire people to create the experience they want to see in the world — we are just merely an entity to help make that happen. All art is judged merely by the fact that it exists and is communicating — nothing more."
 
 ## Editions
 
-- **2019** — the inaugural MeTeORiC, October 2019: some thirty artists across town, among them Peter Mettler screening *Gambling, Gods and LSD* in person, Lauren McCarthy's *Welcomer* installed in hotel rooms, Hannah Jayanti's *Truth or Consequences* screened as a rough cut under the desert stars for the people in the film, Jeannie Ortiz's aerial collaboration, and Olin B. West's *Medusa*.
-- **2020–2021** — interrupted by the pandemic.
-- **2022** — the festival returns.
-- **2024** — February 23–25 across a dozen venues on Broadway and Main, with Tatsuya Nakatani performing twice in one night. On the Saturday, the festival hosted the Grand Opening of Truth or Consequences Contemporary at 312 Main — the show called [*Home*](/exhibitions/).
-- **2025** — February 21–23.
-- **2027** — the next MeTeORiC. The edition planned for February 2026 has been postponed to 2027; we're very sorry, and we'll make it worth the wait.
+- **2019.** The first MeTeORiC, in October 2019, with some thirty artists all over town, among them Peter Mettler screening *Gambling, Gods and LSD* in person, Lauren McCarthy's *Welcomer* installed in hotel rooms, Hannah Jayanti's *Truth or Consequences* screened as a rough cut under the desert stars for the people in the film, Jeannie Ortiz's aerial collaboration, and Olin B. West's *Medusa*.
+- **2020–2021.** The pandemic stopped it.
+- **2022.** The festival came back.
+- **2024.** February 23–25, across a dozen venues on Broadway and Main, with Tatsuya Nakatani performing twice in one night. On the Saturday the festival hosted the Grand Opening of Truth or Consequences Contemporary at 312 Main, with our first show, [*Home*](/exhibitions/).
+- **2025.** February 21–23.
+- **2027.** The next MeTeORiC. The festival planned for February 2026 has been postponed until 2027. We're very sorry.
 
-One more thing the festival gave us: our own name for the work between festivals. Kyle's scheduling poster for an early MeTeORiC was so complicated and overly informative that it confused nearly everyone — but the confusion was intentional, part of the mystery and magic of the weekend, and somehow everyone found themselves exactly where they were supposed to be. That is where the name [Intentionally Confusing](/history/) came from.
+The festival also gave us a name. Kyle made a schedule poster for an early MeTeORiC that was so complicated and overly informative it confused nearly everyone. The confusion was intentional, part of the mystery and magic of the weekend, and somehow everyone ended up exactly where they were supposed to be. That is where the name [Intentionally Confusing](/history/) came from.
 
-The festival's own site will return at meteoric.torc.art. To get involved, [get in touch](/visit/).
+The festival's own site will be back at meteoric.torc.art. To get involved, [get in touch](/visit/).

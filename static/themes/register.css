@@ -1,0 +1,148 @@
+/* Theme: register — the gallery's archive as a ledger. Broadside's type and
+ * inks, in the Forme structure: a numbered rail at the left (the shared
+ * header), section names hung in the margin, dates in their own column. */
+@import url("/themes/broadside-core.css");
+
+:root { --rail: 15.5rem; --margin: 9.5rem; }
+
+body { display: grid; grid-template-columns: minmax(0, 1fr); min-height: 100dvh; }
+@media (min-width: 980px) {
+  body { grid-template-columns: var(--rail) minmax(0, 1fr); }
+  .site-head { grid-column: 1; grid-row: 1 / span 2; }
+  body > main, .site-foot { grid-column: 2; }
+}
+
+/* ---- the rail ---------------------------------------------------------------- */
+.site-head { padding: 1.4rem var(--gutter); border-bottom: 1px solid var(--rule); }
+@media (min-width: 980px) {
+  .site-head { position: sticky; top: 0; height: 100dvh; overflow-y: auto; padding: 2.2rem 1.6rem; border-bottom: 0; border-right: 1px solid var(--rule); }
+}
+.wordmark { display: flex; align-items: flex-start; gap: 0.6rem; text-decoration: none; color: var(--ink); }
+.wordmark-mark { width: 28px; flex: none; }
+.wordmark-name { font-variation-settings: var(--display-cut); font-size: 1.2rem; line-height: 1.08; }
+.wordmark:hover { color: var(--second); }
+.site-tagline { margin: 0.5rem 0 0; font-style: italic; color: var(--ink-2); font-size: 0.85rem; }
+.site-nav { margin-top: 1.4rem; font-size: 0.82rem; }
+.site-nav ul { counter-reset: n; }
+.site-nav li { counter-increment: n; }
+.site-nav a { display: flex; gap: 0.8rem; padding: 0.28rem 0; text-decoration: none; color: var(--ink-2); }
+.site-nav li:not(.is-external) a::before { content: counter(n, decimal-leading-zero); font-feature-settings: "lnum", "tnum"; letter-spacing: 0; font-size: 0.72rem; color: var(--ink-3); width: 1.3rem; padding-top: 0.12rem; }
+.site-nav li.is-external a::before { content: "↗"; width: 1.3rem; color: var(--ink-3); }
+.site-nav a:hover { color: var(--ink); }
+.site-nav a[aria-current="page"] { color: var(--ink); }
+.site-nav a[aria-current="page"]::before { color: var(--second); }
+@media (max-width: 979px) {
+  .site-nav ul { display: flex; flex-wrap: wrap; gap: 0 1rem; }
+  .site-nav a::before { display: none; }
+}
+
+/* ---- the page: a text column with a margin for labels ----------------------- */
+.prose, .rg-home { width: 100%; max-width: calc(var(--margin) + 2rem + 38rem + 2 * var(--gutter)); padding: 3rem var(--gutter) 4.5rem; }
+@media (min-width: 760px) { .prose { padding-left: calc(var(--margin) + 2rem + var(--gutter)); } }
+
+.prose > h1:first-child { font-variation-settings: var(--display-cut); font-size: clamp(44px, 7vw, 76px); line-height: 1; letter-spacing: -0.015em; margin: 0 0 1.4rem; }
+.prose h2 {
+  font-variation-settings: var(--caption-cut); font-feature-settings: "c2sc", "smcp", "kern"; letter-spacing: 0.12em;
+  font-size: 0.82rem; color: var(--ink-2); margin: 2.6rem 0 0.8rem; padding-top: 0.9rem; border-top: 1px solid var(--rule);
+}
+@media (min-width: 760px) {
+  .prose h2 { float: left; clear: left; width: var(--margin); margin-left: calc(-1 * (var(--margin) + 2rem)); margin-top: 0.15rem; padding-top: 0; border-top: 0; text-align: right; }
+  .prose h2 + * { border-top: 1px solid var(--rule); padding-top: 0.9rem; margin-top: 2.6rem; }
+  .prose h1 + h2 + * { border-top: 0; padding-top: 0; margin-top: 0; }
+}
+.prose h3 { font-style: italic; font-size: 1.15rem; margin: 1.8rem 0 0.5rem; }
+.prose p, .prose li { margin: 0 0 0.9em; }
+.prose blockquote { border-left: 1px solid var(--second); }
+
+/* Dated lists are the register proper: the date in its own column, the
+ * entry beside it, a hairline between entries. On a phone the date sits
+ * above. */
+:root { --when: 8.6rem; }
+.prose dl { margin: 0 0 1rem; }
+.prose dt { padding-top: 0.9rem; margin-top: 0.9rem; border-top: 1px solid var(--rule-2); }
+.prose dt:first-child { border-top: 0; margin-top: 0; padding-top: 0.2rem; }
+.prose dt .when::after { content: none; }
+/* The date speaks in the menu's voice: the sans, in tracked capitals. */
+.prose dt .when {
+  display: block; font-family: var(--sans); font-variation-settings: normal; font-feature-settings: "kern";
+  font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.6rem; color: var(--ink-2);
+}
+.prose dt .what { display: block; font-variation-settings: var(--display-cut); font-size: 1.3rem; line-height: 1.2; color: var(--ink); }
+.prose dd { margin: 0.35rem 0 0; color: var(--ink); }
+@media (min-width: 640px) {
+  .prose dt { display: grid; grid-template-columns: var(--when) minmax(0, 1fr); column-gap: 1.4rem; align-items: baseline; }
+  .prose dt .when { grid-column: 1; }
+  .prose dt .what { grid-column: 2; }
+  .prose dd { margin-left: calc(var(--when) + 1.4rem); }
+}
+
+/* ---- the front page ---------------------------------------------------------- */
+.rg-head { padding-bottom: 2rem; border-bottom: 1.5px solid var(--ink); }
+.rg-kicker { margin: 0 0 1rem; font-variation-settings: var(--caption-cut); font-feature-settings: "c2sc", "smcp", "kern"; letter-spacing: 0.14em; font-size: 0.82rem; color: var(--ink-2); }
+.rg-title { margin: 0; font-variation-settings: var(--display-cut); font-size: clamp(46px, 7.4vw, 92px); line-height: 0.96; letter-spacing: -0.02em; max-width: 12ch; }
+.rg-lede { margin: 1.4rem 0 0; font-style: italic; font-size: 1.25rem; color: var(--ink-2); max-width: 32rem; }
+.rg-hero { margin: 2rem 0 0; }
+.rg-hero img { width: 100%; }
+.rg-hero figcaption { font-style: italic; font-variation-settings: var(--caption-cut); font-size: 0.82rem; color: var(--ink-3); margin-top: 0.5rem; }
+
+.rg-row { display: grid; grid-template-columns: 1fr; gap: 0.6rem; padding: 1.4rem 0 1.6rem; border-bottom: 1px solid var(--rule); }
+@media (min-width: 760px) { .rg-row { grid-template-columns: var(--margin) minmax(0, 1fr); gap: 2rem; } .rg-margin { text-align: right; } }
+.rg-margin { margin: 0.2rem 0 0; font-variation-settings: var(--caption-cut); font-feature-settings: "c2sc", "smcp", "kern"; letter-spacing: 0.12em; font-size: 0.82rem; color: var(--ink-2); line-height: 1.5; }
+.rg-margin span { font-style: italic; font-feature-settings: "kern"; letter-spacing: 0; color: var(--ink-3); }
+.rg-body p { margin: 0 0 0.8em; }
+.rg-sign { font-style: italic; color: var(--ink-2); }
+
+.rg-ledger { list-style: none; padding: 0; margin: 0; }
+.rg-ledger li { display: grid; grid-template-columns: 6.6rem minmax(0, 1fr); gap: 0 1rem; padding: 0.45rem 0; border-bottom: 1px solid var(--rule-2); }
+.rg-ledger time { font-variation-settings: var(--caption-cut); font-size: 0.85rem; color: var(--ink-3); padding-top: 0.1rem; white-space: nowrap; }
+.rg-ledger a { color: var(--ink); text-decoration: none; }
+.rg-ledger a:hover { color: var(--second); text-decoration: underline; text-underline-offset: 0.22em; }
+.rg-ledger .by { grid-column: 2; font-style: italic; font-size: 0.82rem; color: var(--ink-3); }
+.rg-more { margin: 0.9rem 0 0; font-style: italic; }
+@media (min-width: 760px) { .rg-more { grid-column: 2; } }
+
+.rg-index { list-style: none; padding: 0; margin: 0; columns: 2 16rem; column-gap: 2.4rem; counter-reset: n; }
+.rg-index li { break-inside: avoid; padding: 0.35rem 0 0.35rem 2rem; position: relative; counter-increment: n; }
+.rg-index li::before { content: counter(n, decimal-leading-zero); position: absolute; left: 0; top: 0.5rem; font-feature-settings: "lnum", "tnum"; font-size: 0.72rem; color: var(--ink-3); }
+.rg-index a { color: var(--ink); text-decoration: none; font-variation-settings: var(--display-cut); font-size: 1.15rem; }
+.rg-index a:hover { color: var(--second); }
+.rg-index span { display: block; font-style: italic; font-size: 0.82rem; color: var(--ink-2); }
+
+/* ---- footer ------------------------------------------------------------------ */
+.site-foot { padding: 1.6rem var(--gutter) 2.4rem; border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; gap: 1.2rem 3rem; font-size: 0.85rem; color: var(--ink-2); font-style: italic; }
+@media (min-width: 760px) { .site-foot { padding-left: calc(var(--margin) + 2rem + var(--gutter)); } }
+.site-foot p { margin: 0.1rem 0; }
+.foot-name { font-style: normal; color: var(--ink); }
+.foot-links li { margin: 0.05rem 0; }
+
+/* ---- the journal: dates in the margin ---------------------------------------- */
+.post .kicker { font-feature-settings: "c2sc", "smcp"; letter-spacing: 0.12em; }
+.post > h1 { font-variation-settings: var(--display-cut); font-size: clamp(36px, 5.6vw, 60px); line-height: 1.02; margin: 0 0 0.6rem; }
+@media (min-width: 760px) {
+  .journal-index li { display: grid !important; grid-template-columns: 1fr auto; }
+}
+.prose dd > :first-child { margin-top: 0.35rem; }
+
+/* Pages made of dated entries (calendar, exhibitions; Kyle, 2026-10-24):
+ * the section names are titles, set flush left with the dates beneath
+ * them, and the margin the names used holds each entry's date instead, so the entries get the full
+ * width. Prose pages keep their names in the margin. */
+@media (min-width: 760px) {
+  .prose:has(> dl) h2 {
+    float: none; width: auto; margin: 3.2rem 0 1.4rem calc(-1 * (var(--margin) + 2rem)); padding: 1.1rem 0 0 0;
+    text-align: left; border-top: 1px solid var(--rule);
+    font-variation-settings: var(--display-cut); font-feature-settings: "kern"; letter-spacing: -0.005em;
+    font-size: 1.75rem; line-height: 1.1; color: var(--ink);
+  }
+  .prose:has(> dl) h2 + * { border-top: 0; padding-top: 0; margin-top: 0; }
+  /* The date and the entry's title share a baseline: the dt reaches back
+   * into the margin as a two-column grid aligned on the first baseline. */
+  .prose:has(> dl) dt {
+    display: grid; grid-template-columns: var(--margin) minmax(0, 1fr); column-gap: 2rem;
+    align-items: baseline; margin-left: calc(-1 * (var(--margin) + 2rem));
+  }
+  .prose:has(> dl) dt .when { grid-column: 1; text-align: left; }
+  .prose:has(> dl) dt .what { grid-column: 2; }
+  /* Each row's hairline runs under the date as well, as a ledger's would. */
+  .prose:has(> dl) dd { margin-left: 0; }
+}
