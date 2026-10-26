@@ -25,7 +25,7 @@ title_lines = ["Truth or", "Consequences", "Contemporary"]
 marquee = [
   "A Gallery in the Middle of Nowhere",
   "Art in the Oasis",
-  "312 Main Ave",
+  "312 Main St",
   "Truth or Consequences NM",
 ]
 

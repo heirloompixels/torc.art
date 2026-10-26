@@ -36,7 +36,7 @@
     <h2>Coordinates</h2>
     {%- set c = config.extra.contact %}
     <p>{{ c.street }}<br>{{ c.locality }}{% if c.building %}<br>{{ c.building }}{% endif %}</p>
-    <p><a href="mailto:{{ c.email }}">{{ c.email }}</a></p>
+    <p><a href="mailto:{{ c.email }}">{{ c.email }}</a>{% if c.phone %}<br><a href="tel:{{ c.phone_e164 }}">{{ c.phone }}</a>{% endif %}</p>
   </div>
 </div>
 
