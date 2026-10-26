@@ -8,6 +8,10 @@
  *
  * Centurion is Kyle's kerned build of Ben Whitmore's Coelacanth (OFL,
  * static/fonts/OFL.md), the same design as the metal Centaur in the cases.
+ * The files are the `register` profile from lab/coelacanth/web/build.py
+ * (2026-10-26): no small or petite capitals, since every small label here
+ * is set in the sans. A rule that asks for "smcp" or "c2sc" gets ordinary
+ * letters; to set small capitals again, copy in the `broadside` profile.
  */
 
 @font-face { font-family: "Centurion"; src: url("/fonts/Centurion-Roman.woff2") format("woff2"); font-weight: 400 600; font-style: normal; font-display: swap;
