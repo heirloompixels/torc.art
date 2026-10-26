@@ -86,7 +86,7 @@ It is the Luchini Electric Building, standing since 1916, the year the Elephant 
 
 We bought the building in March 2023 and spent nine long months renovating it. Why buy at all?
 
-> With the purchase of 312 Main St. we saw the possibilities of being able to bring something to life in a larger and richer way than we were able to do in a rented space that could never be truly our own. We have always had an underlying vision of creating a space for Art and humans (by default) to flourish. We want to create a world to fulfill our own creative desires by having ample space and access to all of the requisite tools, be able to share this with local artists and also draw in artists from afar.
+> With the purchase of 312 Main Ave. we saw the possibilities of being able to bring something to life in a larger and richer way than we were able to do in a rented space that could never be truly our own. We have always had an underlying vision of creating a space for Art and humans (by default) to flourish. We want to create a world to fulfill our own creative desires by having ample space and access to all of the requisite tools, be able to share this with local artists and also draw in artists from afar.
 
 On December 7th, 2023, twelve years to the day since our wheels stopped rolling in TorC, we opened the space with the first pARTluck. Then on February 24th, 2024, the Saturday night of the MeTeORiC festival, we held the Grand Opening Ceremony of Truth or Consequences Contemporary with our first show, *Home*, work exploring the idea of home through dance, music, stone, paint, fiber, drawing, installation, photography, metal, ceramic and glass. We picked that theme on purpose. Opening this space made Truth or Consequences our home for good.
 
