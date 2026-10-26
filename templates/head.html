@@ -65,7 +65,10 @@
 {% set url = config.base_url %}
 {% endif %}
 {% if title %}
-<title>{{ title }}</title>
+{#- Every page but the home names the gallery after its own title, so a search
+    result or a browser tab says whose "About" or "Visit" it is (audit,
+    2026-10-26). -#}
+{% if title == config.title %}<title>{{ title }}</title>{% else %}<title>{{ title }} · {{ config.title }}</title>{% endif %}
 {% endif %}
 {% block metatags %}
 {% if title %}
