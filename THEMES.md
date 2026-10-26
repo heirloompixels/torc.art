@@ -94,7 +94,13 @@ The three Broadside themes set the menu in a sans (Kyle, 2026-10-24):
 `Futura, "Futura PT", "Jost Menu", system-ui, sans-serif`. Apple systems
 draw it in their own Futura and never fetch Jost. Everywhere else gets
 `static/fonts/Jost-Menu.woff2`, Jost (OFL, `static/fonts/OFL-Jost.md`)
-trimmed to about 7 KB: capitals, figures and `. , @ · & ' ’ + - – — ↗`, every weight. Register's footer and ledger dates use it too.
+trimmed to about 8 KB: capitals, figures and `. , : / ( ) @ · & ' ’ + - – — ↗`, every weight.
+Since 2026-10-26 it is the voice of every small label, not only the menu
+(Kyle, after the exhibitions page: "i'd like that to transfer over to all
+the other pages"): the footer, section names in the margin, the front
+page's kicker and margin, dates in the ledgers and the journal, and a
+table's label column. One rule in `broadside-core.css` (§ the label
+voice) sets them all.
 The menu is set in capitals, so its lowercase is never drawn. If a menu
 item ever needs a character outside that set (an accent, say), add it to
 `scripts/jost-menu.sh`, run it, and widen the `unicode-range` in

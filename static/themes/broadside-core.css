@@ -20,8 +20,8 @@
   unicode-range: U+0100-0130, U+0132-0151, U+0154-017F, U+0218-021B, U+2016-2017, U+2023-2025, U+2027-202F, U+2070-209F, U+2153-215E; }
 
 @font-face { font-family: "Jost Menu"; src: url("/fonts/Jost-Menu.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap;
-  /* Only what scripts/jost-menu.sh keeps: capitals, figures, the punctuation the menu, footer and ledger dates use. */
-  unicode-range: U+0020, U+0026-0027, U+002B-002E, U+0030-0039, U+0040-005A, U+00B7, U+2013-2014, U+2019, U+2197; }
+  /* Only what scripts/jost-menu.sh keeps: capitals, figures, the punctuation the sans labels use. */
+  unicode-range: U+0020, U+0026-0029, U+002B-003A, U+0040-005A, U+00B7, U+2013-2014, U+2019, U+2197; }
 
 :root {
   --bg: #f7f4ef;
@@ -163,4 +163,19 @@ body .site-foot { font-size: 0.62rem; line-height: 1.9; }
 body .site-foot .foot-name {
   font-family: var(--serif); font-variation-settings: var(--display-cut); font-feature-settings: "kern";
   text-transform: none; letter-spacing: 0; font-weight: 400; font-size: 1.25rem; line-height: 1.2; margin-bottom: 0.3rem;
+}
+
+/* The label voice (Kyle, 2026-10-26: what the exhibitions dates did, on
+ * every page): every small label is the menu's sans in tracked capitals,
+ * where it had been Centurion's small capitals. Section names in the
+ * margin, the front page's kicker and margin, dates in the ledgers and
+ * the journal, the label column of a table. Capitals always: the Jost
+ * subset has no lowercase. A theme that sets one of these as a title
+ * instead resets it there. The body selector outranks journal.css, which
+ * loads after the theme. */
+.prose h2, .prose dt .when, .prose td:first-child, .rg-kicker, .rg-margin, .rg-ledger time,
+body .post .kicker, body .post .post-meta, body .journal-index time {
+  font-family: var(--sans); font-variation-settings: normal; font-feature-settings: "kern";
+  font-style: normal; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em;
+  font-size: 0.6rem; line-height: 1.6;
 }

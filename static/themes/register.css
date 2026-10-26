@@ -42,8 +42,7 @@ body { display: grid; grid-template-columns: minmax(0, 1fr); min-height: 100dvh;
 
 .prose > h1:first-child { font-variation-settings: var(--display-cut); font-size: clamp(44px, 7vw, 76px); line-height: 1; letter-spacing: -0.015em; margin: 0 0 1.4rem; }
 .prose h2 {
-  font-variation-settings: var(--caption-cut); font-feature-settings: "c2sc", "smcp", "kern"; letter-spacing: 0.12em;
-  font-size: 0.82rem; color: var(--ink-2); margin: 2.6rem 0 0.8rem; padding-top: 0.9rem; border-top: 1px solid var(--rule);
+  color: var(--ink-2); margin: 2.6rem 0 0.8rem; padding-top: 0.9rem; border-top: 1px solid var(--rule);
 }
 @media (min-width: 760px) {
   .prose h2 { float: left; clear: left; width: var(--margin); margin-left: calc(-1 * (var(--margin) + 2rem)); margin-top: 0.15rem; padding-top: 0; border-top: 0; text-align: right; }
@@ -62,11 +61,8 @@ body { display: grid; grid-template-columns: minmax(0, 1fr); min-height: 100dvh;
 .prose dt { padding-top: 0.9rem; margin-top: 0.9rem; border-top: 1px solid var(--rule-2); }
 .prose dt:first-child { border-top: 0; margin-top: 0; padding-top: 0.2rem; }
 .prose dt .when::after { content: none; }
-/* The date speaks in the menu's voice: the sans, in tracked capitals. */
-.prose dt .when {
-  display: block; font-family: var(--sans); font-variation-settings: normal; font-feature-settings: "kern";
-  font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.6rem; color: var(--ink-2);
-}
+/* The date speaks in the label voice (broadside-core.css). */
+.prose dt .when { display: block; color: var(--ink-2); }
 .prose dt .what { display: block; font-variation-settings: var(--display-cut); font-size: 1.3rem; line-height: 1.2; color: var(--ink); }
 .prose dd { margin: 0.35rem 0 0; color: var(--ink); }
 @media (min-width: 640px) {
@@ -78,7 +74,7 @@ body { display: grid; grid-template-columns: minmax(0, 1fr); min-height: 100dvh;
 
 /* ---- the front page ---------------------------------------------------------- */
 .rg-head { padding-bottom: 2rem; border-bottom: 1.5px solid var(--ink); }
-.rg-kicker { margin: 0 0 1rem; font-variation-settings: var(--caption-cut); font-feature-settings: "c2sc", "smcp", "kern"; letter-spacing: 0.14em; font-size: 0.82rem; color: var(--ink-2); }
+.rg-kicker { margin: 0 0 1rem; color: var(--ink-2); }
 .rg-title { margin: 0; font-variation-settings: var(--display-cut); font-size: clamp(46px, 7.4vw, 92px); line-height: 0.96; letter-spacing: -0.02em; max-width: 12ch; }
 .rg-lede { margin: 1.4rem 0 0; font-style: italic; font-size: 1.25rem; color: var(--ink-2); max-width: 32rem; }
 .rg-hero { margin: 2rem 0 0; }
@@ -87,14 +83,18 @@ body { display: grid; grid-template-columns: minmax(0, 1fr); min-height: 100dvh;
 
 .rg-row { display: grid; grid-template-columns: 1fr; gap: 0.6rem; padding: 1.4rem 0 1.6rem; border-bottom: 1px solid var(--rule); }
 @media (min-width: 760px) { .rg-row { grid-template-columns: var(--margin) minmax(0, 1fr); gap: 2rem; } .rg-margin { text-align: right; } }
-.rg-margin { margin: 0.2rem 0 0; font-variation-settings: var(--caption-cut); font-feature-settings: "c2sc", "smcp", "kern"; letter-spacing: 0.12em; font-size: 0.82rem; color: var(--ink-2); line-height: 1.5; }
-.rg-margin span { font-style: italic; font-feature-settings: "kern"; letter-spacing: 0; color: var(--ink-3); }
+.rg-margin { margin: 0.35rem 0 0; color: var(--ink-2); }
+/* The aside under a margin label stays Centurion italic, as the signature does. */
+.rg-margin span {
+  font-family: var(--serif); font-variation-settings: var(--caption-cut); font-feature-settings: "kern";
+  font-style: italic; font-weight: 400; text-transform: none; letter-spacing: 0; font-size: 0.82rem; color: var(--ink-3);
+}
 .rg-body p { margin: 0 0 0.8em; }
 .rg-sign { font-style: italic; color: var(--ink-2); }
 
 .rg-ledger { list-style: none; padding: 0; margin: 0; }
 .rg-ledger li { display: grid; grid-template-columns: 6.6rem minmax(0, 1fr); gap: 0 1rem; padding: 0.45rem 0; border-bottom: 1px solid var(--rule-2); }
-.rg-ledger time { font-variation-settings: var(--caption-cut); font-size: 0.85rem; color: var(--ink-3); padding-top: 0.1rem; white-space: nowrap; }
+.rg-ledger time { color: var(--ink-2); padding-top: 0.35rem; white-space: nowrap; }
 .rg-ledger a { color: var(--ink); text-decoration: none; }
 .rg-ledger a:hover { color: var(--second); text-decoration: underline; text-underline-offset: 0.22em; }
 .rg-ledger .by { grid-column: 2; font-style: italic; font-size: 0.82rem; color: var(--ink-3); }
@@ -116,7 +116,7 @@ body { display: grid; grid-template-columns: minmax(0, 1fr); min-height: 100dvh;
 .foot-links li { margin: 0.05rem 0; }
 
 /* ---- the journal: dates in the margin ---------------------------------------- */
-.post .kicker { font-feature-settings: "c2sc", "smcp"; letter-spacing: 0.12em; }
+.post .kicker, .post .post-meta { color: var(--ink-2); }
 .post > h1 { font-variation-settings: var(--display-cut); font-size: clamp(36px, 5.6vw, 60px); line-height: 1.02; margin: 0 0 0.6rem; }
 @media (min-width: 760px) {
   .journal-index li { display: grid !important; grid-template-columns: 1fr auto; }
@@ -131,6 +131,7 @@ body { display: grid; grid-template-columns: minmax(0, 1fr); min-height: 100dvh;
   .prose:has(> dl) h2 {
     float: none; width: auto; margin: 3.2rem 0 1.4rem calc(-1 * (var(--margin) + 2rem)); padding: 1.1rem 0 0 0;
     text-align: left; border-top: 1px solid var(--rule);
+    font-family: var(--serif); font-style: normal; font-weight: 400; text-transform: none;
     font-variation-settings: var(--display-cut); font-feature-settings: "kern"; letter-spacing: -0.005em;
     font-size: 1.75rem; line-height: 1.1; color: var(--ink);
   }
